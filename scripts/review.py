@@ -9,7 +9,7 @@ import sys
 import tempfile
 from pathlib import Path
 
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import expect, sync_playwright
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tests"))
 from integration import Server  # noqa: E402
@@ -46,7 +46,7 @@ def main() -> None:
                 page.goto(f"http://127.0.0.1:{server.http}")
                 page.get_by_text("● LIVE / 1s POLL").wait_for()
                 page.get_by_role("button", name="Seed synthetic keys").click()
-                page.wait_for_function("document.getElementById('keys').textContent === '64'")
+                expect(page.locator("#keys")).to_have_text("64")
                 page.get_by_label("Shard 0,", exact=False).click()
                 page.screenshot(path=str(out / "desktop.png"), full_page=True)
 
@@ -63,9 +63,7 @@ def main() -> None:
                     page.wait_for_timeout(400)
 
                 execute("SET", value="first visible write")
-                page.wait_for_function(
-                    "document.getElementById('rows').textContent.includes('first visible write')"
-                )
+                expect(page.locator("#rows")).to_contain_text("first visible write")
                 execute("GET")
                 assert "first visible write" in page.locator("#response").inner_text()
                 execute("INCR")
@@ -74,13 +72,8 @@ def main() -> None:
                 for _ in range(3):
                     execute("INCR", key="atomic:counter")
                 page.get_by_role("button", name="Write a short-lived key").click()
-                page.wait_for_function(
-                    "document.getElementById('rows').textContent.includes('ephemeral:ember')"
-                )
-                page.wait_for_function(
-                    "!document.getElementById('rows').textContent.includes('ephemeral:ember')",
-                    timeout=10000,
-                )
+                expect(page.locator("#rows")).to_contain_text("ephemeral:ember")
+                expect(page.locator("#rows")).not_to_contain_text("ephemeral:ember", timeout=10000)
                 # Repeated real TTL lifecycles: inspect the selected shard while expiry changes actual state.
                 if args.record:
                     for cycle in range(15):

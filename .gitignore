@@ -1,5 +1,5 @@
-build*/
-.cache/
+/build*/
+/.cache/
 .venv/
 __pycache__/
 *.snap
