@@ -1,0 +1,4466 @@
+{
+  "seed": 84017,
+  "histories": [
+    [
+      {
+        "kind": "SET",
+        "key": "history:0",
+        "value": "70",
+        "result": "OK",
+        "start": 781777082171750,
+        "end": 781777082341250
+      },
+      {
+        "kind": "NX",
+        "key": "history:0",
+        "value": "70",
+        "result": null,
+        "start": 781777082343041,
+        "end": 781777082450458
+      },
+      {
+        "kind": "NX",
+        "key": "history:0",
+        "value": "70",
+        "result": "OK",
+        "start": 781777082451666,
+        "end": 781777082554875
+      },
+      {
+        "kind": "SET",
+        "key": "history:0",
+        "value": "58",
+        "result": "OK",
+        "start": 781777082198500,
+        "end": 781777082362791
+      },
+      {
+        "kind": "SET",
+        "key": "history:0",
+        "value": "58",
+        "result": "OK",
+        "start": 781777082363583,
+        "end": 781777082459791
+      },
+      {
+        "kind": "GET",
+        "key": "history:0",
+        "value": "58",
+        "result": "70",
+        "start": 781777082460500,
+        "end": 781777082603541
+      },
+      {
+        "kind": "GET",
+        "key": "history:0",
+        "value": "39",
+        "result": null,
+        "start": 781777082139625,
+        "end": 781777082300708
+      },
+      {
+        "kind": "SET",
+        "key": "history:0",
+        "value": "39",
+        "result": "OK",
+        "start": 781777082303583,
+        "end": 781777082404375
+      },
+      {
+        "kind": "DEL",
+        "key": "history:0",
+        "value": "39",
+        "result": 1,
+        "start": 781777082405458,
+        "end": 781777082497166
+      }
+    ],
+    [
+      {
+        "kind": "DEL",
+        "key": "history:1",
+        "value": "15",
+        "result": 0,
+        "start": 781777083280875,
+        "end": 781777083394250
+      },
+      {
+        "kind": "INCR",
+        "key": "history:1",
+        "value": "15",
+        "result": 2,
+        "start": 781777083395916,
+        "end": 781777083500083
+      },
+      {
+        "kind": "NX",
+        "key": "history:1",
+        "value": "15",
+        "result": null,
+        "start": 781777083500875,
+        "end": 781777083606041
+      },
+      {
+        "kind": "GET",
+        "key": "history:1",
+        "value": "68",
+        "result": null,
+        "start": 781777083259833,
+        "end": 781777083365833
+      },
+      {
+        "kind": "GET",
+        "key": "history:1",
+        "value": "68",
+        "result": "1",
+        "start": 781777083367166,
+        "end": 781777083475916
+      },
+      {
+        "kind": "INCR",
+        "key": "history:1",
+        "value": "68",
+        "result": 3,
+        "start": 781777083477041,
+        "end": 781777083581000
+      },
+      {
+        "kind": "INCR",
+        "key": "history:1",
+        "value": "22",
+        "result": 1,
+        "start": 781777083305708,
+        "end": 781777083417958
+      },
+      {
+        "kind": "NX",
+        "key": "history:1",
+        "value": "22",
+        "result": null,
+        "start": 781777083419333,
+        "end": 781777083522458
+      },
+      {
+        "kind": "SET",
+        "key": "history:1",
+        "value": "22",
+        "result": "OK",
+        "start": 781777083523125,
+        "end": 781777083640583
+      }
+    ],
+    [
+      {
+        "kind": "GET",
+        "key": "history:2",
+        "value": "48",
+        "result": "92",
+        "start": 781777084182875,
+        "end": 781777084346791
+      },
+      {
+        "kind": "NX",
+        "key": "history:2",
+        "value": "48",
+        "result": null,
+        "start": 781777084347666,
+        "end": 781777084451750
+      },
+      {
+        "kind": "INCR",
+        "key": "history:2",
+        "value": "48",
+        "result": 93,
+        "start": 781777084452625,
+        "end": 781777084538791
+      },
+      {
+        "kind": "DEL",
+        "key": "history:2",
+        "value": "14",
+        "result": 0,
+        "start": 781777084165416,
+        "end": 781777084264291
+      },
+      {
+        "kind": "GET",
+        "key": "history:2",
+        "value": "14",
+        "result": "92",
+        "start": 781777084265416,
+        "end": 781777084362916
+      },
+      {
+        "kind": "SET",
+        "key": "history:2",
+        "value": "14",
+        "result": "OK",
+        "start": 781777084364166,
+        "end": 781777084461958
+      },
+      {
+        "kind": "NX",
+        "key": "history:2",
+        "value": "92",
+        "result": "OK",
+        "start": 781777084154208,
+        "end": 781777084315666
+      },
+      {
+        "kind": "GET",
+        "key": "history:2",
+        "value": "92",
+        "result": "92",
+        "start": 781777084316916,
+        "end": 781777084406875
+      },
+      {
+        "kind": "SET",
+        "key": "history:2",
+        "value": "92",
+        "result": "OK",
+        "start": 781777084407500,
+        "end": 781777084516166
+      }
+    ],
+    [
+      {
+        "kind": "INCR",
+        "key": "history:3",
+        "value": "10",
+        "result": 2,
+        "start": 781777085052875,
+        "end": 781777085163166
+      },
+      {
+        "kind": "NX",
+        "key": "history:3",
+        "value": "10",
+        "result": "OK",
+        "start": 781777085164041,
+        "end": 781777085271416
+      },
+      {
+        "kind": "DEL",
+        "key": "history:3",
+        "value": "10",
+        "result": 1,
+        "start": 781777085272625,
+        "end": 781777085357666
+      },
+      {
+        "kind": "INCR",
+        "key": "history:3",
+        "value": "41",
+        "result": 1,
+        "start": 781777085032625,
+        "end": 781777085155750
+      },
+      {
+        "kind": "DEL",
+        "key": "history:3",
+        "value": "41",
+        "result": 0,
+        "start": 781777085156833,
+        "end": 781777085238333
+      },
+      {
+        "kind": "SET",
+        "key": "history:3",
+        "value": "41",
+        "result": "OK",
+        "start": 781777085238958,
+        "end": 781777085339458
+      },
+      {
+        "kind": "DEL",
+        "key": "history:3",
+        "value": "70",
+        "result": 1,
+        "start": 781777085020541,
+        "end": 781777085187333
+      },
+      {
+        "kind": "SET",
+        "key": "history:3",
+        "value": "70",
+        "result": "OK",
+        "start": 781777085188125,
+        "end": 781777085291166
+      },
+      {
+        "kind": "NX",
+        "key": "history:3",
+        "value": "70",
+        "result": "OK",
+        "start": 781777085291833,
+        "end": 781777085391541
+      }
+    ],
+    [
+      {
+        "kind": "SET",
+        "key": "history:4",
+        "value": "67",
+        "result": "OK",
+        "start": 781777085814875,
+        "end": 781777085981125
+      },
+      {
+        "kind": "NX",
+        "key": "history:4",
+        "value": "67",
+        "result": null,
+        "start": 781777085982250,
+        "end": 781777086090916
+      },
+      {
+        "kind": "SET",
+        "key": "history:4",
+        "value": "67",
+        "result": "OK",
+        "start": 781777086091666,
+        "end": 781777086194750
+      },
+      {
+        "kind": "NX",
+        "key": "history:4",
+        "value": "67",
+        "result": null,
+        "start": 781777085807541,
+        "end": 781777086030958
+      },
+      {
+        "kind": "INCR",
+        "key": "history:4",
+        "value": "67",
+        "result": 68,
+        "start": 781777086031833,
+        "end": 781777086137041
+      },
+      {
+        "kind": "GET",
+        "key": "history:4",
+        "value": "67",
+        "result": "67",
+        "start": 781777086138041,
+        "end": 781777086256958
+      },
+      {
+        "kind": "DEL",
+        "key": "history:4",
+        "value": "77",
+        "result": 0,
+        "start": 781777085800375,
+        "end": 781777085967583
+      },
+      {
+        "kind": "NX",
+        "key": "history:4",
+        "value": "77",
+        "result": null,
+        "start": 781777085968583,
+        "end": 781777086080500
+      },
+      {
+        "kind": "INCR",
+        "key": "history:4",
+        "value": "77",
+        "result": 69,
+        "start": 781777086081583,
+        "end": 781777086187541
+      }
+    ],
+    [
+      {
+        "kind": "SET",
+        "key": "history:5",
+        "value": "99",
+        "result": "OK",
+        "start": 781777086789250,
+        "end": 781777086911041
+      },
+      {
+        "kind": "DEL",
+        "key": "history:5",
+        "value": "99",
+        "result": 0,
+        "start": 781777086911958,
+        "end": 781777086992416
+      },
+      {
+        "kind": "INCR",
+        "key": "history:5",
+        "value": "99",
+        "result": 15,
+        "start": 781777086993291,
+        "end": 781777087086416
+      },
+      {
+        "kind": "DEL",
+        "key": "history:5",
+        "value": "14",
+        "result": 1,
+        "start": 781777086859291,
+        "end": 781777086973375
+      },
+      {
+        "kind": "SET",
+        "key": "history:5",
+        "value": "14",
+        "result": "OK",
+        "start": 781777086974250,
+        "end": 781777087069375
+      },
+      {
+        "kind": "INCR",
+        "key": "history:5",
+        "value": "14",
+        "result": 1,
+        "start": 781777087070333,
+        "end": 781777087155083
+      },
+      {
+        "kind": "SET",
+        "key": "history:5",
+        "value": "59",
+        "result": "OK",
+        "start": 781777086803083,
+        "end": 781777086940208
+      },
+      {
+        "kind": "NX",
+        "key": "history:5",
+        "value": "59",
+        "result": "OK",
+        "start": 781777086941166,
+        "end": 781777087040041
+      },
+      {
+        "kind": "DEL",
+        "key": "history:5",
+        "value": "59",
+        "result": 1,
+        "start": 781777087040666,
+        "end": 781777087126166
+      }
+    ],
+    [
+      {
+        "kind": "INCR",
+        "key": "history:6",
+        "value": "47",
+        "result": 89,
+        "start": 781777087809583,
+        "end": 781777087979083
+      },
+      {
+        "kind": "DEL",
+        "key": "history:6",
+        "value": "47",
+        "result": 0,
+        "start": 781777087979916,
+        "end": 781777088093333
+      },
+      {
+        "kind": "INCR",
+        "key": "history:6",
+        "value": "47",
+        "result": 1,
+        "start": 781777088094500,
+        "end": 781777088183458
+      },
+      {
+        "kind": "SET",
+        "key": "history:6",
+        "value": "88",
+        "result": "OK",
+        "start": 781777087784666,
+        "end": 781777087960000
+      },
+      {
+        "kind": "GET",
+        "key": "history:6",
+        "value": "88",
+        "result": null,
+        "start": 781777087961666,
+        "end": 781777088104416
+      },
+      {
+        "kind": "NX",
+        "key": "history:6",
+        "value": "88",
+        "result": null,
+        "start": 781777088105583,
+        "end": 781777088241125
+      },
+      {
+        "kind": "SET",
+        "key": "history:6",
+        "value": "36",
+        "result": "OK",
+        "start": 781777087759333,
+        "end": 781777087898166
+      },
+      {
+        "kind": "DEL",
+        "key": "history:6",
+        "value": "36",
+        "result": 1,
+        "start": 781777087899125,
+        "end": 781777088070958
+      },
+      {
+        "kind": "GET",
+        "key": "history:6",
+        "value": "36",
+        "result": null,
+        "start": 781777088071958,
+        "end": 781777088169583
+      }
+    ],
+    [
+      {
+        "kind": "NX",
+        "key": "history:7",
+        "value": "73",
+        "result": "OK",
+        "start": 781777088887500,
+        "end": 781777088986833
+      },
+      {
+        "kind": "SET",
+        "key": "history:7",
+        "value": "73",
+        "result": "OK",
+        "start": 781777088987500,
+        "end": 781777089071000
+      },
+      {
+        "kind": "GET",
+        "key": "history:7",
+        "value": "73",
+        "result": "74",
+        "start": 781777089073666,
+        "end": 781777089171916
+      },
+      {
+        "kind": "SET",
+        "key": "history:7",
+        "value": "22",
+        "result": "OK",
+        "start": 781777088900125,
+        "end": 781777089024250
+      },
+      {
+        "kind": "INCR",
+        "key": "history:7",
+        "value": "22",
+        "result": 74,
+        "start": 781777089024791,
+        "end": 781777089123000
+      },
+      {
+        "kind": "NX",
+        "key": "history:7",
+        "value": "22",
+        "result": null,
+        "start": 781777089123833,
+        "end": 781777089239166
+      },
+      {
+        "kind": "GET",
+        "key": "history:7",
+        "value": "6",
+        "result": null,
+        "start": 781777088872708,
+        "end": 781777088971708
+      },
+      {
+        "kind": "DEL",
+        "key": "history:7",
+        "value": "6",
+        "result": 1,
+        "start": 781777088972500,
+        "end": 781777089053083
+      },
+      {
+        "kind": "NX",
+        "key": "history:7",
+        "value": "6",
+        "result": null,
+        "start": 781777089053958,
+        "end": 781777089180166
+      }
+    ],
+    [
+      {
+        "kind": "NX",
+        "key": "history:8",
+        "value": "79",
+        "result": null,
+        "start": 781777089772000,
+        "end": 781777089894875
+      },
+      {
+        "kind": "DEL",
+        "key": "history:8",
+        "value": "79",
+        "result": 1,
+        "start": 781777089895750,
+        "end": 781777089974000
+      },
+      {
+        "kind": "GET",
+        "key": "history:8",
+        "value": "79",
+        "result": null,
+        "start": 781777089974625,
+        "end": 781777090056416
+      },
+      {
+        "kind": "INCR",
+        "key": "history:8",
+        "value": "63",
+        "result": 1,
+        "start": 781777089761875,
+        "end": 781777089853625
+      },
+      {
+        "kind": "SET",
+        "key": "history:8",
+        "value": "63",
+        "result": "OK",
+        "start": 781777089854500,
+        "end": 781777089958166
+      },
+      {
+        "kind": "NX",
+        "key": "history:8",
+        "value": "63",
+        "result": "OK",
+        "start": 781777089958833,
+        "end": 781777090182791
+      },
+      {
+        "kind": "SET",
+        "key": "history:8",
+        "value": "41",
+        "result": "OK",
+        "start": 781777089791833,
+        "end": 781777089912458
+      },
+      {
+        "kind": "GET",
+        "key": "history:8",
+        "value": "41",
+        "result": null,
+        "start": 781777089913208,
+        "end": 781777089986666
+      },
+      {
+        "kind": "NX",
+        "key": "history:8",
+        "value": "41",
+        "result": null,
+        "start": 781777089987125,
+        "end": 781777090117958
+      }
+    ],
+    [
+      {
+        "kind": "SET",
+        "key": "history:9",
+        "value": "0",
+        "result": "OK",
+        "start": 781777090658375,
+        "end": 781777090785041
+      },
+      {
+        "kind": "SET",
+        "key": "history:9",
+        "value": "0",
+        "result": "OK",
+        "start": 781777090786125,
+        "end": 781777090953416
+      },
+      {
+        "kind": "GET",
+        "key": "history:9",
+        "value": "0",
+        "result": "1",
+        "start": 781777090953958,
+        "end": 781777091042625
+      },
+      {
+        "kind": "GET",
+        "key": "history:9",
+        "value": "7",
+        "result": "0",
+        "start": 781777090678166,
+        "end": 781777090799208
+      },
+      {
+        "kind": "GET",
+        "key": "history:9",
+        "value": "7",
+        "result": null,
+        "start": 781777090800166,
+        "end": 781777090909666
+      },
+      {
+        "kind": "INCR",
+        "key": "history:9",
+        "value": "7",
+        "result": 1,
+        "start": 781777090910541,
+        "end": 781777091005583
+      },
+      {
+        "kind": "DEL",
+        "key": "history:9",
+        "value": "39",
+        "result": 1,
+        "start": 781777090700083,
+        "end": 781777090829666
+      },
+      {
+        "kind": "GET",
+        "key": "history:9",
+        "value": "39",
+        "result": "0",
+        "start": 781777090830333,
+        "end": 781777090976291
+      },
+      {
+        "kind": "INCR",
+        "key": "history:9",
+        "value": "39",
+        "result": 2,
+        "start": 781777090977208,
+        "end": 781777091057458
+      }
+    ],
+    [
+      {
+        "kind": "GET",
+        "key": "history:10",
+        "value": "16",
+        "result": null,
+        "start": 781777091506666,
+        "end": 781777091613916
+      },
+      {
+        "kind": "DEL",
+        "key": "history:10",
+        "value": "16",
+        "result": 1,
+        "start": 781777091614833,
+        "end": 781777091713041
+      },
+      {
+        "kind": "INCR",
+        "key": "history:10",
+        "value": "16",
+        "result": 2,
+        "start": 781777091713750,
+        "end": 781777091812166
+      },
+      {
+        "kind": "NX",
+        "key": "history:10",
+        "value": "52",
+        "result": null,
+        "start": 781777091532000,
+        "end": 781777091632333
+      },
+      {
+        "kind": "GET",
+        "key": "history:10",
+        "value": "52",
+        "result": null,
+        "start": 781777091632958,
+        "end": 781777091722083
+      },
+      {
+        "kind": "DEL",
+        "key": "history:10",
+        "value": "52",
+        "result": 1,
+        "start": 781777091722750,
+        "end": 781777091873125
+      },
+      {
+        "kind": "INCR",
+        "key": "history:10",
+        "value": "79",
+        "result": 1,
+        "start": 781777091497000,
+        "end": 781777091667875
+      },
+      {
+        "kind": "INCR",
+        "key": "history:10",
+        "value": "79",
+        "result": 1,
+        "start": 781777091668416,
+        "end": 781777091753583
+      },
+      {
+        "kind": "NX",
+        "key": "history:10",
+        "value": "79",
+        "result": "OK",
+        "start": 781777091754375,
+        "end": 781777091864416
+      }
+    ],
+    [
+      {
+        "kind": "SET",
+        "key": "history:11",
+        "value": "14",
+        "result": "OK",
+        "start": 781777092278083,
+        "end": 781777092387583
+      },
+      {
+        "kind": "DEL",
+        "key": "history:11",
+        "value": "14",
+        "result": 1,
+        "start": 781777092388333,
+        "end": 781777092484791
+      },
+      {
+        "kind": "SET",
+        "key": "history:11",
+        "value": "14",
+        "result": "OK",
+        "start": 781777092485416,
+        "end": 781777092580791
+      },
+      {
+        "kind": "INCR",
+        "key": "history:11",
+        "value": "93",
+        "result": 15,
+        "start": 781777092313666,
+        "end": 781777092424833
+      },
+      {
+        "kind": "GET",
+        "key": "history:11",
+        "value": "93",
+        "result": null,
+        "start": 781777092425458,
+        "end": 781777092499833
+      },
+      {
+        "kind": "INCR",
+        "key": "history:11",
+        "value": "93",
+        "result": 15,
+        "start": 781777092500291,
+        "end": 781777092608125
+      },
+      {
+        "kind": "GET",
+        "key": "history:11",
+        "value": "73",
+        "result": null,
+        "start": 781777092263375,
+        "end": 781777092359166
+      },
+      {
+        "kind": "NX",
+        "key": "history:11",
+        "value": "73",
+        "result": null,
+        "start": 781777092359833,
+        "end": 781777092457416
+      },
+      {
+        "kind": "NX",
+        "key": "history:11",
+        "value": "73",
+        "result": "OK",
+        "start": 781777092458333,
+        "end": 781777092549916
+      }
+    ],
+    [
+      {
+        "kind": "DEL",
+        "key": "history:12",
+        "value": "47",
+        "result": 0,
+        "start": 781777093079208,
+        "end": 781777093220625
+      },
+      {
+        "kind": "NX",
+        "key": "history:12",
+        "value": "47",
+        "result": null,
+        "start": 781777093221583,
+        "end": 781777093311458
+      },
+      {
+        "kind": "NX",
+        "key": "history:12",
+        "value": "47",
+        "result": null,
+        "start": 781777093312166,
+        "end": 781777093400333
+      },
+      {
+        "kind": "NX",
+        "key": "history:12",
+        "value": "85",
+        "result": "OK",
+        "start": 781777093090583,
+        "end": 781777093254791
+      },
+      {
+        "kind": "NX",
+        "key": "history:12",
+        "value": "85",
+        "result": null,
+        "start": 781777093255583,
+        "end": 781777093358208
+      },
+      {
+        "kind": "INCR",
+        "key": "history:12",
+        "value": "85",
+        "result": 87,
+        "start": 781777093358750,
+        "end": 781777093447541
+      },
+      {
+        "kind": "GET",
+        "key": "history:12",
+        "value": "12",
+        "result": null,
+        "start": 781777093065500,
+        "end": 781777093236833
+      },
+      {
+        "kind": "INCR",
+        "key": "history:12",
+        "value": "12",
+        "result": 86,
+        "start": 781777093237708,
+        "end": 781777093321291
+      },
+      {
+        "kind": "GET",
+        "key": "history:12",
+        "value": "12",
+        "result": "86",
+        "start": 781777093322208,
+        "end": 781777093434875
+      }
+    ],
+    [
+      {
+        "kind": "SET",
+        "key": "history:13",
+        "value": "26",
+        "result": "OK",
+        "start": 781777093956125,
+        "end": 781777094068083
+      },
+      {
+        "kind": "GET",
+        "key": "history:13",
+        "value": "26",
+        "result": "3",
+        "start": 781777094069000,
+        "end": 781777094167750
+      },
+      {
+        "kind": "GET",
+        "key": "history:13",
+        "value": "26",
+        "result": null,
+        "start": 781777094168500,
+        "end": 781777094264250
+      },
+      {
+        "kind": "DEL",
+        "key": "history:13",
+        "value": "2",
+        "result": 0,
+        "start": 781777093919333,
+        "end": 781777094012125
+      },
+      {
+        "kind": "SET",
+        "key": "history:13",
+        "value": "2",
+        "result": "OK",
+        "start": 781777094012875,
+        "end": 781777094117708
+      },
+      {
+        "kind": "SET",
+        "key": "history:13",
+        "value": "2",
+        "result": "OK",
+        "start": 781777094118791,
+        "end": 781777094228208
+      },
+      {
+        "kind": "SET",
+        "key": "history:13",
+        "value": "8",
+        "result": "OK",
+        "start": 781777093931166,
+        "end": 781777094047791
+      },
+      {
+        "kind": "INCR",
+        "key": "history:13",
+        "value": "8",
+        "result": 3,
+        "start": 781777094049750,
+        "end": 781777094150166
+      },
+      {
+        "kind": "DEL",
+        "key": "history:13",
+        "value": "8",
+        "result": 1,
+        "start": 781777094150958,
+        "end": 781777094256458
+      }
+    ],
+    [
+      {
+        "kind": "SET",
+        "key": "history:14",
+        "value": "44",
+        "result": "OK",
+        "start": 781777094775208,
+        "end": 781777094914125
+      },
+      {
+        "kind": "SET",
+        "key": "history:14",
+        "value": "44",
+        "result": "OK",
+        "start": 781777094915333,
+        "end": 781777095028416
+      },
+      {
+        "kind": "INCR",
+        "key": "history:14",
+        "value": "44",
+        "result": 55,
+        "start": 781777095029250,
+        "end": 781777095135458
+      },
+      {
+        "kind": "DEL",
+        "key": "history:14",
+        "value": "31",
+        "result": 1,
+        "start": 781777094799291,
+        "end": 781777094928583
+      },
+      {
+        "kind": "INCR",
+        "key": "history:14",
+        "value": "31",
+        "result": 45,
+        "start": 781777094929583,
+        "end": 781777095048041
+      },
+      {
+        "kind": "INCR",
+        "key": "history:14",
+        "value": "31",
+        "result": 56,
+        "start": 781777095048750,
+        "end": 781777095169125
+      },
+      {
+        "kind": "DEL",
+        "key": "history:14",
+        "value": "54",
+        "result": 0,
+        "start": 781777094760833,
+        "end": 781777094844083
+      },
+      {
+        "kind": "GET",
+        "key": "history:14",
+        "value": "54",
+        "result": null,
+        "start": 781777094844625,
+        "end": 781777094987958
+      },
+      {
+        "kind": "SET",
+        "key": "history:14",
+        "value": "54",
+        "result": "OK",
+        "start": 781777094990375,
+        "end": 781777095107083
+      }
+    ],
+    [
+      {
+        "kind": "DEL",
+        "key": "history:15",
+        "value": "68",
+        "result": 0,
+        "start": 781777095852166,
+        "end": 781777096009833
+      },
+      {
+        "kind": "SET",
+        "key": "history:15",
+        "value": "68",
+        "result": "OK",
+        "start": 781777096010541,
+        "end": 781777096140041
+      },
+      {
+        "kind": "DEL",
+        "key": "history:15",
+        "value": "68",
+        "result": 1,
+        "start": 781777096140833,
+        "end": 781777096235833
+      },
+      {
+        "kind": "GET",
+        "key": "history:15",
+        "value": "50",
+        "result": null,
+        "start": 781777095876916,
+        "end": 781777096019875
+      },
+      {
+        "kind": "NX",
+        "key": "history:15",
+        "value": "50",
+        "result": null,
+        "start": 781777096020583,
+        "end": 781777096121750
+      },
+      {
+        "kind": "NX",
+        "key": "history:15",
+        "value": "50",
+        "result": null,
+        "start": 781777096122625,
+        "end": 781777096227333
+      },
+      {
+        "kind": "GET",
+        "key": "history:15",
+        "value": "77",
+        "result": null,
+        "start": 781777095835333,
+        "end": 781777095997208
+      },
+      {
+        "kind": "NX",
+        "key": "history:15",
+        "value": "77",
+        "result": "OK",
+        "start": 781777095998416,
+        "end": 781777096112291
+      },
+      {
+        "kind": "NX",
+        "key": "history:15",
+        "value": "77",
+        "result": null,
+        "start": 781777096113125,
+        "end": 781777096243166
+      }
+    ],
+    [
+      {
+        "kind": "DEL",
+        "key": "history:16",
+        "value": "68",
+        "result": 1,
+        "start": 781777096796125,
+        "end": 781777096899875
+      },
+      {
+        "kind": "NX",
+        "key": "history:16",
+        "value": "68",
+        "result": null,
+        "start": 781777096900500,
+        "end": 781777097000041
+      },
+      {
+        "kind": "INCR",
+        "key": "history:16",
+        "value": "68",
+        "result": 62,
+        "start": 781777097000666,
+        "end": 781777097100583
+      },
+      {
+        "kind": "GET",
+        "key": "history:16",
+        "value": "61",
+        "result": null,
+        "start": 781777096756625,
+        "end": 781777096858958
+      },
+      {
+        "kind": "NX",
+        "key": "history:16",
+        "value": "61",
+        "result": "OK",
+        "start": 781777096859666,
+        "end": 781777096974916
+      },
+      {
+        "kind": "NX",
+        "key": "history:16",
+        "value": "61",
+        "result": null,
+        "start": 781777096975750,
+        "end": 781777097062416
+      },
+      {
+        "kind": "NX",
+        "key": "history:16",
+        "value": "96",
+        "result": "OK",
+        "start": 781777096748000,
+        "end": 781777096891333
+      },
+      {
+        "kind": "NX",
+        "key": "history:16",
+        "value": "96",
+        "result": null,
+        "start": 781777096892208,
+        "end": 781777097016125
+      },
+      {
+        "kind": "NX",
+        "key": "history:16",
+        "value": "96",
+        "result": null,
+        "start": 781777097017000,
+        "end": 781777097113833
+      }
+    ],
+    [
+      {
+        "kind": "DEL",
+        "key": "history:17",
+        "value": "16",
+        "result": 1,
+        "start": 781777097643125,
+        "end": 781777097753041
+      },
+      {
+        "kind": "SET",
+        "key": "history:17",
+        "value": "16",
+        "result": "OK",
+        "start": 781777097754250,
+        "end": 781777097839000
+      },
+      {
+        "kind": "DEL",
+        "key": "history:17",
+        "value": "16",
+        "result": 1,
+        "start": 781777097839750,
+        "end": 781777097936750
+      },
+      {
+        "kind": "SET",
+        "key": "history:17",
+        "value": "42",
+        "result": "OK",
+        "start": 781777097626208,
+        "end": 781777097773500
+      },
+      {
+        "kind": "NX",
+        "key": "history:17",
+        "value": "42",
+        "result": null,
+        "start": 781777097774541,
+        "end": 781777097875083
+      },
+      {
+        "kind": "GET",
+        "key": "history:17",
+        "value": "42",
+        "result": null,
+        "start": 781777097875875,
+        "end": 781777097976875
+      },
+      {
+        "kind": "NX",
+        "key": "history:17",
+        "value": "62",
+        "result": "OK",
+        "start": 781777097604583,
+        "end": 781777097734541
+      },
+      {
+        "kind": "INCR",
+        "key": "history:17",
+        "value": "62",
+        "result": 43,
+        "start": 781777097735458,
+        "end": 781777097824375
+      },
+      {
+        "kind": "SET",
+        "key": "history:17",
+        "value": "62",
+        "result": "OK",
+        "start": 781777097825166,
+        "end": 781777097918375
+      }
+    ],
+    [
+      {
+        "kind": "SET",
+        "key": "history:18",
+        "value": "37",
+        "result": "OK",
+        "start": 781777098527458,
+        "end": 781777098679583
+      },
+      {
+        "kind": "DEL",
+        "key": "history:18",
+        "value": "37",
+        "result": 0,
+        "start": 781777098680458,
+        "end": 781777098775333
+      },
+      {
+        "kind": "INCR",
+        "key": "history:18",
+        "value": "37",
+        "result": 3,
+        "start": 781777098776000,
+        "end": 781777098868708
+      },
+      {
+        "kind": "SET",
+        "key": "history:18",
+        "value": "35",
+        "result": "OK",
+        "start": 781777098508541,
+        "end": 781777098659333
+      },
+      {
+        "kind": "DEL",
+        "key": "history:18",
+        "value": "35",
+        "result": 0,
+        "start": 781777098660333,
+        "end": 781777098739791
+      },
+      {
+        "kind": "INCR",
+        "key": "history:18",
+        "value": "35",
+        "result": 2,
+        "start": 781777098740875,
+        "end": 781777098848208
+      },
+      {
+        "kind": "SET",
+        "key": "history:18",
+        "value": "42",
+        "result": "OK",
+        "start": 781777098498208,
+        "end": 781777098632083
+      },
+      {
+        "kind": "DEL",
+        "key": "history:18",
+        "value": "42",
+        "result": 1,
+        "start": 781777098633083,
+        "end": 781777098725458
+      },
+      {
+        "kind": "INCR",
+        "key": "history:18",
+        "value": "42",
+        "result": 1,
+        "start": 781777098726208,
+        "end": 781777098819375
+      }
+    ],
+    [
+      {
+        "kind": "DEL",
+        "key": "history:19",
+        "value": "35",
+        "result": 0,
+        "start": 781777099340375,
+        "end": 781777099452125
+      },
+      {
+        "kind": "NX",
+        "key": "history:19",
+        "value": "35",
+        "result": null,
+        "start": 781777099452916,
+        "end": 781777099539916
+      },
+      {
+        "kind": "GET",
+        "key": "history:19",
+        "value": "35",
+        "result": "53",
+        "start": 781777099540666,
+        "end": 781777099627500
+      },
+      {
+        "kind": "NX",
+        "key": "history:19",
+        "value": "53",
+        "result": "OK",
+        "start": 781777099348250,
+        "end": 781777099499041
+      },
+      {
+        "kind": "NX",
+        "key": "history:19",
+        "value": "53",
+        "result": null,
+        "start": 781777099499958,
+        "end": 781777099591041
+      },
+      {
+        "kind": "DEL",
+        "key": "history:19",
+        "value": "53",
+        "result": 1,
+        "start": 781777099591708,
+        "end": 781777099687208
+      },
+      {
+        "kind": "GET",
+        "key": "history:19",
+        "value": "81",
+        "result": "53",
+        "start": 781777099379916,
+        "end": 781777099483041
+      },
+      {
+        "kind": "NX",
+        "key": "history:19",
+        "value": "81",
+        "result": null,
+        "start": 781777099483833,
+        "end": 781777099583666
+      },
+      {
+        "kind": "INCR",
+        "key": "history:19",
+        "value": "81",
+        "result": 54,
+        "start": 781777099584291,
+        "end": 781777099672041
+      }
+    ],
+    [
+      {
+        "kind": "GET",
+        "key": "history:20",
+        "value": "72",
+        "result": "42",
+        "start": 781777100044333,
+        "end": 781777100178250
+      },
+      {
+        "kind": "NX",
+        "key": "history:20",
+        "value": "72",
+        "result": null,
+        "start": 781777100179083,
+        "end": 781777100257166
+      },
+      {
+        "kind": "INCR",
+        "key": "history:20",
+        "value": "72",
+        "result": 44,
+        "start": 781777100257666,
+        "end": 781777100347083
+      },
+      {
+        "kind": "NX",
+        "key": "history:20",
+        "value": "27",
+        "result": null,
+        "start": 781777100058916,
+        "end": 781777100192791
+      },
+      {
+        "kind": "GET",
+        "key": "history:20",
+        "value": "27",
+        "result": "43",
+        "start": 781777100193375,
+        "end": 781777100272291
+      },
+      {
+        "kind": "GET",
+        "key": "history:20",
+        "value": "27",
+        "result": "44",
+        "start": 781777100272875,
+        "end": 781777100372875
+      },
+      {
+        "kind": "SET",
+        "key": "history:20",
+        "value": "42",
+        "result": "OK",
+        "start": 781777100032666,
+        "end": 781777100130875
+      },
+      {
+        "kind": "INCR",
+        "key": "history:20",
+        "value": "42",
+        "result": 43,
+        "start": 781777100131583,
+        "end": 781777100218333
+      },
+      {
+        "kind": "GET",
+        "key": "history:20",
+        "value": "42",
+        "result": "43",
+        "start": 781777100218958,
+        "end": 781777100303458
+      }
+    ],
+    [
+      {
+        "kind": "SET",
+        "key": "history:21",
+        "value": "97",
+        "result": "OK",
+        "start": 781777100810666,
+        "end": 781777100982291
+      },
+      {
+        "kind": "NX",
+        "key": "history:21",
+        "value": "97",
+        "result": null,
+        "start": 781777100983166,
+        "end": 781777101071833
+      },
+      {
+        "kind": "GET",
+        "key": "history:21",
+        "value": "97",
+        "result": "99",
+        "start": 781777101072291,
+        "end": 781777101172375
+      },
+      {
+        "kind": "GET",
+        "key": "history:21",
+        "value": "25",
+        "result": "1",
+        "start": 781777100835708,
+        "end": 781777100961250
+      },
+      {
+        "kind": "NX",
+        "key": "history:21",
+        "value": "25",
+        "result": null,
+        "start": 781777100962166,
+        "end": 781777101064666
+      },
+      {
+        "kind": "NX",
+        "key": "history:21",
+        "value": "25",
+        "result": null,
+        "start": 781777101065333,
+        "end": 781777101160041
+      },
+      {
+        "kind": "INCR",
+        "key": "history:21",
+        "value": "91",
+        "result": 1,
+        "start": 781777100816541,
+        "end": 781777100937166
+      },
+      {
+        "kind": "INCR",
+        "key": "history:21",
+        "value": "91",
+        "result": 98,
+        "start": 781777100938041,
+        "end": 781777101022416
+      },
+      {
+        "kind": "INCR",
+        "key": "history:21",
+        "value": "91",
+        "result": 99,
+        "start": 781777101022833,
+        "end": 781777101112291
+      }
+    ],
+    [
+      {
+        "kind": "SET",
+        "key": "history:22",
+        "value": "46",
+        "result": "OK",
+        "start": 781777101546083,
+        "end": 781777101656166
+      },
+      {
+        "kind": "INCR",
+        "key": "history:22",
+        "value": "46",
+        "result": 47,
+        "start": 781777101656958,
+        "end": 781777101735916
+      },
+      {
+        "kind": "DEL",
+        "key": "history:22",
+        "value": "46",
+        "result": 1,
+        "start": 781777101736375,
+        "end": 781777101811291
+      },
+      {
+        "kind": "GET",
+        "key": "history:22",
+        "value": "21",
+        "result": "46",
+        "start": 781777101539375,
+        "end": 781777101673583
+      },
+      {
+        "kind": "INCR",
+        "key": "history:22",
+        "value": "21",
+        "result": 48,
+        "start": 781777101674333,
+        "end": 781777101772875
+      },
+      {
+        "kind": "NX",
+        "key": "history:22",
+        "value": "21",
+        "result": "OK",
+        "start": 781777101773458,
+        "end": 781777101872791
+      },
+      {
+        "kind": "NX",
+        "key": "history:22",
+        "value": "2",
+        "result": null,
+        "start": 781777101567250,
+        "end": 781777101699916
+      },
+      {
+        "kind": "NX",
+        "key": "history:22",
+        "value": "2",
+        "result": null,
+        "start": 781777101700666,
+        "end": 781777101787375
+      },
+      {
+        "kind": "DEL",
+        "key": "history:22",
+        "value": "2",
+        "result": 1,
+        "start": 781777101788125,
+        "end": 781777101901250
+      }
+    ],
+    [
+      {
+        "kind": "DEL",
+        "key": "history:23",
+        "value": "8",
+        "result": 0,
+        "start": 781777102255625,
+        "end": 781777102369125
+      },
+      {
+        "kind": "GET",
+        "key": "history:23",
+        "value": "8",
+        "result": "1",
+        "start": 781777102370000,
+        "end": 781777102451750
+      },
+      {
+        "kind": "INCR",
+        "key": "history:23",
+        "value": "8",
+        "result": 72,
+        "start": 781777102452333,
+        "end": 781777102544250
+      },
+      {
+        "kind": "GET",
+        "key": "history:23",
+        "value": "71",
+        "result": "1",
+        "start": 781777102291833,
+        "end": 781777102397208
+      },
+      {
+        "kind": "SET",
+        "key": "history:23",
+        "value": "71",
+        "result": "OK",
+        "start": 781777102398041,
+        "end": 781777102493583
+      },
+      {
+        "kind": "NX",
+        "key": "history:23",
+        "value": "71",
+        "result": null,
+        "start": 781777102494333,
+        "end": 781777102599333
+      },
+      {
+        "kind": "INCR",
+        "key": "history:23",
+        "value": "60",
+        "result": 1,
+        "start": 781777102275208,
+        "end": 781777102382708
+      },
+      {
+        "kind": "INCR",
+        "key": "history:23",
+        "value": "60",
+        "result": 2,
+        "start": 781777102383875,
+        "end": 781777102483625
+      },
+      {
+        "kind": "NX",
+        "key": "history:23",
+        "value": "60",
+        "result": null,
+        "start": 781777102484291,
+        "end": 781777102579916
+      }
+    ],
+    [
+      {
+        "kind": "NX",
+        "key": "history:24",
+        "value": "57",
+        "result": null,
+        "start": 781777102970875,
+        "end": 781777103072833
+      },
+      {
+        "kind": "GET",
+        "key": "history:24",
+        "value": "57",
+        "result": "67",
+        "start": 781777103073500,
+        "end": 781777103178541
+      },
+      {
+        "kind": "GET",
+        "key": "history:24",
+        "value": "57",
+        "result": "67",
+        "start": 781777103179166,
+        "end": 781777103262583
+      },
+      {
+        "kind": "GET",
+        "key": "history:24",
+        "value": "21",
+        "result": null,
+        "start": 781777102958416,
+        "end": 781777103050041
+      },
+      {
+        "kind": "DEL",
+        "key": "history:24",
+        "value": "21",
+        "result": 1,
+        "start": 781777103050541,
+        "end": 781777103137750
+      },
+      {
+        "kind": "SET",
+        "key": "history:24",
+        "value": "21",
+        "result": "OK",
+        "start": 781777103138333,
+        "end": 781777103222250
+      },
+      {
+        "kind": "INCR",
+        "key": "history:24",
+        "value": "67",
+        "result": 1,
+        "start": 781777102964416,
+        "end": 781777103057416
+      },
+      {
+        "kind": "NX",
+        "key": "history:24",
+        "value": "67",
+        "result": "OK",
+        "start": 781777103058208,
+        "end": 781777103154250
+      },
+      {
+        "kind": "SET",
+        "key": "history:24",
+        "value": "67",
+        "result": "OK",
+        "start": 781777103154875,
+        "end": 781777103235166
+      }
+    ],
+    [
+      {
+        "kind": "DEL",
+        "key": "history:25",
+        "value": "69",
+        "result": 1,
+        "start": 781777103683125,
+        "end": 781777103812833
+      },
+      {
+        "kind": "NX",
+        "key": "history:25",
+        "value": "69",
+        "result": "OK",
+        "start": 781777103813791,
+        "end": 781777103918750
+      },
+      {
+        "kind": "DEL",
+        "key": "history:25",
+        "value": "69",
+        "result": 0,
+        "start": 781777103919333,
+        "end": 781777103994708
+      },
+      {
+        "kind": "NX",
+        "key": "history:25",
+        "value": "59",
+        "result": "OK",
+        "start": 781777103656916,
+        "end": 781777103800125
+      },
+      {
+        "kind": "GET",
+        "key": "history:25",
+        "value": "59",
+        "result": null,
+        "start": 781777103801208,
+        "end": 781777103892875
+      },
+      {
+        "kind": "DEL",
+        "key": "history:25",
+        "value": "59",
+        "result": 1,
+        "start": 781777103893625,
+        "end": 781777103967125
+      },
+      {
+        "kind": "DEL",
+        "key": "history:25",
+        "value": "94",
+        "result": 0,
+        "start": 781777103666541,
+        "end": 781777103754458
+      },
+      {
+        "kind": "DEL",
+        "key": "history:25",
+        "value": "94",
+        "result": 0,
+        "start": 781777103755083,
+        "end": 781777103845208
+      },
+      {
+        "kind": "INCR",
+        "key": "history:25",
+        "value": "94",
+        "result": 70,
+        "start": 781777103845875,
+        "end": 781777103933708
+      }
+    ],
+    [
+      {
+        "kind": "DEL",
+        "key": "history:26",
+        "value": "49",
+        "result": 0,
+        "start": 781777104390666,
+        "end": 781777104494875
+      },
+      {
+        "kind": "INCR",
+        "key": "history:26",
+        "value": "49",
+        "result": 13,
+        "start": 781777104495416,
+        "end": 781777104582125
+      },
+      {
+        "kind": "NX",
+        "key": "history:26",
+        "value": "49",
+        "result": null,
+        "start": 781777104582666,
+        "end": 781777104666125
+      },
+      {
+        "kind": "DEL",
+        "key": "history:26",
+        "value": "24",
+        "result": 0,
+        "start": 781777104417916,
+        "end": 781777104517000
+      },
+      {
+        "kind": "INCR",
+        "key": "history:26",
+        "value": "24",
+        "result": 14,
+        "start": 781777104517500,
+        "end": 781777104605250
+      },
+      {
+        "kind": "GET",
+        "key": "history:26",
+        "value": "24",
+        "result": "14",
+        "start": 781777104605750,
+        "end": 781777104687250
+      },
+      {
+        "kind": "DEL",
+        "key": "history:26",
+        "value": "12",
+        "result": 0,
+        "start": 781777104376208,
+        "end": 781777104474250
+      },
+      {
+        "kind": "NX",
+        "key": "history:26",
+        "value": "12",
+        "result": "OK",
+        "start": 781777104475041,
+        "end": 781777104567583
+      },
+      {
+        "kind": "GET",
+        "key": "history:26",
+        "value": "12",
+        "result": "14",
+        "start": 781777104568375,
+        "end": 781777104645875
+      }
+    ],
+    [
+      {
+        "kind": "NX",
+        "key": "history:27",
+        "value": "58",
+        "result": null,
+        "start": 781777105097958,
+        "end": 781777105190250
+      },
+      {
+        "kind": "SET",
+        "key": "history:27",
+        "value": "58",
+        "result": "OK",
+        "start": 781777105190916,
+        "end": 781777105286875
+      },
+      {
+        "kind": "INCR",
+        "key": "history:27",
+        "value": "58",
+        "result": 60,
+        "start": 781777105287458,
+        "end": 781777105376041
+      },
+      {
+        "kind": "DEL",
+        "key": "history:27",
+        "value": "18",
+        "result": 1,
+        "start": 781777105091500,
+        "end": 781777105201958
+      },
+      {
+        "kind": "NX",
+        "key": "history:27",
+        "value": "18",
+        "result": null,
+        "start": 781777105202458,
+        "end": 781777105305208
+      },
+      {
+        "kind": "DEL",
+        "key": "history:27",
+        "value": "18",
+        "result": 1,
+        "start": 781777105305875,
+        "end": 781777105415208
+      },
+      {
+        "kind": "INCR",
+        "key": "history:27",
+        "value": "75",
+        "result": 1,
+        "start": 781777105063583,
+        "end": 781777105157833
+      },
+      {
+        "kind": "DEL",
+        "key": "history:27",
+        "value": "75",
+        "result": 0,
+        "start": 781777105158333,
+        "end": 781777105241416
+      },
+      {
+        "kind": "INCR",
+        "key": "history:27",
+        "value": "75",
+        "result": 59,
+        "start": 781777105241958,
+        "end": 781777105320333
+      }
+    ],
+    [
+      {
+        "kind": "INCR",
+        "key": "history:28",
+        "value": "22",
+        "result": 1,
+        "start": 781777105848375,
+        "end": 781777105952041
+      },
+      {
+        "kind": "INCR",
+        "key": "history:28",
+        "value": "22",
+        "result": 19,
+        "start": 781777105952750,
+        "end": 781777106034208
+      },
+      {
+        "kind": "NX",
+        "key": "history:28",
+        "value": "22",
+        "result": "OK",
+        "start": 781777106034666,
+        "end": 781777106125666
+      },
+      {
+        "kind": "SET",
+        "key": "history:28",
+        "value": "18",
+        "result": "OK",
+        "start": 781777105862000,
+        "end": 781777105990833
+      },
+      {
+        "kind": "DEL",
+        "key": "history:28",
+        "value": "18",
+        "result": 1,
+        "start": 781777105991541,
+        "end": 781777106076500
+      },
+      {
+        "kind": "GET",
+        "key": "history:28",
+        "value": "18",
+        "result": "22",
+        "start": 781777106077041,
+        "end": 781777106166375
+      },
+      {
+        "kind": "INCR",
+        "key": "history:28",
+        "value": "89",
+        "result": 2,
+        "start": 781777105874458,
+        "end": 781777105978791
+      },
+      {
+        "kind": "GET",
+        "key": "history:28",
+        "value": "89",
+        "result": "19",
+        "start": 781777105979333,
+        "end": 781777106068875
+      },
+      {
+        "kind": "INCR",
+        "key": "history:28",
+        "value": "89",
+        "result": 23,
+        "start": 781777106069708,
+        "end": 781777106180958
+      }
+    ],
+    [
+      {
+        "kind": "INCR",
+        "key": "history:29",
+        "value": "62",
+        "result": 42,
+        "start": 781777106541416,
+        "end": 781777106651708
+      },
+      {
+        "kind": "DEL",
+        "key": "history:29",
+        "value": "62",
+        "result": 1,
+        "start": 781777106652250,
+        "end": 781777106741375
+      },
+      {
+        "kind": "DEL",
+        "key": "history:29",
+        "value": "62",
+        "result": 1,
+        "start": 781777106741958,
+        "end": 781777106834958
+      },
+      {
+        "kind": "GET",
+        "key": "history:29",
+        "value": "82",
+        "result": "41",
+        "start": 781777106554625,
+        "end": 781777106636750
+      },
+      {
+        "kind": "SET",
+        "key": "history:29",
+        "value": "82",
+        "result": "OK",
+        "start": 781777106637375,
+        "end": 781777106725041
+      },
+      {
+        "kind": "GET",
+        "key": "history:29",
+        "value": "82",
+        "result": "41",
+        "start": 781777106725833,
+        "end": 781777106868708
+      },
+      {
+        "kind": "NX",
+        "key": "history:29",
+        "value": "41",
+        "result": "OK",
+        "start": 781777106517250,
+        "end": 781777106624291
+      },
+      {
+        "kind": "DEL",
+        "key": "history:29",
+        "value": "41",
+        "result": 1,
+        "start": 781777106625000,
+        "end": 781777106711916
+      },
+      {
+        "kind": "SET",
+        "key": "history:29",
+        "value": "41",
+        "result": "OK",
+        "start": 781777106712500,
+        "end": 781777106810166
+      }
+    ],
+    [
+      {
+        "kind": "DEL",
+        "key": "history:30",
+        "value": "32",
+        "result": 0,
+        "start": 781777107241000,
+        "end": 781777107326666
+      },
+      {
+        "kind": "INCR",
+        "key": "history:30",
+        "value": "32",
+        "result": 1,
+        "start": 781777107327166,
+        "end": 781777107429875
+      },
+      {
+        "kind": "INCR",
+        "key": "history:30",
+        "value": "32",
+        "result": 2,
+        "start": 781777107430333,
+        "end": 781777107513375
+      },
+      {
+        "kind": "GET",
+        "key": "history:30",
+        "value": "70",
+        "result": null,
+        "start": 781777107231916,
+        "end": 781777107340791
+      },
+      {
+        "kind": "GET",
+        "key": "history:30",
+        "value": "70",
+        "result": "1",
+        "start": 781777107341375,
+        "end": 781777107440125
+      },
+      {
+        "kind": "GET",
+        "key": "history:30",
+        "value": "70",
+        "result": "2",
+        "start": 781777107440708,
+        "end": 781777107519500
+      },
+      {
+        "kind": "DEL",
+        "key": "history:30",
+        "value": "21",
+        "result": 0,
+        "start": 781777107219416,
+        "end": 781777107313916
+      },
+      {
+        "kind": "DEL",
+        "key": "history:30",
+        "value": "21",
+        "result": 0,
+        "start": 781777107314541,
+        "end": 781777107401500
+      },
+      {
+        "kind": "GET",
+        "key": "history:30",
+        "value": "21",
+        "result": "1",
+        "start": 781777107402083,
+        "end": 781777107483125
+      }
+    ],
+    [
+      {
+        "kind": "NX",
+        "key": "history:31",
+        "value": "52",
+        "result": "OK",
+        "start": 781777107911958,
+        "end": 781777108051500
+      },
+      {
+        "kind": "DEL",
+        "key": "history:31",
+        "value": "52",
+        "result": 0,
+        "start": 781777108052250,
+        "end": 781777108127375
+      },
+      {
+        "kind": "INCR",
+        "key": "history:31",
+        "value": "52",
+        "result": 44,
+        "start": 781777108127833,
+        "end": 781777108235500
+      },
+      {
+        "kind": "INCR",
+        "key": "history:31",
+        "value": "43",
+        "result": 1,
+        "start": 781777107918000,
+        "end": 781777108016208
+      },
+      {
+        "kind": "GET",
+        "key": "history:31",
+        "value": "43",
+        "result": "52",
+        "start": 781777108020458,
+        "end": 781777108102875
+      },
+      {
+        "kind": "NX",
+        "key": "history:31",
+        "value": "43",
+        "result": "OK",
+        "start": 781777108103750,
+        "end": 781777108208500
+      },
+      {
+        "kind": "DEL",
+        "key": "history:31",
+        "value": "19",
+        "result": 1,
+        "start": 781777107930791,
+        "end": 781777108042916
+      },
+      {
+        "kind": "DEL",
+        "key": "history:31",
+        "value": "19",
+        "result": 1,
+        "start": 781777108043500,
+        "end": 781777108119958
+      },
+      {
+        "kind": "GET",
+        "key": "history:31",
+        "value": "19",
+        "result": null,
+        "start": 781777108120458,
+        "end": 781777108201208
+      }
+    ],
+    [
+      {
+        "kind": "GET",
+        "key": "history:32",
+        "value": "36",
+        "result": null,
+        "start": 781777108634625,
+        "end": 781777108727458
+      },
+      {
+        "kind": "INCR",
+        "key": "history:32",
+        "value": "36",
+        "result": 39,
+        "start": 781777108728250,
+        "end": 781777108835250
+      },
+      {
+        "kind": "DEL",
+        "key": "history:32",
+        "value": "36",
+        "result": 0,
+        "start": 781777108835875,
+        "end": 781777108922791
+      },
+      {
+        "kind": "SET",
+        "key": "history:32",
+        "value": "38",
+        "result": "OK",
+        "start": 781777108662375,
+        "end": 781777108744416
+      },
+      {
+        "kind": "DEL",
+        "key": "history:32",
+        "value": "38",
+        "result": 0,
+        "start": 781777108745166,
+        "end": 781777108853333
+      },
+      {
+        "kind": "INCR",
+        "key": "history:32",
+        "value": "38",
+        "result": 1,
+        "start": 781777108853875,
+        "end": 781777108955333
+      },
+      {
+        "kind": "GET",
+        "key": "history:32",
+        "value": "96",
+        "result": null,
+        "start": 781777108625791,
+        "end": 781777108753708
+      },
+      {
+        "kind": "DEL",
+        "key": "history:32",
+        "value": "96",
+        "result": 1,
+        "start": 781777108754375,
+        "end": 781777108844166
+      },
+      {
+        "kind": "DEL",
+        "key": "history:32",
+        "value": "96",
+        "result": 0,
+        "start": 781777108844791,
+        "end": 781777108931750
+      }
+    ],
+    [
+      {
+        "kind": "NX",
+        "key": "history:33",
+        "value": "26",
+        "result": "OK",
+        "start": 781777111895625,
+        "end": 781777112079416
+      },
+      {
+        "kind": "SET",
+        "key": "history:33",
+        "value": "26",
+        "result": "OK",
+        "start": 781777112080500,
+        "end": 781777112175666
+      },
+      {
+        "kind": "DEL",
+        "key": "history:33",
+        "value": "26",
+        "result": 1,
+        "start": 781777112176333,
+        "end": 781777112261041
+      },
+      {
+        "kind": "DEL",
+        "key": "history:33",
+        "value": "53",
+        "result": 0,
+        "start": 781777111875541,
+        "end": 781777112033083
+      },
+      {
+        "kind": "SET",
+        "key": "history:33",
+        "value": "53",
+        "result": "OK",
+        "start": 781777112034041,
+        "end": 781777112155750
+      },
+      {
+        "kind": "GET",
+        "key": "history:33",
+        "value": "53",
+        "result": "27",
+        "start": 781777112157083,
+        "end": 781777112280833
+      },
+      {
+        "kind": "GET",
+        "key": "history:33",
+        "value": "76",
+        "result": null,
+        "start": 781777109307000,
+        "end": 781777112019583
+      },
+      {
+        "kind": "NX",
+        "key": "history:33",
+        "value": "76",
+        "result": null,
+        "start": 781777112020750,
+        "end": 781777112122708
+      },
+      {
+        "kind": "INCR",
+        "key": "history:33",
+        "value": "76",
+        "result": 27,
+        "start": 781777112123666,
+        "end": 781777112235916
+      }
+    ],
+    [
+      {
+        "kind": "DEL",
+        "key": "history:34",
+        "value": "22",
+        "result": 1,
+        "start": 781777112756291,
+        "end": 781777112870750
+      },
+      {
+        "kind": "GET",
+        "key": "history:34",
+        "value": "22",
+        "result": "84",
+        "start": 781777112871458,
+        "end": 781777112973875
+      },
+      {
+        "kind": "INCR",
+        "key": "history:34",
+        "value": "22",
+        "result": 1,
+        "start": 781777112975625,
+        "end": 781777113079375
+      },
+      {
+        "kind": "SET",
+        "key": "history:34",
+        "value": "41",
+        "result": "OK",
+        "start": 781777112746541,
+        "end": 781777112856125
+      },
+      {
+        "kind": "INCR",
+        "key": "history:34",
+        "value": "41",
+        "result": 84,
+        "start": 781777112857000,
+        "end": 781777112954750
+      },
+      {
+        "kind": "GET",
+        "key": "history:34",
+        "value": "41",
+        "result": "84",
+        "start": 781777112955250,
+        "end": 781777113042875
+      },
+      {
+        "kind": "NX",
+        "key": "history:34",
+        "value": "83",
+        "result": "OK",
+        "start": 781777112774291,
+        "end": 781777112880750
+      },
+      {
+        "kind": "GET",
+        "key": "history:34",
+        "value": "83",
+        "result": "84",
+        "start": 781777112881625,
+        "end": 781777112964791
+      },
+      {
+        "kind": "DEL",
+        "key": "history:34",
+        "value": "83",
+        "result": 1,
+        "start": 781777112965458,
+        "end": 781777113067500
+      }
+    ],
+    [
+      {
+        "kind": "GET",
+        "key": "history:35",
+        "value": "33",
+        "result": "1",
+        "start": 781777113485625,
+        "end": 781777113581375
+      },
+      {
+        "kind": "INCR",
+        "key": "history:35",
+        "value": "33",
+        "result": 2,
+        "start": 781777113582250,
+        "end": 781777113678416
+      },
+      {
+        "kind": "SET",
+        "key": "history:35",
+        "value": "33",
+        "result": "OK",
+        "start": 781777113678958,
+        "end": 781777113805666
+      },
+      {
+        "kind": "INCR",
+        "key": "history:35",
+        "value": "2",
+        "result": 1,
+        "start": 781777113455125,
+        "end": 781777113548708
+      },
+      {
+        "kind": "GET",
+        "key": "history:35",
+        "value": "2",
+        "result": "1",
+        "start": 781777113549625,
+        "end": 781777113648041
+      },
+      {
+        "kind": "DEL",
+        "key": "history:35",
+        "value": "2",
+        "result": 1,
+        "start": 781777113648833,
+        "end": 781777113787625
+      },
+      {
+        "kind": "DEL",
+        "key": "history:35",
+        "value": "93",
+        "result": 0,
+        "start": 781777113444416,
+        "end": 781777113529916
+      },
+      {
+        "kind": "NX",
+        "key": "history:35",
+        "value": "93",
+        "result": null,
+        "start": 781777113530625,
+        "end": 781777113612708
+      },
+      {
+        "kind": "NX",
+        "key": "history:35",
+        "value": "93",
+        "result": null,
+        "start": 781777113613708,
+        "end": 781777113721416
+      }
+    ],
+    [
+      {
+        "kind": "GET",
+        "key": "history:36",
+        "value": "9",
+        "result": null,
+        "start": 781777114168916,
+        "end": 781777114261708
+      },
+      {
+        "kind": "SET",
+        "key": "history:36",
+        "value": "9",
+        "result": "OK",
+        "start": 781777114262666,
+        "end": 781777114358958
+      },
+      {
+        "kind": "DEL",
+        "key": "history:36",
+        "value": "9",
+        "result": 0,
+        "start": 781777114359458,
+        "end": 781777114436958
+      },
+      {
+        "kind": "GET",
+        "key": "history:36",
+        "value": "7",
+        "result": null,
+        "start": 781777114199750,
+        "end": 781777114291500
+      },
+      {
+        "kind": "NX",
+        "key": "history:36",
+        "value": "7",
+        "result": null,
+        "start": 781777114292250,
+        "end": 781777114386583
+      },
+      {
+        "kind": "INCR",
+        "key": "history:36",
+        "value": "7",
+        "result": 1,
+        "start": 781777114387208,
+        "end": 781777114487166
+      },
+      {
+        "kind": "DEL",
+        "key": "history:36",
+        "value": "95",
+        "result": 0,
+        "start": 781777114152708,
+        "end": 781777114247583
+      },
+      {
+        "kind": "SET",
+        "key": "history:36",
+        "value": "95",
+        "result": "OK",
+        "start": 781777114248416,
+        "end": 781777114341000
+      },
+      {
+        "kind": "DEL",
+        "key": "history:36",
+        "value": "95",
+        "result": 1,
+        "start": 781777114341750,
+        "end": 781777114419916
+      }
+    ],
+    [
+      {
+        "kind": "DEL",
+        "key": "history:37",
+        "value": "22",
+        "result": 0,
+        "start": 781777114847666,
+        "end": 781777114940916
+      },
+      {
+        "kind": "DEL",
+        "key": "history:37",
+        "value": "22",
+        "result": 1,
+        "start": 781777114941708,
+        "end": 781777115023958
+      },
+      {
+        "kind": "INCR",
+        "key": "history:37",
+        "value": "22",
+        "result": 1,
+        "start": 781777115024541,
+        "end": 781777115116083
+      },
+      {
+        "kind": "GET",
+        "key": "history:37",
+        "value": "86",
+        "result": "27",
+        "start": 781777114827625,
+        "end": 781777114986791
+      },
+      {
+        "kind": "DEL",
+        "key": "history:37",
+        "value": "86",
+        "result": 0,
+        "start": 781777114987416,
+        "end": 781777115071375
+      },
+      {
+        "kind": "DEL",
+        "key": "history:37",
+        "value": "86",
+        "result": 1,
+        "start": 781777115072000,
+        "end": 781777115185041
+      },
+      {
+        "kind": "NX",
+        "key": "history:37",
+        "value": "27",
+        "result": "OK",
+        "start": 781777114813125,
+        "end": 781777114968750
+      },
+      {
+        "kind": "DEL",
+        "key": "history:37",
+        "value": "27",
+        "result": 0,
+        "start": 781777114969833,
+        "end": 781777115045875
+      },
+      {
+        "kind": "SET",
+        "key": "history:37",
+        "value": "27",
+        "result": "OK",
+        "start": 781777115046625,
+        "end": 781777115147125
+      }
+    ],
+    [
+      {
+        "kind": "INCR",
+        "key": "history:38",
+        "value": "56",
+        "result": 1,
+        "start": 781777115556166,
+        "end": 781777115649416
+      },
+      {
+        "kind": "NX",
+        "key": "history:38",
+        "value": "56",
+        "result": null,
+        "start": 781777115650125,
+        "end": 781777115736125
+      },
+      {
+        "kind": "SET",
+        "key": "history:38",
+        "value": "56",
+        "result": "OK",
+        "start": 781777115736791,
+        "end": 781777115827750
+      },
+      {
+        "kind": "SET",
+        "key": "history:38",
+        "value": "79",
+        "result": "OK",
+        "start": 781777115574583,
+        "end": 781777115671583
+      },
+      {
+        "kind": "DEL",
+        "key": "history:38",
+        "value": "79",
+        "result": 1,
+        "start": 781777115672166,
+        "end": 781777115749833
+      },
+      {
+        "kind": "SET",
+        "key": "history:38",
+        "value": "79",
+        "result": "OK",
+        "start": 781777115750208,
+        "end": 781777115893916
+      },
+      {
+        "kind": "DEL",
+        "key": "history:38",
+        "value": "11",
+        "result": 1,
+        "start": 781777115550875,
+        "end": 781777115686291
+      },
+      {
+        "kind": "GET",
+        "key": "history:38",
+        "value": "11",
+        "result": null,
+        "start": 781777115687000,
+        "end": 781777115765083
+      },
+      {
+        "kind": "INCR",
+        "key": "history:38",
+        "value": "11",
+        "result": 80,
+        "start": 781777115765666,
+        "end": 781777115869458
+      }
+    ],
+    [
+      {
+        "kind": "NX",
+        "key": "history:39",
+        "value": "36",
+        "result": "OK",
+        "start": 781777116233333,
+        "end": 781777116347750
+      },
+      {
+        "kind": "SET",
+        "key": "history:39",
+        "value": "36",
+        "result": "OK",
+        "start": 781777116348625,
+        "end": 781777116435458
+      },
+      {
+        "kind": "DEL",
+        "key": "history:39",
+        "value": "36",
+        "result": 1,
+        "start": 781777116436041,
+        "end": 781777116523750
+      },
+      {
+        "kind": "DEL",
+        "key": "history:39",
+        "value": "74",
+        "result": 1,
+        "start": 781777116246791,
+        "end": 781777116365291
+      },
+      {
+        "kind": "GET",
+        "key": "history:39",
+        "value": "74",
+        "result": "36",
+        "start": 781777116365875,
+        "end": 781777116465666
+      },
+      {
+        "kind": "INCR",
+        "key": "history:39",
+        "value": "74",
+        "result": 1,
+        "start": 781777116466291,
+        "end": 781777116553833
+      },
+      {
+        "kind": "GET",
+        "key": "history:39",
+        "value": "83",
+        "result": null,
+        "start": 781777116227750,
+        "end": 781777116370916
+      },
+      {
+        "kind": "NX",
+        "key": "history:39",
+        "value": "83",
+        "result": null,
+        "start": 781777116371708,
+        "end": 781777116495250
+      },
+      {
+        "kind": "DEL",
+        "key": "history:39",
+        "value": "83",
+        "result": 1,
+        "start": 781777116495916,
+        "end": 781777116616250
+      }
+    ],
+    [
+      {
+        "kind": "DEL",
+        "key": "history:40",
+        "value": "30",
+        "result": 0,
+        "start": 781777116988791,
+        "end": 781777117082041
+      },
+      {
+        "kind": "NX",
+        "key": "history:40",
+        "value": "30",
+        "result": null,
+        "start": 781777117082833,
+        "end": 781777117181458
+      },
+      {
+        "kind": "DEL",
+        "key": "history:40",
+        "value": "30",
+        "result": 0,
+        "start": 781777117182000,
+        "end": 781777117255291
+      },
+      {
+        "kind": "INCR",
+        "key": "history:40",
+        "value": "21",
+        "result": 1,
+        "start": 781777117015875,
+        "end": 781777117113916
+      },
+      {
+        "kind": "NX",
+        "key": "history:40",
+        "value": "21",
+        "result": null,
+        "start": 781777117114541,
+        "end": 781777117197750
+      },
+      {
+        "kind": "NX",
+        "key": "history:40",
+        "value": "21",
+        "result": "OK",
+        "start": 781777117198500,
+        "end": 781777117291625
+      },
+      {
+        "kind": "NX",
+        "key": "history:40",
+        "value": "27",
+        "result": null,
+        "start": 781777116979875,
+        "end": 781777117125708
+      },
+      {
+        "kind": "DEL",
+        "key": "history:40",
+        "value": "27",
+        "result": 1,
+        "start": 781777117126333,
+        "end": 781777117213000
+      },
+      {
+        "kind": "NX",
+        "key": "history:40",
+        "value": "27",
+        "result": null,
+        "start": 781777117213541,
+        "end": 781777117315208
+      }
+    ],
+    [
+      {
+        "kind": "DEL",
+        "key": "history:41",
+        "value": "79",
+        "result": 0,
+        "start": 781777117646083,
+        "end": 781777117740625
+      },
+      {
+        "kind": "GET",
+        "key": "history:41",
+        "value": "79",
+        "result": "21",
+        "start": 781777117741458,
+        "end": 781777117838833
+      },
+      {
+        "kind": "DEL",
+        "key": "history:41",
+        "value": "79",
+        "result": 1,
+        "start": 781777117839416,
+        "end": 781777117921041
+      },
+      {
+        "kind": "SET",
+        "key": "history:41",
+        "value": "21",
+        "result": "OK",
+        "start": 781777117663208,
+        "end": 781777117775166
+      },
+      {
+        "kind": "INCR",
+        "key": "history:41",
+        "value": "21",
+        "result": 1,
+        "start": 781777117775916,
+        "end": 781777117868708
+      },
+      {
+        "kind": "SET",
+        "key": "history:41",
+        "value": "21",
+        "result": "OK",
+        "start": 781777117869208,
+        "end": 781777117955500
+      },
+      {
+        "kind": "NX",
+        "key": "history:41",
+        "value": "16",
+        "result": "OK",
+        "start": 781777117635625,
+        "end": 781777117761208
+      },
+      {
+        "kind": "DEL",
+        "key": "history:41",
+        "value": "16",
+        "result": 1,
+        "start": 781777117761833,
+        "end": 781777117846041
+      },
+      {
+        "kind": "NX",
+        "key": "history:41",
+        "value": "16",
+        "result": "OK",
+        "start": 781777117846791,
+        "end": 781777117939666
+      }
+    ],
+    [
+      {
+        "kind": "SET",
+        "key": "history:42",
+        "value": "47",
+        "result": "OK",
+        "start": 781777118418250,
+        "end": 781777118518041
+      },
+      {
+        "kind": "INCR",
+        "key": "history:42",
+        "value": "47",
+        "result": 58,
+        "start": 781777118518916,
+        "end": 781777118606208
+      },
+      {
+        "kind": "SET",
+        "key": "history:42",
+        "value": "47",
+        "result": "OK",
+        "start": 781777118606791,
+        "end": 781777118695250
+      },
+      {
+        "kind": "NX",
+        "key": "history:42",
+        "value": "57",
+        "result": null,
+        "start": 781777118400666,
+        "end": 781777118504416
+      },
+      {
+        "kind": "SET",
+        "key": "history:42",
+        "value": "57",
+        "result": "OK",
+        "start": 781777118505291,
+        "end": 781777118591416
+      },
+      {
+        "kind": "GET",
+        "key": "history:42",
+        "value": "57",
+        "result": "58",
+        "start": 781777118592250,
+        "end": 781777118676708
+      },
+      {
+        "kind": "INCR",
+        "key": "history:42",
+        "value": "38",
+        "result": 1,
+        "start": 781777118377041,
+        "end": 781777118534125
+      },
+      {
+        "kind": "NX",
+        "key": "history:42",
+        "value": "38",
+        "result": null,
+        "start": 781777118535125,
+        "end": 781777118634333
+      },
+      {
+        "kind": "GET",
+        "key": "history:42",
+        "value": "38",
+        "result": "47",
+        "start": 781777118634875,
+        "end": 781777118717166
+      }
+    ],
+    [
+      {
+        "kind": "INCR",
+        "key": "history:43",
+        "value": "15",
+        "result": 87,
+        "start": 781777119121333,
+        "end": 781777119239833
+      },
+      {
+        "kind": "SET",
+        "key": "history:43",
+        "value": "15",
+        "result": "OK",
+        "start": 781777119240375,
+        "end": 781777119341916
+      },
+      {
+        "kind": "GET",
+        "key": "history:43",
+        "value": "15",
+        "result": "86",
+        "start": 781777119342500,
+        "end": 781777119426333
+      },
+      {
+        "kind": "SET",
+        "key": "history:43",
+        "value": "86",
+        "result": "OK",
+        "start": 781777119141333,
+        "end": 781777119253708
+      },
+      {
+        "kind": "NX",
+        "key": "history:43",
+        "value": "86",
+        "result": null,
+        "start": 781777119254458,
+        "end": 781777119356583
+      },
+      {
+        "kind": "SET",
+        "key": "history:43",
+        "value": "86",
+        "result": "OK",
+        "start": 781777119357166,
+        "end": 781777119449666
+      },
+      {
+        "kind": "SET",
+        "key": "history:43",
+        "value": "86",
+        "result": "OK",
+        "start": 781777119109375,
+        "end": 781777119206833
+      },
+      {
+        "kind": "GET",
+        "key": "history:43",
+        "value": "86",
+        "result": "86",
+        "start": 781777119209541,
+        "end": 781777119296416
+      },
+      {
+        "kind": "SET",
+        "key": "history:43",
+        "value": "86",
+        "result": "OK",
+        "start": 781777119297000,
+        "end": 781777119384000
+      }
+    ],
+    [
+      {
+        "kind": "GET",
+        "key": "history:44",
+        "value": "49",
+        "result": "8",
+        "start": 781777119846458,
+        "end": 781777119965416
+      },
+      {
+        "kind": "INCR",
+        "key": "history:44",
+        "value": "49",
+        "result": 10,
+        "start": 781777119965916,
+        "end": 781777120074041
+      },
+      {
+        "kind": "INCR",
+        "key": "history:44",
+        "value": "49",
+        "result": 1,
+        "start": 781777120074625,
+        "end": 781777120165791
+      },
+      {
+        "kind": "NX",
+        "key": "history:44",
+        "value": "8",
+        "result": "OK",
+        "start": 781777119839875,
+        "end": 781777119932750
+      },
+      {
+        "kind": "INCR",
+        "key": "history:44",
+        "value": "8",
+        "result": 9,
+        "start": 781777119933666,
+        "end": 781777120032458
+      },
+      {
+        "kind": "DEL",
+        "key": "history:44",
+        "value": "8",
+        "result": 1,
+        "start": 781777120033166,
+        "end": 781777120123708
+      },
+      {
+        "kind": "NX",
+        "key": "history:44",
+        "value": "97",
+        "result": null,
+        "start": 781777119860458,
+        "end": 781777119951333
+      },
+      {
+        "kind": "NX",
+        "key": "history:44",
+        "value": "97",
+        "result": null,
+        "start": 781777119951958,
+        "end": 781777120038958
+      },
+      {
+        "kind": "GET",
+        "key": "history:44",
+        "value": "97",
+        "result": null,
+        "start": 781777120039541,
+        "end": 781777120131291
+      }
+    ],
+    [
+      {
+        "kind": "SET",
+        "key": "history:45",
+        "value": "31",
+        "result": "OK",
+        "start": 781777120546208,
+        "end": 781777120658958
+      },
+      {
+        "kind": "DEL",
+        "key": "history:45",
+        "value": "31",
+        "result": 1,
+        "start": 781777120659833,
+        "end": 781777120746500
+      },
+      {
+        "kind": "GET",
+        "key": "history:45",
+        "value": "31",
+        "result": null,
+        "start": 781777120747166,
+        "end": 781777120847708
+      },
+      {
+        "kind": "NX",
+        "key": "history:45",
+        "value": "80",
+        "result": null,
+        "start": 781777120559125,
+        "end": 781777120675375
+      },
+      {
+        "kind": "DEL",
+        "key": "history:45",
+        "value": "80",
+        "result": 0,
+        "start": 781777120676083,
+        "end": 781777120766291
+      },
+      {
+        "kind": "GET",
+        "key": "history:45",
+        "value": "80",
+        "result": null,
+        "start": 781777120766791,
+        "end": 781777120869500
+      },
+      {
+        "kind": "NX",
+        "key": "history:45",
+        "value": "76",
+        "result": "OK",
+        "start": 781777120519625,
+        "end": 781777120644916
+      },
+      {
+        "kind": "GET",
+        "key": "history:45",
+        "value": "76",
+        "result": "31",
+        "start": 781777120645708,
+        "end": 781777120738208
+      },
+      {
+        "kind": "DEL",
+        "key": "history:45",
+        "value": "76",
+        "result": 0,
+        "start": 781777120738833,
+        "end": 781777120828083
+      }
+    ],
+    [
+      {
+        "kind": "DEL",
+        "key": "history:46",
+        "value": "29",
+        "result": 1,
+        "start": 781777121360583,
+        "end": 781777121461208
+      },
+      {
+        "kind": "INCR",
+        "key": "history:46",
+        "value": "29",
+        "result": 2,
+        "start": 781777121461625,
+        "end": 781777121569125
+      },
+      {
+        "kind": "NX",
+        "key": "history:46",
+        "value": "29",
+        "result": null,
+        "start": 781777121569833,
+        "end": 781777121666541
+      },
+      {
+        "kind": "SET",
+        "key": "history:46",
+        "value": "65",
+        "result": "OK",
+        "start": 781777121342625,
+        "end": 781777121446916
+      },
+      {
+        "kind": "INCR",
+        "key": "history:46",
+        "value": "65",
+        "result": 1,
+        "start": 781777121447500,
+        "end": 781777121549750
+      },
+      {
+        "kind": "NX",
+        "key": "history:46",
+        "value": "65",
+        "result": null,
+        "start": 781777121553041,
+        "end": 781777121643208
+      },
+      {
+        "kind": "GET",
+        "key": "history:46",
+        "value": "88",
+        "result": null,
+        "start": 781777121327458,
+        "end": 781777121408541
+      },
+      {
+        "kind": "DEL",
+        "key": "history:46",
+        "value": "88",
+        "result": 0,
+        "start": 781777121409291,
+        "end": 781777121511250
+      },
+      {
+        "kind": "NX",
+        "key": "history:46",
+        "value": "88",
+        "result": null,
+        "start": 781777121512375,
+        "end": 781777121613250
+      }
+    ],
+    [
+      {
+        "kind": "DEL",
+        "key": "history:47",
+        "value": "35",
+        "result": 1,
+        "start": 781777122112625,
+        "end": 781777122226583
+      },
+      {
+        "kind": "GET",
+        "key": "history:47",
+        "value": "35",
+        "result": null,
+        "start": 781777122227208,
+        "end": 781777122310916
+      },
+      {
+        "kind": "INCR",
+        "key": "history:47",
+        "value": "35",
+        "result": 85,
+        "start": 781777122311625,
+        "end": 781777122405625
+      },
+      {
+        "kind": "NX",
+        "key": "history:47",
+        "value": "78",
+        "result": "OK",
+        "start": 781777122130333,
+        "end": 781777122253125
+      },
+      {
+        "kind": "NX",
+        "key": "history:47",
+        "value": "78",
+        "result": "OK",
+        "start": 781777122253708,
+        "end": 781777122354250
+      },
+      {
+        "kind": "SET",
+        "key": "history:47",
+        "value": "78",
+        "result": "OK",
+        "start": 781777122354833,
+        "end": 781777122451416
+      },
+      {
+        "kind": "SET",
+        "key": "history:47",
+        "value": "84",
+        "result": "OK",
+        "start": 781777122098958,
+        "end": 781777122209875
+      },
+      {
+        "kind": "DEL",
+        "key": "history:47",
+        "value": "84",
+        "result": 1,
+        "start": 781777122210583,
+        "end": 781777122294041
+      },
+      {
+        "kind": "SET",
+        "key": "history:47",
+        "value": "84",
+        "result": "OK",
+        "start": 781777122294875,
+        "end": 781777122369250
+      }
+    ],
+    [
+      {
+        "kind": "DEL",
+        "key": "history:48",
+        "value": "42",
+        "result": 1,
+        "start": 781777122900083,
+        "end": 781777123015833
+      },
+      {
+        "kind": "INCR",
+        "key": "history:48",
+        "value": "42",
+        "result": 1,
+        "start": 781777123016250,
+        "end": 781777123105375
+      },
+      {
+        "kind": "GET",
+        "key": "history:48",
+        "value": "42",
+        "result": "70",
+        "start": 781777123106000,
+        "end": 781777123202791
+      },
+      {
+        "kind": "NX",
+        "key": "history:48",
+        "value": "38",
+        "result": "OK",
+        "start": 781777122870875,
+        "end": 781777122974791
+      },
+      {
+        "kind": "SET",
+        "key": "history:48",
+        "value": "38",
+        "result": "OK",
+        "start": 781777122975500,
+        "end": 781777123060875
+      },
+      {
+        "kind": "INCR",
+        "key": "history:48",
+        "value": "38",
+        "result": 2,
+        "start": 781777123061541,
+        "end": 781777123146125
+      },
+      {
+        "kind": "NX",
+        "key": "history:48",
+        "value": "70",
+        "result": null,
+        "start": 781777122863750,
+        "end": 781777122991250
+      },
+      {
+        "kind": "DEL",
+        "key": "history:48",
+        "value": "70",
+        "result": 1,
+        "start": 781777122992208,
+        "end": 781777123078916
+      },
+      {
+        "kind": "SET",
+        "key": "history:48",
+        "value": "70",
+        "result": "OK",
+        "start": 781777123079375,
+        "end": 781777123188875
+      }
+    ],
+    [
+      {
+        "kind": "NX",
+        "key": "history:49",
+        "value": "85",
+        "result": "OK",
+        "start": 781777123661375,
+        "end": 781777123778083
+      },
+      {
+        "kind": "GET",
+        "key": "history:49",
+        "value": "85",
+        "result": "86",
+        "start": 781777123778833,
+        "end": 781777123865083
+      },
+      {
+        "kind": "SET",
+        "key": "history:49",
+        "value": "85",
+        "result": "OK",
+        "start": 781777123865583,
+        "end": 781777123956625
+      },
+      {
+        "kind": "INCR",
+        "key": "history:49",
+        "value": "34",
+        "result": 86,
+        "start": 781777123683250,
+        "end": 781777123785666
+      },
+      {
+        "kind": "DEL",
+        "key": "history:49",
+        "value": "34",
+        "result": 1,
+        "start": 781777123786375,
+        "end": 781777123879958
+      },
+      {
+        "kind": "INCR",
+        "key": "history:49",
+        "value": "34",
+        "result": 86,
+        "start": 781777123880541,
+        "end": 781777123999625
+      },
+      {
+        "kind": "NX",
+        "key": "history:49",
+        "value": "53",
+        "result": null,
+        "start": 781777123671583,
+        "end": 781777123801250
+      },
+      {
+        "kind": "DEL",
+        "key": "history:49",
+        "value": "53",
+        "result": 0,
+        "start": 781777123801833,
+        "end": 781777123902625
+      },
+      {
+        "kind": "INCR",
+        "key": "history:49",
+        "value": "53",
+        "result": 87,
+        "start": 781777123903166,
+        "end": 781777124017208
+      }
+    ],
+    [
+      {
+        "kind": "GET",
+        "key": "history:50",
+        "value": "28",
+        "result": null,
+        "start": 781777124356666,
+        "end": 781777124460666
+      },
+      {
+        "kind": "NX",
+        "key": "history:50",
+        "value": "28",
+        "result": "OK",
+        "start": 781777124461291,
+        "end": 781777124559416
+      },
+      {
+        "kind": "DEL",
+        "key": "history:50",
+        "value": "28",
+        "result": 1,
+        "start": 781777124560041,
+        "end": 781777124638791
+      },
+      {
+        "kind": "DEL",
+        "key": "history:50",
+        "value": "54",
+        "result": 1,
+        "start": 781777124372958,
+        "end": 781777124492750
+      },
+      {
+        "kind": "GET",
+        "key": "history:50",
+        "value": "54",
+        "result": "28",
+        "start": 781777124493333,
+        "end": 781777124578208
+      },
+      {
+        "kind": "DEL",
+        "key": "history:50",
+        "value": "54",
+        "result": 0,
+        "start": 781777124578708,
+        "end": 781777124676791
+      },
+      {
+        "kind": "INCR",
+        "key": "history:50",
+        "value": "22",
+        "result": 1,
+        "start": 781777124343625,
+        "end": 781777124475291
+      },
+      {
+        "kind": "NX",
+        "key": "history:50",
+        "value": "22",
+        "result": null,
+        "start": 781777124476125,
+        "end": 781777124566958
+      },
+      {
+        "kind": "DEL",
+        "key": "history:50",
+        "value": "22",
+        "result": 0,
+        "start": 781777124567375,
+        "end": 781777124694375
+      }
+    ],
+    [
+      {
+        "kind": "GET",
+        "key": "history:51",
+        "value": "6",
+        "result": null,
+        "start": 781777125105791,
+        "end": 781777125180291
+      },
+      {
+        "kind": "SET",
+        "key": "history:51",
+        "value": "6",
+        "result": "OK",
+        "start": 781777125180833,
+        "end": 781777125269375
+      },
+      {
+        "kind": "SET",
+        "key": "history:51",
+        "value": "6",
+        "result": "OK",
+        "start": 781777125269958,
+        "end": 781777125354708
+      },
+      {
+        "kind": "GET",
+        "key": "history:51",
+        "value": "81",
+        "result": null,
+        "start": 781777125075541,
+        "end": 781777125159750
+      },
+      {
+        "kind": "INCR",
+        "key": "history:51",
+        "value": "81",
+        "result": 1,
+        "start": 781777125160625,
+        "end": 781777125262833
+      },
+      {
+        "kind": "INCR",
+        "key": "history:51",
+        "value": "81",
+        "result": 43,
+        "start": 781777125263625,
+        "end": 781777125339000
+      },
+      {
+        "kind": "DEL",
+        "key": "history:51",
+        "value": "42",
+        "result": 0,
+        "start": 781777125083708,
+        "end": 781777125153333
+      },
+      {
+        "kind": "GET",
+        "key": "history:51",
+        "value": "42",
+        "result": null,
+        "start": 781777125153958,
+        "end": 781777125235791
+      },
+      {
+        "kind": "SET",
+        "key": "history:51",
+        "value": "42",
+        "result": "OK",
+        "start": 781777125236458,
+        "end": 781777125302625
+      }
+    ],
+    [
+      {
+        "kind": "NX",
+        "key": "history:52",
+        "value": "87",
+        "result": null,
+        "start": 781777125770166,
+        "end": 781777125851791
+      },
+      {
+        "kind": "GET",
+        "key": "history:52",
+        "value": "87",
+        "result": "1",
+        "start": 781777125852458,
+        "end": 781777125920916
+      },
+      {
+        "kind": "INCR",
+        "key": "history:52",
+        "value": "87",
+        "result": 60,
+        "start": 781777125921541,
+        "end": 781777125991625
+      },
+      {
+        "kind": "DEL",
+        "key": "history:52",
+        "value": "59",
+        "result": 1,
+        "start": 781777125798416,
+        "end": 781777125865083
+      },
+      {
+        "kind": "SET",
+        "key": "history:52",
+        "value": "59",
+        "result": "OK",
+        "start": 781777125865666,
+        "end": 781777125943000
+      },
+      {
+        "kind": "NX",
+        "key": "history:52",
+        "value": "59",
+        "result": null,
+        "start": 781777125943750,
+        "end": 781777126043250
+      },
+      {
+        "kind": "NX",
+        "key": "history:52",
+        "value": "61",
+        "result": "OK",
+        "start": 781777125753041,
+        "end": 781777125826125
+      },
+      {
+        "kind": "INCR",
+        "key": "history:52",
+        "value": "61",
+        "result": 1,
+        "start": 781777125826833,
+        "end": 781777125895458
+      },
+      {
+        "kind": "GET",
+        "key": "history:52",
+        "value": "61",
+        "result": "59",
+        "start": 781777125896375,
+        "end": 781777125966666
+      }
+    ],
+    [
+      {
+        "kind": "NX",
+        "key": "history:53",
+        "value": "55",
+        "result": "OK",
+        "start": 781777126412958,
+        "end": 781777126483375
+      },
+      {
+        "kind": "NX",
+        "key": "history:53",
+        "value": "55",
+        "result": null,
+        "start": 781777126484083,
+        "end": 781777126556541
+      },
+      {
+        "kind": "SET",
+        "key": "history:53",
+        "value": "55",
+        "result": "OK",
+        "start": 781777126557125,
+        "end": 781777126640666
+      },
+      {
+        "kind": "NX",
+        "key": "history:53",
+        "value": "83",
+        "result": null,
+        "start": 781777126407791,
+        "end": 781777126505333
+      },
+      {
+        "kind": "INCR",
+        "key": "history:53",
+        "value": "83",
+        "result": 71,
+        "start": 781777126506000,
+        "end": 781777126581375
+      },
+      {
+        "kind": "SET",
+        "key": "history:53",
+        "value": "83",
+        "result": "OK",
+        "start": 781777126581833,
+        "end": 781777126658166
+      },
+      {
+        "kind": "SET",
+        "key": "history:53",
+        "value": "70",
+        "result": "OK",
+        "start": 781777126427875,
+        "end": 781777126512666
+      },
+      {
+        "kind": "NX",
+        "key": "history:53",
+        "value": "70",
+        "result": null,
+        "start": 781777126513333,
+        "end": 781777126587583
+      },
+      {
+        "kind": "SET",
+        "key": "history:53",
+        "value": "70",
+        "result": "OK",
+        "start": 781777126597041,
+        "end": 781777126688041
+      }
+    ],
+    [
+      {
+        "kind": "SET",
+        "key": "history:54",
+        "value": "46",
+        "result": "OK",
+        "start": 781777127140458,
+        "end": 781777127208500
+      },
+      {
+        "kind": "GET",
+        "key": "history:54",
+        "value": "46",
+        "result": "63",
+        "start": 781777127209333,
+        "end": 781777127278541
+      },
+      {
+        "kind": "NX",
+        "key": "history:54",
+        "value": "46",
+        "result": null,
+        "start": 781777127279500,
+        "end": 781777127356791
+      },
+      {
+        "kind": "INCR",
+        "key": "history:54",
+        "value": "99",
+        "result": 63,
+        "start": 781777127153833,
+        "end": 781777127253208
+      },
+      {
+        "kind": "DEL",
+        "key": "history:54",
+        "value": "99",
+        "result": 1,
+        "start": 781777127254041,
+        "end": 781777127364875
+      },
+      {
+        "kind": "GET",
+        "key": "history:54",
+        "value": "99",
+        "result": null,
+        "start": 781777127365458,
+        "end": 781777127419500
+      },
+      {
+        "kind": "SET",
+        "key": "history:54",
+        "value": "62",
+        "result": "OK",
+        "start": 781777127133500,
+        "end": 781777127234791
+      },
+      {
+        "kind": "INCR",
+        "key": "history:54",
+        "value": "62",
+        "result": 64,
+        "start": 781777127235375,
+        "end": 781777127344000
+      },
+      {
+        "kind": "INCR",
+        "key": "history:54",
+        "value": "62",
+        "result": 1,
+        "start": 781777127344708,
+        "end": 781777127453041
+      }
+    ],
+    [
+      {
+        "kind": "GET",
+        "key": "history:55",
+        "value": "63",
+        "result": "74",
+        "start": 781777127786916,
+        "end": 781777127859291
+      },
+      {
+        "kind": "DEL",
+        "key": "history:55",
+        "value": "63",
+        "result": 1,
+        "start": 781777127860166,
+        "end": 781777127943750
+      },
+      {
+        "kind": "INCR",
+        "key": "history:55",
+        "value": "63",
+        "result": 1,
+        "start": 781777127944416,
+        "end": 781777128027375
+      },
+      {
+        "kind": "GET",
+        "key": "history:55",
+        "value": "90",
+        "result": null,
+        "start": 781777127763416,
+        "end": 781777127834791
+      },
+      {
+        "kind": "NX",
+        "key": "history:55",
+        "value": "90",
+        "result": null,
+        "start": 781777127835458,
+        "end": 781777127911166
+      },
+      {
+        "kind": "GET",
+        "key": "history:55",
+        "value": "90",
+        "result": null,
+        "start": 781777127911708,
+        "end": 781777127970875
+      },
+      {
+        "kind": "NX",
+        "key": "history:55",
+        "value": "74",
+        "result": "OK",
+        "start": 781777127751708,
+        "end": 781777127850791
+      },
+      {
+        "kind": "SET",
+        "key": "history:55",
+        "value": "74",
+        "result": "OK",
+        "start": 781777127851541,
+        "end": 781777127929250
+      },
+      {
+        "kind": "GET",
+        "key": "history:55",
+        "value": "74",
+        "result": null,
+        "start": 781777127930291,
+        "end": 781777127993333
+      }
+    ],
+    [
+      {
+        "kind": "SET",
+        "key": "history:56",
+        "value": "91",
+        "result": "OK",
+        "start": 781777128488875,
+        "end": 781777128563541
+      },
+      {
+        "kind": "NX",
+        "key": "history:56",
+        "value": "91",
+        "result": null,
+        "start": 781777128564333,
+        "end": 781777128638750
+      },
+      {
+        "kind": "SET",
+        "key": "history:56",
+        "value": "91",
+        "result": "OK",
+        "start": 781777128639541,
+        "end": 781777128723041
+      },
+      {
+        "kind": "NX",
+        "key": "history:56",
+        "value": "92",
+        "result": null,
+        "start": 781777128531125,
+        "end": 781777128615875
+      },
+      {
+        "kind": "DEL",
+        "key": "history:56",
+        "value": "92",
+        "result": 1,
+        "start": 781777128616916,
+        "end": 781777128694375
+      },
+      {
+        "kind": "NX",
+        "key": "history:56",
+        "value": "92",
+        "result": null,
+        "start": 781777128695125,
+        "end": 781777128785583
+      },
+      {
+        "kind": "NX",
+        "key": "history:56",
+        "value": "65",
+        "result": null,
+        "start": 781777128482125,
+        "end": 781777128654833
+      },
+      {
+        "kind": "NX",
+        "key": "history:56",
+        "value": "65",
+        "result": null,
+        "start": 781777128655708,
+        "end": 781777128730875
+      },
+      {
+        "kind": "NX",
+        "key": "history:56",
+        "value": "65",
+        "result": null,
+        "start": 781777128731541,
+        "end": 781777128850416
+      }
+    ],
+    [
+      {
+        "kind": "SET",
+        "key": "history:57",
+        "value": "76",
+        "result": "OK",
+        "start": 781777129220875,
+        "end": 781777129303333
+      },
+      {
+        "kind": "DEL",
+        "key": "history:57",
+        "value": "76",
+        "result": 1,
+        "start": 781777129303958,
+        "end": 781777129364583
+      },
+      {
+        "kind": "NX",
+        "key": "history:57",
+        "value": "76",
+        "result": null,
+        "start": 781777129365333,
+        "end": 781777129437208
+      },
+      {
+        "kind": "INCR",
+        "key": "history:57",
+        "value": "82",
+        "result": 77,
+        "start": 781777129239458,
+        "end": 781777129313333
+      },
+      {
+        "kind": "INCR",
+        "key": "history:57",
+        "value": "82",
+        "result": 1,
+        "start": 781777129313916,
+        "end": 781777129387916
+      },
+      {
+        "kind": "GET",
+        "key": "history:57",
+        "value": "82",
+        "result": "1",
+        "start": 781777129388750,
+        "end": 781777129470625
+      },
+      {
+        "kind": "SET",
+        "key": "history:57",
+        "value": "45",
+        "result": "OK",
+        "start": 781777129214666,
+        "end": 781777129342750
+      },
+      {
+        "kind": "GET",
+        "key": "history:57",
+        "value": "45",
+        "result": "1",
+        "start": 781777129343875,
+        "end": 781777129412083
+      },
+      {
+        "kind": "NX",
+        "key": "history:57",
+        "value": "45",
+        "result": null,
+        "start": 781777129412708,
+        "end": 781777129518333
+      }
+    ],
+    [
+      {
+        "kind": "SET",
+        "key": "history:58",
+        "value": "65",
+        "result": "OK",
+        "start": 781777129975125,
+        "end": 781777130087416
+      },
+      {
+        "kind": "DEL",
+        "key": "history:58",
+        "value": "65",
+        "result": 0,
+        "start": 781777130088041,
+        "end": 781777130149083
+      },
+      {
+        "kind": "INCR",
+        "key": "history:58",
+        "value": "65",
+        "result": 1,
+        "start": 781777130149666,
+        "end": 781777130243458
+      },
+      {
+        "kind": "NX",
+        "key": "history:58",
+        "value": "84",
+        "result": null,
+        "start": 781777130003791,
+        "end": 781777130095958
+      },
+      {
+        "kind": "GET",
+        "key": "history:58",
+        "value": "84",
+        "result": null,
+        "start": 781777130096666,
+        "end": 781777130170083
+      },
+      {
+        "kind": "SET",
+        "key": "history:58",
+        "value": "84",
+        "result": "OK",
+        "start": 781777130170750,
+        "end": 781777130278291
+      },
+      {
+        "kind": "SET",
+        "key": "history:58",
+        "value": "0",
+        "result": "OK",
+        "start": 781777129991000,
+        "end": 781777130063666
+      },
+      {
+        "kind": "DEL",
+        "key": "history:58",
+        "value": "0",
+        "result": 1,
+        "start": 781777130064375,
+        "end": 781777130137166
+      },
+      {
+        "kind": "GET",
+        "key": "history:58",
+        "value": "0",
+        "result": null,
+        "start": 781777130137916,
+        "end": 781777130186416
+      }
+    ],
+    [
+      {
+        "kind": "NX",
+        "key": "history:59",
+        "value": "8",
+        "result": "OK",
+        "start": 781777130757625,
+        "end": 781777130893541
+      },
+      {
+        "kind": "SET",
+        "key": "history:59",
+        "value": "8",
+        "result": "OK",
+        "start": 781777130894375,
+        "end": 781777131004416
+      },
+      {
+        "kind": "DEL",
+        "key": "history:59",
+        "value": "8",
+        "result": 1,
+        "start": 781777131005208,
+        "end": 781777131067541
+      },
+      {
+        "kind": "GET",
+        "key": "history:59",
+        "value": "59",
+        "result": null,
+        "start": 781777130740541,
+        "end": 781777130835291
+      },
+      {
+        "kind": "INCR",
+        "key": "history:59",
+        "value": "59",
+        "result": 9,
+        "start": 781777130836041,
+        "end": 781777130908416
+      },
+      {
+        "kind": "GET",
+        "key": "history:59",
+        "value": "59",
+        "result": "9",
+        "start": 781777130909791,
+        "end": 781777130975958
+      },
+      {
+        "kind": "GET",
+        "key": "history:59",
+        "value": "77",
+        "result": null,
+        "start": 781777130731458,
+        "end": 781777130794000
+      },
+      {
+        "kind": "NX",
+        "key": "history:59",
+        "value": "77",
+        "result": null,
+        "start": 781777130794666,
+        "end": 781777130886000
+      },
+      {
+        "kind": "NX",
+        "key": "history:59",
+        "value": "77",
+        "result": null,
+        "start": 781777130886791,
+        "end": 781777130966333
+      }
+    ]
+  ],
+  "passed": 60,
+  "operations_each": 9,
+  "negative_control": [
+    {
+      "kind": "SET",
+      "key": "x",
+      "value": "7",
+      "result": "OK",
+      "start": 1,
+      "end": 2
+    },
+    {
+      "kind": "GET",
+      "key": "x",
+      "result": "old",
+      "start": 3,
+      "end": 4
+    }
+  ],
+  "negative_control_rejected": true,
+  "overlapping_read_accepted": true
+}

@@ -1,0 +1,233 @@
+..FFF                                                                    [100%]
+=================================== FAILURES ===================================
+_____________ Integration.test_invalid_input_and_oom_do_not_mutate _____________
+
+self = <integration.Integration testMethod=test_invalid_input_and_oom_do_not_mutate>
+
+    def test_invalid_input_and_oom_do_not_mutate(self) -> None:
+        failures = []
+        with Client(self.server.port) as client:
+            client.call("SET", "safe", "original")
+            for args in [
+                ("SET", "safe", "bad", "PX", "-1"),
+                ("SET", "safe", "bad", "XX"),
+                ("INCR", "safe"),
+                ("SET", "safe", "x" * 40000),
+                ("DEL", "safe", "other"),
+            ]:
+                with self.assertRaises(RespError) as caught:
+                    client.call(*args)
+                failures.append({"command": list(args[:2]), "caught": str(caught.exception)})
+                self.assertEqual(client.call("GET", "safe"), b"original")
+            for malformed in [
+                b"*99\r\n",
+                b"*1\r\n$-2\r\n",
+                b"*1\r\n$9999999\r\n",
+                b"*1\r\n$1\r\nx!!",
+            ]:
+                with socket.create_connection(("127.0.0.1", self.server.port)) as sock:
+                    sock.sendall(malformed)
+                    self.assertTrue(sock.recv(100).startswith(b"-ERR"))
+            self.assertEqual(client.call("PING"), "PONG")
+>       (RESULTS / "caught-failures.json").write_text(json.dumps(failures, indent=2) + "\n")
+
+tests/integration.py:197: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py:555: in write_text
+    return PathBase.write_text(self, data, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py:651: in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('docs/results/tsan/caught-failures.json'), mode = 'w'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'docs/results/tsan/caught-failures.json'
+
+/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py:537: FileNotFoundError
+_____ Integration.test_linearizable_histories_and_checker_negative_control _____
+
+self = <integration.Integration testMethod=test_linearizable_histories_and_checker_negative_control>
+
+    def test_linearizable_histories_and_checker_negative_control(self) -> None:
+        rng = random.Random(84017)
+        histories = []
+        for case in range(60):
+            key = f"history:{case}"
+            barrier = threading.Barrier(3)
+            operations = [
+                [rng.choice(["SET", "NX", "GET", "INCR", "DEL"]) for _ in range(3)]
+                for _ in range(3)
+            ]
+    
+            def worker(
+                inputs: tuple[int, threading.Barrier, list[list[str]], list[int], str],
+            ) -> list[dict]:
+                index, barrier, operations, rng_value, key = inputs
+                history = []
+                with Client(self.server.port) as client:
+                    barrier.wait(timeout=5)
+                    for kind in operations[index]:
+                        value = str(rng_value[index])
+                        args = ["SET", key, value] if kind in {"SET", "NX"} else [kind, key]
+                        if kind == "NX":
+                            args.append("NX")
+                        start = time.monotonic_ns()
+                        try:
+                            result = client.call(*args)
+                            if isinstance(result, bytes):
+                                result = result.decode()
+                        except RespError:
+                            result = "ERROR"
+                        end = time.monotonic_ns()
+                        history.append(
+                            {
+                                "kind": kind,
+                                "key": key,
+                                "value": value,
+                                "result": result,
+                                "start": start,
+                                "end": end,
+                            }
+                        )
+                return history
+    
+            rng_value = [rng.randrange(100) for _ in range(3)]
+            with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
+                history = [
+                    op
+                    for batch in executor.map(
+                        worker, [(i, barrier, operations, rng_value, key) for i in range(3)]
+                    )
+                    for op in batch
+                ]
+            self.assertTrue(linearizable(history), history)
+            histories.append(history)
+        # Impossible completed read after completed write: a real-time stale-read bug.
+        negative = [
+            {
+                "kind": "SET",
+                "key": "x",
+                "value": "7",
+                "result": "OK",
+                "start": 1,
+                "end": 2,
+            },
+            {"kind": "GET", "key": "x", "result": "old", "start": 3, "end": 4},
+        ]
+        self.assertFalse(linearizable(negative))
+        overlap = copy.deepcopy(negative)
+        overlap[1].update(result=None, start=1, end=3)
+        self.assertTrue(linearizable(overlap))
+>       (RESULTS / "histories.json").write_text(
+            json.dumps(
+                {
+                    "seed": 84017,
+                    "histories": histories,
+                    "passed": len(histories),
+                    "operations_each": 9,
+                    "negative_control": negative,
+                    "negative_control_rejected": True,
+                    "overlapping_read_accepted": True,
+                },
+                indent=2,
+            )
+            + "\n"
+        )
+
+tests/integration.py:320: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py:555: in write_text
+    return PathBase.write_text(self, data, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py:651: in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('docs/results/tsan/histories.json'), mode = 'w', buffering = -1
+encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'docs/results/tsan/histories.json'
+
+/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py:537: FileNotFoundError
+________ Integration.test_snapshot_sigkill_recovery_and_corruption_gate ________
+
+self = <integration.Integration testMethod=test_snapshot_sigkill_recovery_and_corruption_gate>
+
+    def test_snapshot_sigkill_recovery_and_corruption_gate(self) -> None:
+        with Client(self.server.port) as client:
+            client.call("SET", "durable", "synthetic")
+            client.call("SET", "expiring", "v", "PX", "80")
+            self.assertEqual(client.call("SAVE"), "OK")
+            client.call("SET", "after-save", "not-durable")
+        self.server.stop(kill=True)
+        time.sleep(0.1)
+        self.server.start()
+        with Client(self.server.port) as client:
+            self.assertEqual(client.call("GET", "durable"), b"synthetic")
+            self.assertIsNone(client.call("GET", "expiring"))
+            self.assertIsNone(client.call("GET", "after-save"))
+        self.server.stop()
+        data = bytearray(self.server.path.read_bytes())
+        data[20] ^= 0x40
+        self.server.path.write_bytes(data)
+        with self.assertRaisesRegex(RuntimeError, "checksum mismatch"):
+            self.server.start()
+>       (RESULTS / "corruption-rejected.log").write_text(
+            (self.server.path.parent / "server.log").read_text()
+        )
+
+tests/integration.py:218: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py:555: in write_text
+    return PathBase.write_text(self, data, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py:651: in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('docs/results/tsan/corruption-rejected.log'), mode = 'w'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'docs/results/tsan/corruption-rejected.log'
+
+/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py:537: FileNotFoundError
+=========================== short test summary info ============================
+FAILED tests/integration.py::Integration::test_invalid_input_and_oom_do_not_mutate
+FAILED tests/integration.py::Integration::test_linearizable_histories_and_checker_negative_control
+FAILED tests/integration.py::Integration::test_snapshot_sigkill_recovery_and_corruption_gate
+3 failed, 2 passed in 2.77s

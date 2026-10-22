@@ -1,0 +1,854 @@
+﻿2026-10-22T23:45:30.2083233Z Current runner version: '2.338.0'
+2026-10-22T23:45:30.2103533Z ##[group]Runner Image Provisioner
+2026-10-22T23:45:30.2104261Z Hosted Compute Agent
+2026-10-22T23:45:30.2104750Z Version: 20261012.601
+2026-10-22T23:45:30.2105324Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-22T23:45:30.2105913Z Build Date: 2026-10-12T17:48:21Z
+2026-10-22T23:45:30.2106813Z Worker ID: {0cf5876d-1453-4a0d-8d6d-b9ea1997df33}
+2026-10-22T23:45:30.2107493Z Region: westus3
+2026-10-22T23:45:30.2107972Z Cloud: Azure
+2026-10-22T23:45:30.2108462Z ##[endgroup]
+2026-10-22T23:45:30.2109564Z ##[group]Operating System
+2026-10-22T23:45:30.2110109Z Ubuntu
+2026-10-22T23:45:30.2110626Z 24.04.5
+2026-10-22T23:45:30.2111044Z LTS
+2026-10-22T23:45:30.2111647Z ##[endgroup]
+2026-10-22T23:45:30.2112121Z ##[group]Runner Image
+2026-10-22T23:45:30.2112659Z Image: ubuntu-24.04
+2026-10-22T23:45:30.2113217Z Version: 20261012.334.1
+2026-10-22T23:45:30.2114236Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-22T23:45:30.2115532Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-22T23:45:30.2116351Z ##[endgroup]
+2026-10-22T23:45:30.2117298Z ##[group]GITHUB_TOKEN Permissions
+2026-10-22T23:45:30.2118838Z Contents: read
+2026-10-22T23:45:30.2119415Z Metadata: read
+2026-10-22T23:45:30.2119910Z ##[endgroup]
+2026-10-22T23:45:30.2122145Z Secret source: Actions
+2026-10-22T23:45:30.2122948Z Cache mode: write
+2026-10-22T23:45:30.2123546Z Prepare workflow directory
+2026-10-22T23:45:30.2394557Z Prepare all required actions
+2026-10-22T23:45:30.2434305Z Getting action download info
+2026-10-22T23:45:30.5470922Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-22T23:45:30.8162673Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-22T23:45:31.1457955Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-22T23:45:31.3148967Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-22T23:45:31.6693504Z Complete job name: verify (thread)
+2026-10-22T23:45:31.7312398Z ##[group]Run actions/checkout@v4
+2026-10-22T23:45:31.7313264Z with:
+2026-10-22T23:45:31.7313632Z   repository: rjrddy/cinder
+2026-10-22T23:45:31.7316929Z   token: ***
+2026-10-22T23:45:31.7317284Z   ssh-strict: true
+2026-10-22T23:45:31.7317642Z   ssh-user: git
+2026-10-22T23:45:31.7318002Z   persist-credentials: true
+2026-10-22T23:45:31.7318397Z   clean: true
+2026-10-22T23:45:31.7318753Z   sparse-checkout-cone-mode: true
+2026-10-22T23:45:31.7319166Z   fetch-depth: 1
+2026-10-22T23:45:31.7319521Z   fetch-tags: false
+2026-10-22T23:45:31.7319878Z   show-progress: true
+2026-10-22T23:45:31.7320255Z   lfs: false
+2026-10-22T23:45:31.7320597Z   submodules: false
+2026-10-22T23:45:31.7320961Z   set-safe-directory: true
+2026-10-22T23:45:31.7321374Z   allow-unsafe-pr-checkout: false
+2026-10-22T23:45:31.7322167Z ##[endgroup]
+2026-10-22T23:45:31.8112064Z Syncing repository: rjrddy/cinder
+2026-10-22T23:45:31.8113540Z ##[group]Getting Git version info
+2026-10-22T23:45:31.8114196Z Working directory is '/home/runner/work/cinder/cinder'
+2026-10-22T23:45:31.8122540Z [command]/usr/bin/git version
+2026-10-22T23:45:31.8964201Z git version 2.55.0
+2026-10-22T23:45:31.8981364Z ##[endgroup]
+2026-10-22T23:45:31.8994772Z Temporarily overriding HOME='/home/runner/work/_temp/4bfea38a-92b5-4735-941e-26fab9e4f1c2' before making global git config changes
+2026-10-22T23:45:31.8996515Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-22T23:45:31.8999865Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cinder/cinder
+2026-10-22T23:45:31.9048691Z Deleting the contents of '/home/runner/work/cinder/cinder'
+2026-10-22T23:45:31.9052618Z ##[group]Initializing the repository
+2026-10-22T23:45:31.9056389Z [command]/usr/bin/git init /home/runner/work/cinder/cinder
+2026-10-22T23:45:31.9146199Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-22T23:45:31.9147461Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-22T23:45:31.9148596Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-22T23:45:31.9149432Z hint: call:
+2026-10-22T23:45:31.9150085Z hint:
+2026-10-22T23:45:31.9150643Z hint: 	git config --global init.defaultBranch <name>
+2026-10-22T23:45:31.9151160Z hint:
+2026-10-22T23:45:31.9153214Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-22T23:45:31.9154036Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-22T23:45:31.9155054Z hint:
+2026-10-22T23:45:31.9156258Z hint: 	git branch -m <name>
+2026-10-22T23:45:31.9156761Z hint:
+2026-10-22T23:45:31.9157257Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-22T23:45:31.9158712Z Initialized empty Git repository in /home/runner/work/cinder/cinder/.git/
+2026-10-22T23:45:31.9161080Z [command]/usr/bin/git remote add origin https://github.com/rjrddy/cinder
+2026-10-22T23:45:31.9241382Z ##[endgroup]
+2026-10-22T23:45:31.9242816Z ##[group]Disabling automatic garbage collection
+2026-10-22T23:45:31.9251285Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-22T23:45:31.9303365Z ##[endgroup]
+2026-10-22T23:45:31.9304177Z ##[group]Setting up auth
+2026-10-22T23:45:31.9311044Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-22T23:45:31.9359220Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-22T23:45:32.0086846Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-22T23:45:32.0119059Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-22T23:45:32.0309111Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-22T23:45:32.0339186Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-22T23:45:32.0528768Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-22T23:45:32.0565019Z ##[endgroup]
+2026-10-22T23:45:32.0565979Z ##[group]Fetching the repository
+2026-10-22T23:45:32.0573806Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ca2021bb77cd9016c9108d1faa26d5c87f9679b5:refs/remotes/origin/main
+2026-10-22T23:45:32.7822118Z From https://github.com/rjrddy/cinder
+2026-10-22T23:45:32.7823177Z  * [new ref]         ca2021bb77cd9016c9108d1faa26d5c87f9679b5 -> origin/main
+2026-10-22T23:45:32.7826731Z ##[endgroup]
+2026-10-22T23:45:32.7827676Z ##[group]Determining the checkout info
+2026-10-22T23:45:32.7829432Z ##[endgroup]
+2026-10-22T23:45:32.7835098Z [command]/usr/bin/git sparse-checkout disable
+2026-10-22T23:45:32.7883036Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-22T23:45:32.7910633Z ##[group]Checking out the ref
+2026-10-22T23:45:32.7915014Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-22T23:45:32.8006856Z Switched to a new branch 'main'
+2026-10-22T23:45:32.8011212Z branch 'main' set up to track 'origin/main'.
+2026-10-22T23:45:32.8016052Z ##[endgroup]
+2026-10-22T23:45:32.8050249Z [command]/usr/bin/git log -1 --format=%H
+2026-10-22T23:45:32.8072393Z ca2021bb77cd9016c9108d1faa26d5c87f9679b5
+2026-10-22T23:45:32.8381736Z ##[group]Run actions/setup-python@v5
+2026-10-22T23:45:32.8382291Z with:
+2026-10-22T23:45:32.8382665Z   python-version: 3.13
+2026-10-22T23:45:32.8383098Z   check-latest: false
+2026-10-22T23:45:32.8387462Z   token: ***
+2026-10-22T23:45:32.8387857Z   update-environment: true
+2026-10-22T23:45:32.8388319Z   allow-prereleases: false
+2026-10-22T23:45:32.8388774Z   freethreaded: false
+2026-10-22T23:45:32.8389187Z ##[endgroup]
+2026-10-22T23:45:32.9463626Z ##[group]Installed versions
+2026-10-22T23:45:32.9881008Z (node:2085) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-22T23:45:32.9883097Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-22T23:45:32.9896670Z Successfully set up CPython (3.13.16)
+2026-10-22T23:45:32.9897801Z ##[endgroup]
+2026-10-22T23:45:33.0090259Z ##[group]Run actions/setup-node@v4
+2026-10-22T23:45:33.0091024Z with:
+2026-10-22T23:45:33.0093377Z   node-version: 22
+2026-10-22T23:45:33.0093981Z   always-auth: false
+2026-10-22T23:45:33.0094555Z   check-latest: false
+2026-10-22T23:45:33.0099099Z   token: ***
+2026-10-22T23:45:33.0099470Z env:
+2026-10-22T23:45:33.0099935Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:45:33.0100779Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+2026-10-22T23:45:33.0101834Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:45:33.0102561Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:45:33.0103290Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:45:33.0104032Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+2026-10-22T23:45:33.0104644Z ##[endgroup]
+2026-10-22T23:45:33.2281109Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+2026-10-22T23:45:33.2286941Z (node:2093) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-22T23:45:33.2288791Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-22T23:45:33.2290193Z ##[group]Environment details
+2026-10-22T23:45:36.7698971Z node: v22.23.3
+2026-10-22T23:45:36.7699471Z npm: 10.9.9
+2026-10-22T23:45:36.7699861Z yarn: 1.22.22
+2026-10-22T23:45:36.7701752Z ##[endgroup]
+2026-10-22T23:45:36.7830979Z ##[group]Run make setup
+2026-10-22T23:45:36.7831296Z [36;1mmake setup[0m
+2026-10-22T23:45:36.8678536Z shell: /usr/bin/bash -e {0}
+2026-10-22T23:45:36.8678868Z env:
+2026-10-22T23:45:36.8679156Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:45:36.8679581Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+2026-10-22T23:45:36.8679966Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:45:36.8680318Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:45:36.8680666Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:45:36.8681007Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+2026-10-22T23:45:36.8681321Z ##[endgroup]
+2026-10-22T23:45:36.8967371Z python3 -m venv .venv
+2026-10-22T23:45:41.1521135Z .venv/bin/python -m pip install -r requirements-dev.txt
+2026-10-22T23:45:42.0692047Z Collecting pytest==9.1.1 (from -r requirements-dev.txt (line 1))
+2026-10-22T23:45:42.1270468Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+2026-10-22T23:45:42.3590232Z Collecting ruff==0.17.1 (from -r requirements-dev.txt (line 2))
+2026-10-22T23:45:42.3694310Z   Downloading ruff-0.17.1-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+2026-10-22T23:45:42.4177897Z Collecting clang-format==20.1.8 (from -r requirements-dev.txt (line 3))
+2026-10-22T23:45:42.4282706Z   Downloading clang_format-20.1.8-py2.py3-none-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (4.7 kB)
+2026-10-22T23:45:42.4402400Z Collecting pip-audit==2.9.0 (from -r requirements-dev.txt (line 4))
+2026-10-22T23:45:42.4498237Z   Downloading pip_audit-2.9.0-py3-none-any.whl.metadata (27 kB)
+2026-10-22T23:45:42.4628407Z Collecting iniconfig>=1.0.1 (from pytest==9.1.1->-r requirements-dev.txt (line 1))
+2026-10-22T23:45:42.4724359Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+2026-10-22T23:45:42.4837588Z Collecting packaging>=22 (from pytest==9.1.1->-r requirements-dev.txt (line 1))
+2026-10-22T23:45:42.4933510Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-10-22T23:45:42.7409845Z Collecting pluggy<2,>=1.5 (from pytest==9.1.1->-r requirements-dev.txt (line 1))
+2026-10-22T23:45:42.7507995Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+2026-10-22T23:45:42.7662849Z Collecting pygments>=2.7.2 (from pytest==9.1.1->-r requirements-dev.txt (line 1))
+2026-10-22T23:45:42.7758546Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-10-22T23:45:42.8567606Z Collecting CacheControl>=0.13.0 (from CacheControl[filecache]>=0.13.0->pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:42.8663840Z   Downloading cachecontrol-0.14.4-py3-none-any.whl.metadata (3.1 kB)
+2026-10-22T23:45:42.8873064Z Collecting cyclonedx-python-lib<10,>=5 (from pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:42.8971428Z   Downloading cyclonedx_python_lib-9.1.0-py3-none-any.whl.metadata (6.5 kB)
+2026-10-22T23:45:42.9079778Z Collecting pip-api>=0.0.28 (from pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:42.9178423Z   Downloading pip_api-0.0.35-py3-none-any.whl.metadata (17 kB)
+2026-10-22T23:45:42.9307423Z Collecting pip-requirements-parser>=32.0.0 (from pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:42.9407113Z   Downloading pip_requirements_parser-32.0.1-py3-none-any.whl.metadata (9.3 kB)
+2026-10-22T23:45:42.9570255Z Collecting requests>=2.31.0 (from pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:42.9670366Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-10-22T23:45:42.9880956Z Collecting rich>=12.4 (from pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:42.9979282Z   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+2026-10-22T23:45:43.0076430Z Collecting toml>=0.10 (from pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:43.0172117Z   Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+2026-10-22T23:45:43.1112187Z Collecting platformdirs>=4.2.0 (from pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:43.1210524Z   Downloading platformdirs-4.13.5-py3-none-any.whl.metadata (5.5 kB)
+2026-10-22T23:45:43.1323762Z Collecting license-expression<31,>=30 (from cyclonedx-python-lib<10,>=5->pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:43.1419095Z   Downloading license_expression-30.4.4-py3-none-any.whl.metadata (11 kB)
+2026-10-22T23:45:43.1549929Z Collecting packageurl-python<2,>=0.11 (from cyclonedx-python-lib<10,>=5->pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:43.1646328Z   Downloading packageurl_python-0.17.6-py3-none-any.whl.metadata (5.1 kB)
+2026-10-22T23:45:43.1767042Z Collecting py-serializable<3.0.0,>=2.0.0 (from cyclonedx-python-lib<10,>=5->pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:43.1866767Z   Downloading py_serializable-2.1.0-py3-none-any.whl.metadata (4.3 kB)
+2026-10-22T23:45:43.1962833Z Collecting sortedcontainers<3.0.0,>=2.4.0 (from cyclonedx-python-lib<10,>=5->pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:43.2057411Z   Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+2026-10-22T23:45:43.2184158Z Collecting boolean.py>=4.0 (from license-expression<31,>=30->cyclonedx-python-lib<10,>=5->pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:43.2284149Z   Downloading boolean_py-5.0-py3-none-any.whl.metadata (2.3 kB)
+2026-10-22T23:45:43.2395515Z Collecting defusedxml<0.8.0,>=0.7.1 (from py-serializable<3.0.0,>=2.0.0->cyclonedx-python-lib<10,>=5->pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:43.2492915Z   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+2026-10-22T23:45:43.3094130Z Collecting msgpack<2.0.0,>=0.5.2 (from CacheControl>=0.13.0->CacheControl[filecache]>=0.13.0->pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:43.3193307Z   Downloading msgpack-1.2.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+2026-10-22T23:45:43.3395673Z Collecting filelock>=3.8.0 (from CacheControl[filecache]>=0.13.0->pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:43.3493428Z   Downloading filelock-4.2.4-py3-none-any.whl.metadata (2.0 kB)
+2026-10-22T23:45:43.3532471Z Requirement already satisfied: pip in ./.venv/lib/python3.13/site-packages (from pip-api>=0.0.28->pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (26.2.1)
+2026-10-22T23:45:43.3953183Z Collecting pyparsing (from pip-requirements-parser>=32.0.0->pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:43.4049660Z   Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+2026-10-22T23:45:43.4906368Z Collecting charset_normalizer<4,>=2 (from requests>=2.31.0->pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:43.5007231Z   Downloading charset_normalizer-3.5.2-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+2026-10-22T23:45:43.5148364Z Collecting idna<4,>=2.5 (from requests>=2.31.0->pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:43.5244513Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-10-22T23:45:43.5394854Z Collecting urllib3<3,>=1.26 (from requests>=2.31.0->pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:43.5490691Z   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+2026-10-22T23:45:43.5654540Z Collecting certifi>=2023.5.7 (from requests>=2.31.0->pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:43.5758199Z   Downloading certifi-2026.10.19-py3-none-any.whl.metadata (2.5 kB)
+2026-10-22T23:45:43.6212439Z Collecting markdown-it-py>=2.2.0 (from rich>=12.4->pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:43.6309341Z   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+2026-10-22T23:45:43.6433870Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=12.4->pip-audit==2.9.0->-r requirements-dev.txt (line 4))
+2026-10-22T23:45:43.6531072Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-10-22T23:45:43.6672055Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+2026-10-22T23:45:43.6963669Z Downloading ruff-0.17.1-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.4 MB)
+2026-10-22T23:45:43.8143744Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.4/10.4 MB 87.8 MB/s  0:00:00
+2026-10-22T23:45:43.8249715Z Downloading clang_format-20.1.8-py2.py3-none-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (1.8 MB)
+2026-10-22T23:45:43.8526771Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 58.9 MB/s  0:00:00
+2026-10-22T23:45:43.8629595Z Downloading pip_audit-2.9.0-py3-none-any.whl (58 kB)
+2026-10-22T23:45:43.8742980Z Downloading cyclonedx_python_lib-9.1.0-py3-none-any.whl (374 kB)
+2026-10-22T23:45:43.8866326Z Downloading license_expression-30.4.4-py3-none-any.whl (120 kB)
+2026-10-22T23:45:43.8982394Z Downloading packageurl_python-0.17.6-py3-none-any.whl (36 kB)
+2026-10-22T23:45:43.9094970Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+2026-10-22T23:45:43.9207568Z Downloading py_serializable-2.1.0-py3-none-any.whl (23 kB)
+2026-10-22T23:45:43.9320811Z Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+2026-10-22T23:45:43.9431823Z Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+2026-10-22T23:45:43.9543221Z Downloading boolean_py-5.0-py3-none-any.whl (26 kB)
+2026-10-22T23:45:43.9654833Z Downloading cachecontrol-0.14.4-py3-none-any.whl (22 kB)
+2026-10-22T23:45:43.9769115Z Downloading msgpack-1.2.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (466 kB)
+2026-10-22T23:45:43.9890587Z Downloading filelock-4.2.4-py3-none-any.whl (162 kB)
+2026-10-22T23:45:44.0007713Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+2026-10-22T23:45:44.0129221Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-22T23:45:44.0243758Z Downloading pip_api-0.0.35-py3-none-any.whl (123 kB)
+2026-10-22T23:45:44.1407018Z Downloading pip_requirements_parser-32.0.1-py3-none-any.whl (35 kB)
+2026-10-22T23:45:44.1523172Z Downloading platformdirs-4.13.5-py3-none-any.whl (32 kB)
+2026-10-22T23:45:44.1639987Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-22T23:45:44.1695520Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 287.2 MB/s  0:00:00
+2026-10-22T23:45:44.1794817Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+2026-10-22T23:45:44.1908928Z Downloading charset_normalizer-3.5.2-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (254 kB)
+2026-10-22T23:45:44.2025986Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+2026-10-22T23:45:44.2140507Z Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+2026-10-22T23:45:44.2255823Z Downloading certifi-2026.10.19-py3-none-any.whl (136 kB)
+2026-10-22T23:45:44.2373245Z Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+2026-10-22T23:45:44.2491050Z Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+2026-10-22T23:45:44.2610352Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-10-22T23:45:44.2721852Z Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+2026-10-22T23:45:44.2834856Z Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+2026-10-22T23:45:44.3964331Z Installing collected packages: sortedcontainers, clang-format, boolean.py, urllib3, toml, ruff, pyparsing, pygments, pluggy, platformdirs, pip-api, packaging, packageurl-python, msgpack, mdurl, license-expression, iniconfig, idna, filelock, defusedxml, charset_normalizer, certifi, requests, pytest, py-serializable, pip-requirements-parser, markdown-it-py, rich, cyclonedx-python-lib, CacheControl, pip-audit
+2026-10-22T23:45:46.3642059Z 
+2026-10-22T23:45:46.3669728Z Successfully installed CacheControl-0.14.4 boolean.py-5.0 certifi-2026.10.19 charset_normalizer-3.5.2 clang-format-20.1.8 cyclonedx-python-lib-9.1.0 defusedxml-0.7.1 filelock-4.2.4 idna-3.20 iniconfig-2.3.1 license-expression-30.4.4 markdown-it-py-4.2.0 mdurl-0.1.2 msgpack-1.2.3 packageurl-python-0.17.6 packaging-26.3 pip-api-0.0.35 pip-audit-2.9.0 pip-requirements-parser-32.0.1 platformdirs-4.13.5 pluggy-1.7.0 py-serializable-2.1.0 pygments-2.21.0 pyparsing-3.3.3 pytest-9.1.1 requests-2.34.2 rich-15.0.0 ruff-0.17.1 sortedcontainers-2.4.0 toml-0.10.2 urllib3-2.8.0
+2026-10-22T23:45:46.3675591Z 
+2026-10-22T23:45:46.3676028Z [notice] A new release of pip is available: 26.2.1 -> 26.2.2
+2026-10-22T23:45:46.3676772Z [notice] To update, run: /home/runner/work/cinder/cinder/.venv/bin/python -m pip install --upgrade pip
+2026-10-22T23:45:46.4604908Z ##[group]Run make lint
+2026-10-22T23:45:46.4605135Z [36;1mmake lint[0m
+2026-10-22T23:45:46.4662547Z shell: /usr/bin/bash -e {0}
+2026-10-22T23:45:46.4662760Z env:
+2026-10-22T23:45:46.4662982Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:45:46.4663328Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+2026-10-22T23:45:46.4663667Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:45:46.4663982Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:45:46.4664273Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:45:46.4664570Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+2026-10-22T23:45:46.4664824Z ##[endgroup]
+2026-10-22T23:45:46.4749188Z .venv/bin/clang-format --dry-run --Werror src/*.cpp src/*.hpp tests/*.cpp
+2026-10-22T23:45:46.5247166Z .venv/bin/ruff check scripts tests
+2026-10-22T23:45:46.5323747Z All checks passed!
+2026-10-22T23:45:46.5327379Z .venv/bin/ruff format --check scripts tests
+2026-10-22T23:45:46.5396084Z 7 files already formatted
+2026-10-22T23:45:46.5396709Z node --check web/app.js
+2026-10-22T23:45:46.5649729Z ##[group]Run if [ "thread" = none ]; then
+2026-10-22T23:45:46.5650022Z [36;1mif [ "thread" = none ]; then[0m
+2026-10-22T23:45:46.5650246Z [36;1m  make test[0m
+2026-10-22T23:45:46.5650413Z [36;1m  make scan[0m
+2026-10-22T23:45:46.5650763Z [36;1m  make container-test[0m
+2026-10-22T23:45:46.5650953Z [36;1melse[0m
+2026-10-22T23:45:46.5651168Z [36;1m  make test BUILD=build-thread SANITIZER=thread[0m
+2026-10-22T23:45:46.5651421Z [36;1mfi[0m
+2026-10-22T23:45:46.5709881Z shell: /usr/bin/bash -e {0}
+2026-10-22T23:45:46.5710102Z env:
+2026-10-22T23:45:46.5710327Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:45:46.5710681Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+2026-10-22T23:45:46.5711017Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:45:46.5711313Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:45:46.5711753Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:45:46.5729131Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+2026-10-22T23:45:46.5729447Z   ASAN_OPTIONS: detect_leaks=1:halt_on_error=1
+2026-10-22T23:45:46.5729694Z   TSAN_OPTIONS: halt_on_error=1
+2026-10-22T23:45:46.5729901Z ##[endgroup]
+2026-10-22T23:45:46.5817332Z cmake -S . -B build-thread -DCMAKE_BUILD_TYPE=Release -DSANITIZER=thread
+2026-10-22T23:45:48.5043462Z -- The CXX compiler identification is GNU 13.3.0
+2026-10-22T23:45:48.6402635Z -- Detecting CXX compiler ABI info
+2026-10-22T23:45:49.0503399Z -- Detecting CXX compiler ABI info - done
+2026-10-22T23:45:49.0645125Z -- Check for working CXX compiler: /usr/bin/c++ - skipped
+2026-10-22T23:45:49.0691976Z -- Detecting CXX compile features
+2026-10-22T23:45:49.0736225Z -- Detecting CXX compile features - done
+2026-10-22T23:45:49.1154223Z -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+2026-10-22T23:45:49.6220124Z -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+2026-10-22T23:45:49.6302643Z -- Found Threads: TRUE
+2026-10-22T23:45:49.6309465Z -- Configuring done (2.7s)
+2026-10-22T23:45:49.6553413Z -- Generating done (0.0s)
+2026-10-22T23:45:49.6702719Z -- Build files have been written to: /home/runner/work/cinder/cinder/build-thread
+2026-10-22T23:45:49.6854715Z cmake --build build-thread -j 4
+2026-10-22T23:45:49.6884363Z gmake[1]: Entering directory '/home/runner/work/cinder/cinder/build-thread'
+2026-10-22T23:45:49.6928447Z gmake[2]: Entering directory '/home/runner/work/cinder/cinder/build-thread'
+2026-10-22T23:45:49.6937882Z gmake[3]: Entering directory '/home/runner/work/cinder/cinder/build-thread'
+2026-10-22T23:45:49.6961751Z gmake[3]: Leaving directory '/home/runner/work/cinder/cinder/build-thread'
+2026-10-22T23:45:49.6972315Z gmake[3]: Entering directory '/home/runner/work/cinder/cinder/build-thread'
+2026-10-22T23:45:49.6989708Z [ 14%] Building CXX object CMakeFiles/cinder_core.dir/src/store.cpp.o
+2026-10-22T23:45:49.6990687Z [ 28%] Building CXX object CMakeFiles/cinder_core.dir/src/protocol.cpp.o
+2026-10-22T23:45:52.9702938Z [ 42%] Linking CXX static library libcinder_core.a
+2026-10-22T23:46:04.2180935Z gmake[3]: Leaving directory '/home/runner/work/cinder/cinder/build-thread'
+2026-10-22T23:46:04.2203503Z [ 42%] Built target cinder_core
+2026-10-22T23:46:04.2217503Z gmake[3]: Entering directory '/home/runner/work/cinder/cinder/build-thread'
+2026-10-22T23:46:04.2218966Z gmake[3]: Entering directory '/home/runner/work/cinder/cinder/build-thread'
+2026-10-22T23:46:04.2239955Z gmake[3]: Leaving directory '/home/runner/work/cinder/cinder/build-thread'
+2026-10-22T23:46:04.2240707Z gmake[3]: Leaving directory '/home/runner/work/cinder/cinder/build-thread'
+2026-10-22T23:46:04.2251362Z gmake[3]: Entering directory '/home/runner/work/cinder/cinder/build-thread'
+2026-10-22T23:46:04.2252770Z gmake[3]: Entering directory '/home/runner/work/cinder/cinder/build-thread'
+2026-10-22T23:46:04.2268545Z [ 71%] Building CXX object CMakeFiles/cinder.dir/src/server.cpp.o
+2026-10-22T23:46:04.2269506Z [ 71%] Building CXX object CMakeFiles/core_tests.dir/tests/core.cpp.o
+2026-10-22T23:46:06.3647129Z [ 85%] Linking CXX executable core_tests
+2026-10-22T23:46:06.6407496Z gmake[3]: Leaving directory '/home/runner/work/cinder/cinder/build-thread'
+2026-10-22T23:46:06.6429033Z [ 85%] Built target core_tests
+2026-10-22T23:46:06.8750431Z [100%] Linking CXX executable cinder
+2026-10-22T23:46:06.9311264Z gmake[3]: Leaving directory '/home/runner/work/cinder/cinder/build-thread'
+2026-10-22T23:46:06.9331973Z [100%] Built target cinder
+2026-10-22T23:46:06.9335587Z gmake[2]: Leaving directory '/home/runner/work/cinder/cinder/build-thread'
+2026-10-22T23:46:06.9766426Z gmake[1]: Leaving directory '/home/runner/work/cinder/cinder/build-thread'
+2026-10-22T23:46:06.9774046Z ./build-thread/core_tests
+2026-10-22T23:46:07.4817889Z {"checks":8163,"concurrent_increments":16000,"collision_keys":100,"model_steps":4000,"parser_fuzz_cases":10000,"status":"pass"}
+2026-10-22T23:46:07.4840694Z CINDER_BINARY=build-thread/cinder CINDER_RESULTS=docs/results/build-thread .venv/bin/python -m pytest -q
+2026-10-22T23:46:10.3928145Z FFFFF                                                                    [100%]
+2026-10-22T23:46:10.3928691Z =================================== FAILURES ===================================
+2026-10-22T23:46:10.3929288Z ______________ Integration.test_auth_origin_and_viewer_live_state ______________
+2026-10-22T23:46:10.3929688Z 
+2026-10-22T23:46:10.3930055Z self = <integration.Integration testMethod=test_auth_origin_and_viewer_live_state>
+2026-10-22T23:46:10.3930429Z 
+2026-10-22T23:46:10.3930691Z     def test_auth_origin_and_viewer_live_state(self) -> None:
+2026-10-22T23:46:10.3931108Z >       self.server.stop()
+2026-10-22T23:46:10.3931280Z 
+2026-10-22T23:46:10.3931418Z tests/integration.py:231: 
+2026-10-22T23:46:10.3931997Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-10-22T23:46:10.3932269Z 
+2026-10-22T23:46:10.3932539Z self = <integration.Server object at 0x7fcc905a5e80>, kill = False
+2026-10-22T23:46:10.3932745Z 
+2026-10-22T23:46:10.3932897Z     def stop(self, kill: bool = False) -> None:
+2026-10-22T23:46:10.3933212Z         if self.process and self.process.poll() is None:
+2026-10-22T23:46:10.3933610Z             self.process.kill() if kill else self.process.terminate()
+2026-10-22T23:46:10.3933941Z             code = self.process.wait(timeout=8)
+2026-10-22T23:46:10.3934222Z             if not kill and code != 0:
+2026-10-22T23:46:10.3934478Z >               raise RuntimeError(
+2026-10-22T23:46:10.3934946Z                     "server failed at shutdown: " + (self.path.parent / "server.log").read_text()
+2026-10-22T23:46:10.3935468Z                 )
+2026-10-22T23:46:10.3935995Z E               RuntimeError: server failed at shutdown: {"event":"ready","resp_port":47307,"http_port":38837}
+2026-10-22T23:46:10.3936404Z E               ==================
+2026-10-22T23:46:10.3936714Z E               WARNING: ThreadSanitizer: data race (pid=2335)
+2026-10-22T23:46:10.3937065Z E                 Write of size 4 at 0x563a42905274 by main thread:
+2026-10-22T23:46:10.3937676Z E                   #0 stop /home/runner/work/cinder/cinder/src/server.cpp:20 (cinder+0xa5ec) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.3938590Z E                   #1 CallUserSignalHandler ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:2096 (libtsan.so.2+0x517d5) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.3939454Z E                   #2 poll /usr/include/x86_64-linux-gnu/bits/poll2.h:39 (cinder+0x94a1) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.3940049Z E                   #3 main /home/runner/work/cinder/cinder/src/server.cpp:336 (cinder+0x94a1)
+2026-10-22T23:46:10.3940367Z E               
+2026-10-22T23:46:10.3940660Z E                 Previous read of size 4 at 0x563a42905274 by thread T2:
+2026-10-22T23:46:10.3941266Z E                   #0 resp /home/runner/work/cinder/cinder/src/server.cpp:230 (cinder+0x107d7) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.3942479Z E                   #1 operator() /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x11e9e) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.3943375Z E                   #2 __invoke_impl<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:61 (cinder+0x11e9e)
+2026-10-22T23:46:10.3944156Z E                   #3 __invoke_r<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:111 (cinder+0x11e9e)
+2026-10-22T23:46:10.3944694Z E                   #4 _M_invoke /usr/include/c++/13/bits/std_function.h:290 (cinder+0x11e9e)
+2026-10-22T23:46:10.3945440Z E                   #5 std::function<void (int)>::operator()(int) const /usr/include/c++/13/bits/std_function.h:591 (cinder+0xaded) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.3946141Z E                   #6 operator() /home/runner/work/cinder/cinder/src/server.cpp:67 (cinder+0xaded)
+2026-10-22T23:46:10.3946893Z E                   #7 __invoke_impl<void, (anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:61 (cinder+0xaded)
+2026-10-22T23:46:10.3947765Z E                   #8 __invoke<(anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:96 (cinder+0xaded)
+2026-10-22T23:46:10.3948381Z E                   #9 _M_invoke<0> /usr/include/c++/13/bits/std_thread.h:292 (cinder+0xaded)
+2026-10-22T23:46:10.3948865Z E                   #10 operator() /usr/include/c++/13/bits/std_thread.h:299 (cinder+0xaded)
+2026-10-22T23:46:10.3949338Z E                   #11 _M_run /usr/include/c++/13/bits/std_thread.h:244 (cinder+0xaded)
+2026-10-22T23:46:10.3949860Z E                   #12 <null> <null> (libstdc++.so.6+0xecdb3) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.3950204Z E               
+2026-10-22T23:46:10.3950631Z E                 Location is global '(anonymous namespace)::stopping' of size 4 at 0x563a42905274 (cinder+0x36274)
+2026-10-22T23:46:10.3950991Z E               
+2026-10-22T23:46:10.3951276Z E                 Thread T2 (tid=2338, running) created by main thread at:
+2026-10-22T23:46:10.3952095Z E                   #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1022 (libtsan.so.2+0x5ac1a) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.3953186Z E                   #1 std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)()) <null> (libstdc++.so.6+0xeceb0) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.3954133Z E                   #2 main /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x9215) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.3954565Z E               
+2026-10-22T23:46:10.3954976Z E               SUMMARY: ThreadSanitizer: data race /home/runner/work/cinder/cinder/src/server.cpp:20 in stop
+2026-10-22T23:46:10.3955384Z E               ==================
+2026-10-22T23:46:10.3955525Z 
+2026-10-22T23:46:10.3955654Z tests/integration.py:81: RuntimeError
+2026-10-22T23:46:10.3956055Z __________ Integration.test_binary_fragmentation_pipeline_and_expiry ___________
+2026-10-22T23:46:10.3956304Z 
+2026-10-22T23:46:10.3956582Z self = <integration.Integration testMethod=test_binary_fragmentation_pipeline_and_expiry>
+2026-10-22T23:46:10.3956853Z 
+2026-10-22T23:46:10.3956959Z     def tearDown(self) -> None:
+2026-10-22T23:46:10.3957182Z >       self.server.close()
+2026-10-22T23:46:10.3957307Z 
+2026-10-22T23:46:10.3957400Z tests/integration.py:161: 
+2026-10-22T23:46:10.3957697Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-10-22T23:46:10.3958002Z tests/integration.py:86: in close
+2026-10-22T23:46:10.3958208Z     self.stop()
+2026-10-22T23:46:10.3958477Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-10-22T23:46:10.3958661Z 
+2026-10-22T23:46:10.3958958Z self = <integration.Server object at 0x7fcc8fd0e5d0>, kill = False
+2026-10-22T23:46:10.3959170Z 
+2026-10-22T23:46:10.3959285Z     def stop(self, kill: bool = False) -> None:
+2026-10-22T23:46:10.3959595Z         if self.process and self.process.poll() is None:
+2026-10-22T23:46:10.3960041Z             self.process.kill() if kill else self.process.terminate()
+2026-10-22T23:46:10.3960351Z             code = self.process.wait(timeout=8)
+2026-10-22T23:46:10.3960691Z             if not kill and code != 0:
+2026-10-22T23:46:10.3960977Z >               raise RuntimeError(
+2026-10-22T23:46:10.3961334Z                     "server failed at shutdown: " + (self.path.parent / "server.log").read_text()
+2026-10-22T23:46:10.3961736Z                 )
+2026-10-22T23:46:10.3962144Z E               RuntimeError: server failed at shutdown: {"event":"ready","resp_port":33661,"http_port":57869}
+2026-10-22T23:46:10.3962534Z E               ==================
+2026-10-22T23:46:10.3962838Z E               WARNING: ThreadSanitizer: data race (pid=2406)
+2026-10-22T23:46:10.3963183Z E                 Write of size 4 at 0x55b8ecc00274 by main thread:
+2026-10-22T23:46:10.3963772Z E                   #0 stop /home/runner/work/cinder/cinder/src/server.cpp:20 (cinder+0xa5ec) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.3964683Z E                   #1 CallUserSignalHandler ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:2096 (libtsan.so.2+0x517d5) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.3965535Z E                   #2 poll /usr/include/x86_64-linux-gnu/bits/poll2.h:39 (cinder+0x94a1) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.3966119Z E                   #3 main /home/runner/work/cinder/cinder/src/server.cpp:336 (cinder+0x94a1)
+2026-10-22T23:46:10.3966429Z E               
+2026-10-22T23:46:10.3966706Z E                 Previous read of size 4 at 0x55b8ecc00274 by thread T3:
+2026-10-22T23:46:10.3967302Z E                   #0 resp /home/runner/work/cinder/cinder/src/server.cpp:230 (cinder+0x107d7) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.3968117Z E                   #1 operator() /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x11e9e) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.3968862Z E                   #2 __invoke_impl<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:61 (cinder+0x11e9e)
+2026-10-22T23:46:10.3969504Z E                   #3 __invoke_r<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:111 (cinder+0x11e9e)
+2026-10-22T23:46:10.3970030Z E                   #4 _M_invoke /usr/include/c++/13/bits/std_function.h:290 (cinder+0x11e9e)
+2026-10-22T23:46:10.3970775Z E                   #5 std::function<void (int)>::operator()(int) const /usr/include/c++/13/bits/std_function.h:591 (cinder+0xaded) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.3971545Z E                   #6 operator() /home/runner/work/cinder/cinder/src/server.cpp:67 (cinder+0xaded)
+2026-10-22T23:46:10.3972304Z E                   #7 __invoke_impl<void, (anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:61 (cinder+0xaded)
+2026-10-22T23:46:10.3973142Z E                   #8 __invoke<(anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:96 (cinder+0xaded)
+2026-10-22T23:46:10.3973746Z E                   #9 _M_invoke<0> /usr/include/c++/13/bits/std_thread.h:292 (cinder+0xaded)
+2026-10-22T23:46:10.3974192Z E                   #10 operator() /usr/include/c++/13/bits/std_thread.h:299 (cinder+0xaded)
+2026-10-22T23:46:10.3974626Z E                   #11 _M_run /usr/include/c++/13/bits/std_thread.h:244 (cinder+0xaded)
+2026-10-22T23:46:10.3975131Z E                   #12 <null> <null> (libstdc++.so.6+0xecdb3) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.3975462Z E               
+2026-10-22T23:46:10.3975991Z E                 Location is global '(anonymous namespace)::stopping' of size 4 at 0x55b8ecc00274 (cinder+0x36274)
+2026-10-22T23:46:10.3976354Z E               
+2026-10-22T23:46:10.3976634Z E                 Thread T3 (tid=2410, running) created by main thread at:
+2026-10-22T23:46:10.3977436Z E                   #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1022 (libtsan.so.2+0x5ac1a) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.3978498Z E                   #1 std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)()) <null> (libstdc++.so.6+0xeceb0) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.3979421Z E                   #2 main /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x9215) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.3979835Z E               
+2026-10-22T23:46:10.3980248Z E               SUMMARY: ThreadSanitizer: data race /home/runner/work/cinder/cinder/src/server.cpp:20 in stop
+2026-10-22T23:46:10.3980634Z E               ==================
+2026-10-22T23:46:10.3980769Z 
+2026-10-22T23:46:10.3980896Z tests/integration.py:81: RuntimeError
+2026-10-22T23:46:10.3981264Z _____________ Integration.test_invalid_input_and_oom_do_not_mutate _____________
+2026-10-22T23:46:10.3981661Z 
+2026-10-22T23:46:10.3981952Z self = <integration.Integration testMethod=test_invalid_input_and_oom_do_not_mutate>
+2026-10-22T23:46:10.3982215Z 
+2026-10-22T23:46:10.3982314Z     def tearDown(self) -> None:
+2026-10-22T23:46:10.3982533Z >       self.server.close()
+2026-10-22T23:46:10.3982657Z 
+2026-10-22T23:46:10.3982753Z tests/integration.py:161: 
+2026-10-22T23:46:10.3983041Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-10-22T23:46:10.3983331Z tests/integration.py:86: in close
+2026-10-22T23:46:10.3983534Z     self.stop()
+2026-10-22T23:46:10.3983800Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-10-22T23:46:10.3983981Z 
+2026-10-22T23:46:10.3984177Z self = <integration.Server object at 0x7fcc8fd0efd0>, kill = False
+2026-10-22T23:46:10.3984379Z 
+2026-10-22T23:46:10.3984498Z     def stop(self, kill: bool = False) -> None:
+2026-10-22T23:46:10.3984794Z         if self.process and self.process.poll() is None:
+2026-10-22T23:46:10.3985122Z             self.process.kill() if kill else self.process.terminate()
+2026-10-22T23:46:10.3985425Z             code = self.process.wait(timeout=8)
+2026-10-22T23:46:10.3985677Z             if not kill and code != 0:
+2026-10-22T23:46:10.3985915Z >               raise RuntimeError(
+2026-10-22T23:46:10.3986257Z                     "server failed at shutdown: " + (self.path.parent / "server.log").read_text()
+2026-10-22T23:46:10.3986561Z                 )
+2026-10-22T23:46:10.3986960Z E               RuntimeError: server failed at shutdown: {"event":"ready","resp_port":45419,"http_port":56835}
+2026-10-22T23:46:10.3987349Z E               ==================
+2026-10-22T23:46:10.3987637Z E               WARNING: ThreadSanitizer: data race (pid=2477)
+2026-10-22T23:46:10.3987976Z E                 Write of size 4 at 0x55cbee840274 by main thread:
+2026-10-22T23:46:10.3988556Z E                   #0 stop /home/runner/work/cinder/cinder/src/server.cpp:20 (cinder+0xa5ec) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.3989441Z E                   #1 CallUserSignalHandler ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:2096 (libtsan.so.2+0x517d5) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.3990276Z E                   #2 poll /usr/include/x86_64-linux-gnu/bits/poll2.h:39 (cinder+0x94a1) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.3990845Z E                   #3 main /home/runner/work/cinder/cinder/src/server.cpp:336 (cinder+0x94a1)
+2026-10-22T23:46:10.3991147Z E               
+2026-10-22T23:46:10.3991623Z E                 Previous read of size 4 at 0x55cbee840274 by thread T3:
+2026-10-22T23:46:10.3992229Z E                   #0 resp /home/runner/work/cinder/cinder/src/server.cpp:230 (cinder+0x107d7) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.3993010Z E                   #1 operator() /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x11e9e) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.3993851Z E                   #2 __invoke_impl<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:61 (cinder+0x11e9e)
+2026-10-22T23:46:10.3994506Z E                   #3 __invoke_r<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:111 (cinder+0x11e9e)
+2026-10-22T23:46:10.3995037Z E                   #4 _M_invoke /usr/include/c++/13/bits/std_function.h:290 (cinder+0x11e9e)
+2026-10-22T23:46:10.3995779Z E                   #5 std::function<void (int)>::operator()(int) const /usr/include/c++/13/bits/std_function.h:591 (cinder+0xaded) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.3996465Z E                   #6 operator() /home/runner/work/cinder/cinder/src/server.cpp:67 (cinder+0xaded)
+2026-10-22T23:46:10.3997198Z E                   #7 __invoke_impl<void, (anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:61 (cinder+0xaded)
+2026-10-22T23:46:10.3998035Z E                   #8 __invoke<(anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:96 (cinder+0xaded)
+2026-10-22T23:46:10.3998639Z E                   #9 _M_invoke<0> /usr/include/c++/13/bits/std_thread.h:292 (cinder+0xaded)
+2026-10-22T23:46:10.3999085Z E                   #10 operator() /usr/include/c++/13/bits/std_thread.h:299 (cinder+0xaded)
+2026-10-22T23:46:10.3999515Z E                   #11 _M_run /usr/include/c++/13/bits/std_thread.h:244 (cinder+0xaded)
+2026-10-22T23:46:10.4000023Z E                   #12 <null> <null> (libstdc++.so.6+0xecdb3) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.4000354Z E               
+2026-10-22T23:46:10.4000772Z E                 Location is global '(anonymous namespace)::stopping' of size 4 at 0x55cbee840274 (cinder+0x36274)
+2026-10-22T23:46:10.4001122Z E               
+2026-10-22T23:46:10.4001406Z E                 Thread T3 (tid=2481, running) created by main thread at:
+2026-10-22T23:46:10.4002203Z E                   #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1022 (libtsan.so.2+0x5ac1a) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.4003266Z E                   #1 std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)()) <null> (libstdc++.so.6+0xeceb0) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.4004196Z E                   #2 main /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x9215) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4004635Z E               
+2026-10-22T23:46:10.4005038Z E               SUMMARY: ThreadSanitizer: data race /home/runner/work/cinder/cinder/src/server.cpp:20 in stop
+2026-10-22T23:46:10.4005421Z E               ==================
+2026-10-22T23:46:10.4005551Z 
+2026-10-22T23:46:10.4005678Z tests/integration.py:81: RuntimeError
+2026-10-22T23:46:10.4006078Z _____ Integration.test_linearizable_histories_and_checker_negative_control _____
+2026-10-22T23:46:10.4006320Z 
+2026-10-22T23:46:10.4006628Z self = <integration.Integration testMethod=test_linearizable_histories_and_checker_negative_control>
+2026-10-22T23:46:10.4006925Z 
+2026-10-22T23:46:10.4007019Z     def tearDown(self) -> None:
+2026-10-22T23:46:10.4007228Z >       self.server.close()
+2026-10-22T23:46:10.4007358Z 
+2026-10-22T23:46:10.4007456Z tests/integration.py:161: 
+2026-10-22T23:46:10.4007742Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-10-22T23:46:10.4008029Z tests/integration.py:86: in close
+2026-10-22T23:46:10.4008338Z     self.stop()
+2026-10-22T23:46:10.4008606Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-10-22T23:46:10.4008789Z 
+2026-10-22T23:46:10.4008981Z self = <integration.Server object at 0x7fcc90597e10>, kill = False
+2026-10-22T23:46:10.4009282Z 
+2026-10-22T23:46:10.4009405Z     def stop(self, kill: bool = False) -> None:
+2026-10-22T23:46:10.4009708Z         if self.process and self.process.poll() is None:
+2026-10-22T23:46:10.4010046Z             self.process.kill() if kill else self.process.terminate()
+2026-10-22T23:46:10.4010359Z             code = self.process.wait(timeout=8)
+2026-10-22T23:46:10.4010609Z             if not kill and code != 0:
+2026-10-22T23:46:10.4010855Z >               raise RuntimeError(
+2026-10-22T23:46:10.4011202Z                     "server failed at shutdown: " + (self.path.parent / "server.log").read_text()
+2026-10-22T23:46:10.4011607Z                 )
+2026-10-22T23:46:10.4012017Z E               RuntimeError: server failed at shutdown: {"event":"ready","resp_port":48101,"http_port":34687}
+2026-10-22T23:46:10.4012411Z E               ==================
+2026-10-22T23:46:10.4012696Z E               WARNING: ThreadSanitizer: data race (pid=2548)
+2026-10-22T23:46:10.4013029Z E                 Write of size 4 at 0x55facb8ab274 by main thread:
+2026-10-22T23:46:10.4013605Z E                   #0 stop /home/runner/work/cinder/cinder/src/server.cpp:20 (cinder+0xa5ec) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4014494Z E                   #1 CallUserSignalHandler ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:2096 (libtsan.so.2+0x517d5) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.4015342Z E                   #2 poll /usr/include/x86_64-linux-gnu/bits/poll2.h:39 (cinder+0x94a1) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4015914Z E                   #3 main /home/runner/work/cinder/cinder/src/server.cpp:336 (cinder+0x94a1)
+2026-10-22T23:46:10.4016219Z E               
+2026-10-22T23:46:10.4016495Z E                 Previous read of size 4 at 0x55facb8ab274 by thread T53:
+2026-10-22T23:46:10.4017094Z E                   #0 resp /home/runner/work/cinder/cinder/src/server.cpp:230 (cinder+0x107d7) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4017885Z E                   #1 operator() /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x11e9e) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4018614Z E                   #2 __invoke_impl<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:61 (cinder+0x11e9e)
+2026-10-22T23:46:10.4019287Z E                   #3 __invoke_r<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:111 (cinder+0x11e9e)
+2026-10-22T23:46:10.4019809Z E                   #4 _M_invoke /usr/include/c++/13/bits/std_function.h:290 (cinder+0x11e9e)
+2026-10-22T23:46:10.4020564Z E                   #5 std::function<void (int)>::operator()(int) const /usr/include/c++/13/bits/std_function.h:591 (cinder+0xaded) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4021287Z E                   #6 operator() /home/runner/work/cinder/cinder/src/server.cpp:67 (cinder+0xaded)
+2026-10-22T23:46:10.4022230Z E                   #7 __invoke_impl<void, (anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:61 (cinder+0xaded)
+2026-10-22T23:46:10.4023127Z E                   #8 __invoke<(anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:96 (cinder+0xaded)
+2026-10-22T23:46:10.4023739Z E                   #9 _M_invoke<0> /usr/include/c++/13/bits/std_thread.h:292 (cinder+0xaded)
+2026-10-22T23:46:10.4024210Z E                   #10 operator() /usr/include/c++/13/bits/std_thread.h:299 (cinder+0xaded)
+2026-10-22T23:46:10.4024647Z E                   #11 _M_run /usr/include/c++/13/bits/std_thread.h:244 (cinder+0xaded)
+2026-10-22T23:46:10.4025290Z E                   #12 <null> <null> (libstdc++.so.6+0xecdb3) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.4025650Z E               
+2026-10-22T23:46:10.4026067Z E                 Location is global '(anonymous namespace)::stopping' of size 4 at 0x55facb8ab274 (cinder+0x36274)
+2026-10-22T23:46:10.4026526Z E               
+2026-10-22T23:46:10.4026813Z E                 Thread T53 (tid=2602, running) created by main thread at:
+2026-10-22T23:46:10.4027517Z E                   #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1022 (libtsan.so.2+0x5ac1a) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.4028587Z E                   #1 std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)()) <null> (libstdc++.so.6+0xeceb0) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.4029504Z E                   #2 main /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x9215) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4029923Z E               
+2026-10-22T23:46:10.4030324Z E               SUMMARY: ThreadSanitizer: data race /home/runner/work/cinder/cinder/src/server.cpp:20 in stop
+2026-10-22T23:46:10.4030709Z E               ==================
+2026-10-22T23:46:10.4030844Z 
+2026-10-22T23:46:10.4030967Z tests/integration.py:81: RuntimeError
+2026-10-22T23:46:10.4031339Z ________ Integration.test_snapshot_sigkill_recovery_and_corruption_gate ________
+2026-10-22T23:46:10.4031671Z 
+2026-10-22T23:46:10.4031959Z self = <integration.Integration testMethod=test_snapshot_sigkill_recovery_and_corruption_gate>
+2026-10-22T23:46:10.4032256Z 
+2026-10-22T23:46:10.4032439Z     def test_snapshot_sigkill_recovery_and_corruption_gate(self) -> None:
+2026-10-22T23:46:10.4032788Z         with Client(self.server.port) as client:
+2026-10-22T23:46:10.4033063Z             client.call("SET", "durable", "synthetic")
+2026-10-22T23:46:10.4033363Z             client.call("SET", "expiring", "v", "PX", "80")
+2026-10-22T23:46:10.4033660Z             self.assertEqual(client.call("SAVE"), "OK")
+2026-10-22T23:46:10.4033947Z             client.call("SET", "after-save", "not-durable")
+2026-10-22T23:46:10.4034218Z         self.server.stop(kill=True)
+2026-10-22T23:46:10.4034433Z         time.sleep(0.1)
+2026-10-22T23:46:10.4034621Z         self.server.start()
+2026-10-22T23:46:10.4034849Z         with Client(self.server.port) as client:
+2026-10-22T23:46:10.4035165Z             self.assertEqual(client.call("GET", "durable"), b"synthetic")
+2026-10-22T23:46:10.4035508Z             self.assertIsNone(client.call("GET", "expiring"))
+2026-10-22T23:46:10.4035829Z             self.assertIsNone(client.call("GET", "after-save"))
+2026-10-22T23:46:10.4036099Z >       self.server.stop()
+2026-10-22T23:46:10.4036222Z 
+2026-10-22T23:46:10.4036313Z tests/integration.py:220: 
+2026-10-22T23:46:10.4036600Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-10-22T23:46:10.4036785Z 
+2026-10-22T23:46:10.4036981Z self = <integration.Server object at 0x7fcc8fde49d0>, kill = False
+2026-10-22T23:46:10.4037185Z 
+2026-10-22T23:46:10.4037308Z     def stop(self, kill: bool = False) -> None:
+2026-10-22T23:46:10.4037608Z         if self.process and self.process.poll() is None:
+2026-10-22T23:46:10.4037938Z             self.process.kill() if kill else self.process.terminate()
+2026-10-22T23:46:10.4038236Z             code = self.process.wait(timeout=8)
+2026-10-22T23:46:10.4038484Z             if not kill and code != 0:
+2026-10-22T23:46:10.4038720Z >               raise RuntimeError(
+2026-10-22T23:46:10.4039066Z                     "server failed at shutdown: " + (self.path.parent / "server.log").read_text()
+2026-10-22T23:46:10.4039372Z                 )
+2026-10-22T23:46:10.4039773Z E               RuntimeError: server failed at shutdown: {"event":"ready","resp_port":34677,"http_port":53773}
+2026-10-22T23:46:10.4040329Z E               {"event":"ready","resp_port":34677,"http_port":53773}
+2026-10-22T23:46:10.4040625Z E               ==================
+2026-10-22T23:46:10.4040923Z E               WARNING: ThreadSanitizer: data race (pid=2870)
+2026-10-22T23:46:10.4041263Z E                 Write of size 4 at 0x55d25463e274 by main thread:
+2026-10-22T23:46:10.4042032Z E                   #0 stop /home/runner/work/cinder/cinder/src/server.cpp:20 (cinder+0xa5ec) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4042942Z E                   #1 CallUserSignalHandler ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:2096 (libtsan.so.2+0x517d5) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.4043791Z E                   #2 poll /usr/include/x86_64-linux-gnu/bits/poll2.h:39 (cinder+0x94a1) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4044367Z E                   #3 main /home/runner/work/cinder/cinder/src/server.cpp:336 (cinder+0x94a1)
+2026-10-22T23:46:10.4044667Z E               
+2026-10-22T23:46:10.4044948Z E                 Previous read of size 4 at 0x55d25463e274 by thread T3:
+2026-10-22T23:46:10.4045547Z E                   #0 resp /home/runner/work/cinder/cinder/src/server.cpp:230 (cinder+0x107d7) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4046321Z E                   #1 operator() /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x11e9e) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4047263Z E                   #2 __invoke_impl<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:61 (cinder+0x11e9e)
+2026-10-22T23:46:10.4048089Z E                   #3 __invoke_r<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:111 (cinder+0x11e9e)
+2026-10-22T23:46:10.4048635Z E                   #4 _M_invoke /usr/include/c++/13/bits/std_function.h:290 (cinder+0x11e9e)
+2026-10-22T23:46:10.4049380Z E                   #5 std::function<void (int)>::operator()(int) const /usr/include/c++/13/bits/std_function.h:591 (cinder+0xaded) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4050061Z E                   #6 operator() /home/runner/work/cinder/cinder/src/server.cpp:67 (cinder+0xaded)
+2026-10-22T23:46:10.4050799Z E                   #7 __invoke_impl<void, (anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:61 (cinder+0xaded)
+2026-10-22T23:46:10.4051747Z E                   #8 __invoke<(anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:96 (cinder+0xaded)
+2026-10-22T23:46:10.4052359Z E                   #9 _M_invoke<0> /usr/include/c++/13/bits/std_thread.h:292 (cinder+0xaded)
+2026-10-22T23:46:10.4052809Z E                   #10 operator() /usr/include/c++/13/bits/std_thread.h:299 (cinder+0xaded)
+2026-10-22T23:46:10.4053241Z E                   #11 _M_run /usr/include/c++/13/bits/std_thread.h:244 (cinder+0xaded)
+2026-10-22T23:46:10.4053759Z E                   #12 <null> <null> (libstdc++.so.6+0xecdb3) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.4054098Z E               
+2026-10-22T23:46:10.4054512Z E                 Location is global '(anonymous namespace)::stopping' of size 4 at 0x55d25463e274 (cinder+0x36274)
+2026-10-22T23:46:10.4054871Z E               
+2026-10-22T23:46:10.4055143Z E                 Thread T3 (tid=2874, running) created by main thread at:
+2026-10-22T23:46:10.4055850Z E                   #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1022 (libtsan.so.2+0x5ac1a) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.4056929Z E                   #1 std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)()) <null> (libstdc++.so.6+0xeceb0) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.4057965Z E                   #2 main /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x9215) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4058394Z E               
+2026-10-22T23:46:10.4058800Z E               SUMMARY: ThreadSanitizer: data race /home/runner/work/cinder/cinder/src/server.cpp:20 in stop
+2026-10-22T23:46:10.4059340Z E               ==================
+2026-10-22T23:46:10.4059472Z 
+2026-10-22T23:46:10.4059600Z tests/integration.py:81: RuntimeError
+2026-10-22T23:46:10.4059924Z =========================== short test summary info ============================
+2026-10-22T23:46:10.4060672Z FAILED tests/integration.py::Integration::test_auth_origin_and_viewer_live_state - RuntimeError: server failed at shutdown: {"event":"ready","resp_port":47307,"http_port":38837}
+2026-10-22T23:46:10.4061210Z ==================
+2026-10-22T23:46:10.4061603Z WARNING: ThreadSanitizer: data race (pid=2335)
+2026-10-22T23:46:10.4061953Z   Write of size 4 at 0x563a42905274 by main thread:
+2026-10-22T23:46:10.4062457Z     #0 stop /home/runner/work/cinder/cinder/src/server.cpp:20 (cinder+0xa5ec) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4063251Z     #1 CallUserSignalHandler ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:2096 (libtsan.so.2+0x517d5) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.4064013Z     #2 poll /usr/include/x86_64-linux-gnu/bits/poll2.h:39 (cinder+0x94a1) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4064527Z     #3 main /home/runner/work/cinder/cinder/src/server.cpp:336 (cinder+0x94a1)
+2026-10-22T23:46:10.4064753Z 
+2026-10-22T23:46:10.4064903Z   Previous read of size 4 at 0x563a42905274 by thread T2:
+2026-10-22T23:46:10.4065415Z     #0 resp /home/runner/work/cinder/cinder/src/server.cpp:230 (cinder+0x107d7) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4066103Z     #1 operator() /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x11e9e) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4066762Z     #2 __invoke_impl<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:61 (cinder+0x11e9e)
+2026-10-22T23:46:10.4067326Z     #3 __invoke_r<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:111 (cinder+0x11e9e)
+2026-10-22T23:46:10.4067790Z     #4 _M_invoke /usr/include/c++/13/bits/std_function.h:290 (cinder+0x11e9e)
+2026-10-22T23:46:10.4068429Z     #5 std::function<void (int)>::operator()(int) const /usr/include/c++/13/bits/std_function.h:591 (cinder+0xaded) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4069032Z     #6 operator() /home/runner/work/cinder/cinder/src/server.cpp:67 (cinder+0xaded)
+2026-10-22T23:46:10.4069662Z     #7 __invoke_impl<void, (anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:61 (cinder+0xaded)
+2026-10-22T23:46:10.4070406Z     #8 __invoke<(anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:96 (cinder+0xaded)
+2026-10-22T23:46:10.4070935Z     #9 _M_invoke<0> /usr/include/c++/13/bits/std_thread.h:292 (cinder+0xaded)
+2026-10-22T23:46:10.4071313Z     #10 operator() /usr/include/c++/13/bits/std_thread.h:299 (cinder+0xaded)
+2026-10-22T23:46:10.4071762Z     #11 _M_run /usr/include/c++/13/bits/std_thread.h:244 (cinder+0xaded)
+2026-10-22T23:46:10.4072208Z     #12 <null> <null> (libstdc++.so.6+0xecdb3) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.4072462Z 
+2026-10-22T23:46:10.4072722Z   Location is global '(anonymous namespace)::stopping' of size 4 at 0x563a42905274 (cinder+0x36274)
+2026-10-22T23:46:10.4072990Z 
+2026-10-22T23:46:10.4073136Z   Thread T2 (tid=2338, running) created by main thread at:
+2026-10-22T23:46:10.4073729Z     #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1022 (libtsan.so.2+0x5ac1a) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.4074779Z     #1 std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)()) <null> (libstdc++.so.6+0xeceb0) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.4075604Z     #2 main /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x9215) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4076045Z 
+2026-10-22T23:46:10.4076329Z SUMMARY: ThreadSanitizer: data race /home/runner/work/cinder/cinder/src/server.cpp:20 in stop
+2026-10-22T23:46:10.4076684Z ==================
+2026-10-22T23:46:10.4077378Z FAILED tests/integration.py::Integration::test_binary_fragmentation_pipeline_and_expiry - RuntimeError: server failed at shutdown: {"event":"ready","resp_port":33661,"http_port":57869}
+2026-10-22T23:46:10.4077939Z ==================
+2026-10-22T23:46:10.4078176Z WARNING: ThreadSanitizer: data race (pid=2406)
+2026-10-22T23:46:10.4078468Z   Write of size 4 at 0x55b8ecc00274 by main thread:
+2026-10-22T23:46:10.4078968Z     #0 stop /home/runner/work/cinder/cinder/src/server.cpp:20 (cinder+0xa5ec) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4079753Z     #1 CallUserSignalHandler ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:2096 (libtsan.so.2+0x517d5) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.4080528Z     #2 poll /usr/include/x86_64-linux-gnu/bits/poll2.h:39 (cinder+0x94a1) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4081033Z     #3 main /home/runner/work/cinder/cinder/src/server.cpp:336 (cinder+0x94a1)
+2026-10-22T23:46:10.4081271Z 
+2026-10-22T23:46:10.4081420Z   Previous read of size 4 at 0x55b8ecc00274 by thread T3:
+2026-10-22T23:46:10.4082006Z     #0 resp /home/runner/work/cinder/cinder/src/server.cpp:230 (cinder+0x107d7) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4082689Z     #1 operator() /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x11e9e) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4083339Z     #2 __invoke_impl<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:61 (cinder+0x11e9e)
+2026-10-22T23:46:10.4083909Z     #3 __invoke_r<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:111 (cinder+0x11e9e)
+2026-10-22T23:46:10.4084374Z     #4 _M_invoke /usr/include/c++/13/bits/std_function.h:290 (cinder+0x11e9e)
+2026-10-22T23:46:10.4085002Z     #5 std::function<void (int)>::operator()(int) const /usr/include/c++/13/bits/std_function.h:591 (cinder+0xaded) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4085601Z     #6 operator() /home/runner/work/cinder/cinder/src/server.cpp:67 (cinder+0xaded)
+2026-10-22T23:46:10.4086231Z     #7 __invoke_impl<void, (anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:61 (cinder+0xaded)
+2026-10-22T23:46:10.4086971Z     #8 __invoke<(anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:96 (cinder+0xaded)
+2026-10-22T23:46:10.4087502Z     #9 _M_invoke<0> /usr/include/c++/13/bits/std_thread.h:292 (cinder+0xaded)
+2026-10-22T23:46:10.4087885Z     #10 operator() /usr/include/c++/13/bits/std_thread.h:299 (cinder+0xaded)
+2026-10-22T23:46:10.4088255Z     #11 _M_run /usr/include/c++/13/bits/std_thread.h:244 (cinder+0xaded)
+2026-10-22T23:46:10.4088686Z     #12 <null> <null> (libstdc++.so.6+0xecdb3) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.4088943Z 
+2026-10-22T23:46:10.4089195Z   Location is global '(anonymous namespace)::stopping' of size 4 at 0x55b8ecc00274 (cinder+0x36274)
+2026-10-22T23:46:10.4089468Z 
+2026-10-22T23:46:10.4089612Z   Thread T3 (tid=2410, running) created by main thread at:
+2026-10-22T23:46:10.4090213Z     #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1022 (libtsan.so.2+0x5ac1a) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.4091252Z     #1 std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)()) <null> (libstdc++.so.6+0xeceb0) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.4092157Z     #2 main /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x9215) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4092595Z 
+2026-10-22T23:46:10.4092886Z SUMMARY: ThreadSanitizer: data race /home/runner/work/cinder/cinder/src/server.cpp:20 in stop
+2026-10-22T23:46:10.4093229Z ==================
+2026-10-22T23:46:10.4093887Z FAILED tests/integration.py::Integration::test_invalid_input_and_oom_do_not_mutate - RuntimeError: server failed at shutdown: {"event":"ready","resp_port":45419,"http_port":56835}
+2026-10-22T23:46:10.4094435Z ==================
+2026-10-22T23:46:10.4094664Z WARNING: ThreadSanitizer: data race (pid=2477)
+2026-10-22T23:46:10.4094942Z   Write of size 4 at 0x55cbee840274 by main thread:
+2026-10-22T23:46:10.4095429Z     #0 stop /home/runner/work/cinder/cinder/src/server.cpp:20 (cinder+0xa5ec) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4096209Z     #1 CallUserSignalHandler ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:2096 (libtsan.so.2+0x517d5) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.4096957Z     #2 poll /usr/include/x86_64-linux-gnu/bits/poll2.h:39 (cinder+0x94a1) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4097460Z     #3 main /home/runner/work/cinder/cinder/src/server.cpp:336 (cinder+0x94a1)
+2026-10-22T23:46:10.4097688Z 
+2026-10-22T23:46:10.4097826Z   Previous read of size 4 at 0x55cbee840274 by thread T3:
+2026-10-22T23:46:10.4098326Z     #0 resp /home/runner/work/cinder/cinder/src/server.cpp:230 (cinder+0x107d7) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4099016Z     #1 operator() /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x11e9e) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4099672Z     #2 __invoke_impl<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:61 (cinder+0x11e9e)
+2026-10-22T23:46:10.4100239Z     #3 __invoke_r<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:111 (cinder+0x11e9e)
+2026-10-22T23:46:10.4100710Z     #4 _M_invoke /usr/include/c++/13/bits/std_function.h:290 (cinder+0x11e9e)
+2026-10-22T23:46:10.4101341Z     #5 std::function<void (int)>::operator()(int) const /usr/include/c++/13/bits/std_function.h:591 (cinder+0xaded) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4102173Z     #6 operator() /home/runner/work/cinder/cinder/src/server.cpp:67 (cinder+0xaded)
+2026-10-22T23:46:10.4102820Z     #7 __invoke_impl<void, (anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:61 (cinder+0xaded)
+2026-10-22T23:46:10.4103579Z     #8 __invoke<(anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:96 (cinder+0xaded)
+2026-10-22T23:46:10.4104130Z     #9 _M_invoke<0> /usr/include/c++/13/bits/std_thread.h:292 (cinder+0xaded)
+2026-10-22T23:46:10.4104529Z     #10 operator() /usr/include/c++/13/bits/std_thread.h:299 (cinder+0xaded)
+2026-10-22T23:46:10.4104901Z     #11 _M_run /usr/include/c++/13/bits/std_thread.h:244 (cinder+0xaded)
+2026-10-22T23:46:10.4105339Z     #12 <null> <null> (libstdc++.so.6+0xecdb3) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.4105591Z 
+2026-10-22T23:46:10.4105848Z   Location is global '(anonymous namespace)::stopping' of size 4 at 0x55cbee840274 (cinder+0x36274)
+2026-10-22T23:46:10.4106155Z 
+2026-10-22T23:46:10.4106303Z   Thread T3 (tid=2481, running) created by main thread at:
+2026-10-22T23:46:10.4106911Z     #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1022 (libtsan.so.2+0x5ac1a) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.4107993Z     #1 std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)()) <null> (libstdc++.so.6+0xeceb0) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.4108819Z     #2 main /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x9215) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4109276Z 
+2026-10-22T23:46:10.4109559Z SUMMARY: ThreadSanitizer: data race /home/runner/work/cinder/cinder/src/server.cpp:20 in stop
+2026-10-22T23:46:10.4109919Z ==================
+2026-10-22T23:46:10.4110641Z FAILED tests/integration.py::Integration::test_linearizable_histories_and_checker_negative_control - RuntimeError: server failed at shutdown: {"event":"ready","resp_port":48101,"http_port":34687}
+2026-10-22T23:46:10.4111370Z ==================
+2026-10-22T23:46:10.4111800Z WARNING: ThreadSanitizer: data race (pid=2548)
+2026-10-22T23:46:10.4112186Z   Write of size 4 at 0x55facb8ab274 by main thread:
+2026-10-22T23:46:10.4112740Z     #0 stop /home/runner/work/cinder/cinder/src/server.cpp:20 (cinder+0xa5ec) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4113530Z     #1 CallUserSignalHandler ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:2096 (libtsan.so.2+0x517d5) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.4114277Z     #2 poll /usr/include/x86_64-linux-gnu/bits/poll2.h:39 (cinder+0x94a1) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4114788Z     #3 main /home/runner/work/cinder/cinder/src/server.cpp:336 (cinder+0x94a1)
+2026-10-22T23:46:10.4115021Z 
+2026-10-22T23:46:10.4115170Z   Previous read of size 4 at 0x55facb8ab274 by thread T53:
+2026-10-22T23:46:10.4115680Z     #0 resp /home/runner/work/cinder/cinder/src/server.cpp:230 (cinder+0x107d7) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4116358Z     #1 operator() /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x11e9e) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4117013Z     #2 __invoke_impl<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:61 (cinder+0x11e9e)
+2026-10-22T23:46:10.4117573Z     #3 __invoke_r<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:111 (cinder+0x11e9e)
+2026-10-22T23:46:10.4118034Z     #4 _M_invoke /usr/include/c++/13/bits/std_function.h:290 (cinder+0x11e9e)
+2026-10-22T23:46:10.4118664Z     #5 std::function<void (int)>::operator()(int) const /usr/include/c++/13/bits/std_function.h:591 (cinder+0xaded) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4119270Z     #6 operator() /home/runner/work/cinder/cinder/src/server.cpp:67 (cinder+0xaded)
+2026-10-22T23:46:10.4119913Z     #7 __invoke_impl<void, (anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:61 (cinder+0xaded)
+2026-10-22T23:46:10.4120659Z     #8 __invoke<(anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:96 (cinder+0xaded)
+2026-10-22T23:46:10.4121196Z     #9 _M_invoke<0> /usr/include/c++/13/bits/std_thread.h:292 (cinder+0xaded)
+2026-10-22T23:46:10.4121761Z     #10 operator() /usr/include/c++/13/bits/std_thread.h:299 (cinder+0xaded)
+2026-10-22T23:46:10.4122142Z     #11 _M_run /usr/include/c++/13/bits/std_thread.h:244 (cinder+0xaded)
+2026-10-22T23:46:10.4122579Z     #12 <null> <null> (libstdc++.so.6+0xecdb3) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.4122838Z 
+2026-10-22T23:46:10.4123100Z   Location is global '(anonymous namespace)::stopping' of size 4 at 0x55facb8ab274 (cinder+0x36274)
+2026-10-22T23:46:10.4123372Z 
+2026-10-22T23:46:10.4123522Z   Thread T53 (tid=2602, running) created by main thread at:
+2026-10-22T23:46:10.4124134Z     #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1022 (libtsan.so.2+0x5ac1a) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.4125224Z     #1 std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)()) <null> (libstdc++.so.6+0xeceb0) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.4126056Z     #2 main /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x9215) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4126497Z 
+2026-10-22T23:46:10.4126787Z SUMMARY: ThreadSanitizer: data race /home/runner/work/cinder/cinder/src/server.cpp:20 in stop
+2026-10-22T23:46:10.4127158Z ==================
+2026-10-22T23:46:10.4127855Z FAILED tests/integration.py::Integration::test_snapshot_sigkill_recovery_and_corruption_gate - RuntimeError: server failed at shutdown: {"event":"ready","resp_port":34677,"http_port":53773}
+2026-10-22T23:46:10.4128505Z {"event":"ready","resp_port":34677,"http_port":53773}
+2026-10-22T23:46:10.4128750Z ==================
+2026-10-22T23:46:10.4128980Z WARNING: ThreadSanitizer: data race (pid=2870)
+2026-10-22T23:46:10.4129258Z   Write of size 4 at 0x55d25463e274 by main thread:
+2026-10-22T23:46:10.4129747Z     #0 stop /home/runner/work/cinder/cinder/src/server.cpp:20 (cinder+0xa5ec) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4130518Z     #1 CallUserSignalHandler ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:2096 (libtsan.so.2+0x517d5) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.4131264Z     #2 poll /usr/include/x86_64-linux-gnu/bits/poll2.h:39 (cinder+0x94a1) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4131847Z     #3 main /home/runner/work/cinder/cinder/src/server.cpp:336 (cinder+0x94a1)
+2026-10-22T23:46:10.4132078Z 
+2026-10-22T23:46:10.4132221Z   Previous read of size 4 at 0x55d25463e274 by thread T3:
+2026-10-22T23:46:10.4132721Z     #0 resp /home/runner/work/cinder/cinder/src/server.cpp:230 (cinder+0x107d7) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4133400Z     #1 operator() /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x11e9e) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4134035Z     #2 __invoke_impl<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:61 (cinder+0x11e9e)
+2026-10-22T23:46:10.4134593Z     #3 __invoke_r<void, main(int, char**)::<lambda(int)>&, int> /usr/include/c++/13/bits/invoke.h:111 (cinder+0x11e9e)
+2026-10-22T23:46:10.4135055Z     #4 _M_invoke /usr/include/c++/13/bits/std_function.h:290 (cinder+0x11e9e)
+2026-10-22T23:46:10.4135676Z     #5 std::function<void (int)>::operator()(int) const /usr/include/c++/13/bits/std_function.h:591 (cinder+0xaded) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4136282Z     #6 operator() /home/runner/work/cinder/cinder/src/server.cpp:67 (cinder+0xaded)
+2026-10-22T23:46:10.4136901Z     #7 __invoke_impl<void, (anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:61 (cinder+0xaded)
+2026-10-22T23:46:10.4137645Z     #8 __invoke<(anonymous namespace)::Pool::Pool(size_t, std::function<void(int)>)::<lambda()> > /usr/include/c++/13/bits/invoke.h:96 (cinder+0xaded)
+2026-10-22T23:46:10.4138174Z     #9 _M_invoke<0> /usr/include/c++/13/bits/std_thread.h:292 (cinder+0xaded)
+2026-10-22T23:46:10.4138563Z     #10 operator() /usr/include/c++/13/bits/std_thread.h:299 (cinder+0xaded)
+2026-10-22T23:46:10.4138935Z     #11 _M_run /usr/include/c++/13/bits/std_thread.h:244 (cinder+0xaded)
+2026-10-22T23:46:10.4139361Z     #12 <null> <null> (libstdc++.so.6+0xecdb3) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.4139617Z 
+2026-10-22T23:46:10.4139905Z   Location is global '(anonymous namespace)::stopping' of size 4 at 0x55d25463e274 (cinder+0x36274)
+2026-10-22T23:46:10.4140182Z 
+2026-10-22T23:46:10.4140329Z   Thread T3 (tid=2874, running) created by main thread at:
+2026-10-22T23:46:10.4140925Z     #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1022 (libtsan.so.2+0x5ac1a) (BuildId: 2a13a7710e361d06f7babbea53065ca2be93f738)
+2026-10-22T23:46:10.4142247Z     #1 std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)()) <null> (libstdc++.so.6+0xeceb0) (BuildId: 753c6c8608b61d4e67be8f0c890e03e0aa046b8b)
+2026-10-22T23:46:10.4143090Z     #2 main /home/runner/work/cinder/cinder/src/server.cpp:329 (cinder+0x9215) (BuildId: 5d39c5624a92b254a95d06ed76b022888b6463ec)
+2026-10-22T23:46:10.4143532Z 
+2026-10-22T23:46:10.4143819Z SUMMARY: ThreadSanitizer: data race /home/runner/work/cinder/cinder/src/server.cpp:20 in stop
+2026-10-22T23:46:10.4144165Z ==================
+2026-10-22T23:46:10.4144344Z 5 failed in 1.81s
+2026-10-22T23:46:10.4272800Z make: *** [Makefile:23: test] Error 1
+2026-10-22T23:46:10.4287009Z ##[error]Process completed with exit code 2.
+2026-10-22T23:46:10.4355595Z ##[group]Run actions/upload-artifact@v4
+2026-10-22T23:46:10.4355829Z with:
+2026-10-22T23:46:10.4355999Z   name: cinder-thread-evidence
+2026-10-22T23:46:10.4356202Z   path: docs/results/
+2026-10-22T23:46:10.4356381Z   if-no-files-found: warn
+2026-10-22T23:46:10.4356571Z   compression-level: 6
+2026-10-22T23:46:10.4356756Z   overwrite: false
+2026-10-22T23:46:10.4356931Z   include-hidden-files: false
+2026-10-22T23:46:10.4357122Z env:
+2026-10-22T23:46:10.4357323Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:46:10.4357669Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+2026-10-22T23:46:10.4358000Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:46:10.4358297Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:46:10.4358595Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-22T23:46:10.4358899Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+2026-10-22T23:46:10.4359193Z ##[endgroup]
+2026-10-22T23:46:10.5666447Z (node:2941) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-22T23:46:10.5667102Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-22T23:46:10.5822848Z With the provided path, there will be 90 files uploaded
+2026-10-22T23:46:10.5823804Z Artifact name is valid!
+2026-10-22T23:46:10.5824302Z Root directory input is valid!
+2026-10-22T23:46:10.9076261Z Beginning upload of artifact content to blob storage
+2026-10-22T23:46:10.9762093Z (node:2941) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-22T23:46:11.2926931Z Uploaded bytes 47772
+2026-10-22T23:46:11.3558065Z Finished uploading artifact content to blob storage!
+2026-10-22T23:46:11.3559042Z SHA256 digest of uploaded artifact zip is 223a05348cfff882c75884eaab478e771d064bcfb922b84141ca8585c57e3525
+2026-10-22T23:46:11.3559745Z Finalizing artifact upload
+2026-10-22T23:46:11.8286054Z Artifact cinder-thread-evidence.zip successfully finalized. Artifact ID 12467461322
+2026-10-22T23:46:11.8287165Z Artifact cinder-thread-evidence has been successfully uploaded! Final size is 47772 bytes. Artifact ID is 12467461322
+2026-10-22T23:46:11.8292078Z Artifact download URL: https://github.com/rjrddy/cinder/actions/runs/39873863171/artifacts/12467461322
+2026-10-22T23:46:11.8464919Z Post job cleanup.
+2026-10-22T23:46:11.9193229Z [command]/usr/bin/git version
+2026-10-22T23:46:11.9228626Z git version 2.55.0
+2026-10-22T23:46:11.9258610Z Temporarily overriding HOME='/home/runner/work/_temp/e8caa1d4-db6f-47ca-95e8-af9cad1337ba' before making global git config changes
+2026-10-22T23:46:11.9259851Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-22T23:46:11.9262718Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cinder/cinder
+2026-10-22T23:46:11.9294381Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-22T23:46:11.9323454Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-22T23:46:11.9545484Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-22T23:46:11.9565411Z http.https://github.com/.extraheader
+2026-10-22T23:46:11.9574680Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-22T23:46:11.9602943Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-22T23:46:11.9817924Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-22T23:46:11.9850389Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-22T23:46:12.0186706Z Cleaning up orphan processes
+2026-10-22T23:46:12.0405432Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

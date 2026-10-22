@@ -1,13 +1,24 @@
+.venv/bin/clang-format --dry-run --Werror src/*.cpp src/*.hpp tests/*.cpp
+.venv/bin/ruff check scripts tests
+All checks passed!
+.venv/bin/ruff format --check scripts tests
+7 files already formatted
+node --check web/app.js
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DSANITIZER=
 -- Configuring done (0.0s)
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/rajreddy/dev/outreach/cinder/build
 cmake --build build -j 4
+[ 14%] Building CXX object CMakeFiles/cinder_core.dir/src/protocol.cpp.o
+[ 28%] Linking CXX static library libcinder_core.a
 [ 42%] Built target cinder_core
+[ 71%] Linking CXX executable core_tests
+[ 71%] Building CXX object CMakeFiles/cinder.dir/src/server.cpp.o
+[ 85%] Built target core_tests
+[100%] Linking CXX executable cinder
 [100%] Built target cinder
-[100%] Built target core_tests
 ./build/core_tests
 {"checks":8163,"concurrent_increments":16000,"collision_keys":100,"model_steps":4000,"parser_fuzz_cases":10000,"status":"pass"}
 CINDER_BINARY=build/cinder CINDER_RESULTS=docs/results/build .venv/bin/python -m pytest -q
 .....                                                                    [100%]
-5 passed in 1.02s
+5 passed in 1.14s

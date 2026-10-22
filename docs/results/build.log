@@ -1,0 +1,8 @@
+[ 14%] Building CXX object CMakeFiles/cinder_core.dir/src/store.cpp.o
+[ 28%] Linking CXX static library libcinder_core.a
+[ 42%] Built target cinder_core
+[ 71%] Linking CXX executable cinder
+[ 71%] Building CXX object CMakeFiles/core_tests.dir/tests/core.cpp.o
+[ 85%] Built target cinder
+[100%] Linking CXX executable core_tests
+[100%] Built target core_tests

@@ -1,0 +1,4 @@
+{"event":"ready","resp_port":59501,"http_port":59502}
+{"event":"ready","resp_port":59501,"http_port":59502}
+{"event":"stopped","commands":4}
+{"event":"fatal","message":"snapshot checksum mismatch"}

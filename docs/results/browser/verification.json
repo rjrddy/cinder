@@ -1,0 +1,23 @@
+{
+  "real_server": true,
+  "seeded_keys": 64,
+  "viewports_no_overflow": [
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "write_read": "pass",
+  "integer_error": "caught",
+  "ttl_disappearance": "pass",
+  "snapshot_save": "pass",
+  "html_rendered_as_text": true,
+  "page_errors": [],
+  "video": null,
+  "recorded_demo": {
+    "path": "docs/results/browser/demo.webm",
+    "probe": "docs/results/browser/demo-probe.json",
+    "duration_seconds": 95.72,
+    "scope": "Actual long flow recorded before display-label and shutdown-flag fixes; refreshed responsive screenshots use corrected display label."
+  }
+}

@@ -1,0 +1,40 @@
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DSANITIZER=
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/rajreddy/dev/outreach/cinder/build
+cmake --build build -j 4
+[ 14%] Building CXX object CMakeFiles/cinder_core.dir/src/store.cpp.o
+[ 28%] Building CXX object CMakeFiles/cinder_core.dir/src/protocol.cpp.o
+[ 42%] Linking CXX static library libcinder_core.a
+[ 42%] Built target cinder_core
+[ 57%] Building CXX object CMakeFiles/cinder.dir/src/server.cpp.o
+[ 71%] Building CXX object CMakeFiles/core_tests.dir/tests/core.cpp.o
+[ 85%] Linking CXX executable core_tests
+[100%] Linking CXX executable cinder
+[100%] Built target cinder
+[100%] Built target core_tests
+.venv/bin/python scripts/bench.py --redis-bin "../.cache/cinder-tools/redis-7.2.4/src"
+cinder 0 1 1 [('SET', '45385.78', '0.055'), ('GET', '43988.27', '0.055')]
+cinder 0 16 1 [('SET', '105633.80', '0.143'), ('GET', '100334.45', '0.247')]
+cinder 0 50 1 [('SET', '90634.44', '1.319'), ('GET', '103092.78', '0.471')]
+cinder 0 16 16 [('SET', '1363636.38', '0.359'), ('GET', '1363636.38', '0.335')]
+redis 0 1 1 [('SET', '42735.04', '0.055'), ('GET', '45941.81', '0.047')]
+redis 0 16 1 [('SET', '110701.11', '0.175'), ('GET', '111111.11', '0.183')]
+redis 0 50 1 [('SET', '106382.98', '0.719'), ('GET', '102739.73', '0.807')]
+redis 0 16 16 [('SET', '967741.94', '0.359'), ('GET', '1111111.12', '0.367')]
+redis 1 1 1 [('SET', '42432.81', '0.055'), ('GET', '36496.35', '0.095')]
+redis 1 16 1 [('SET', '67720.09', '0.983'), ('GET', '105633.80', '0.271')]
+redis 1 50 1 [('SET', '108695.66', '0.455'), ('GET', '102739.73', '0.871')]
+redis 1 16 16 [('SET', '1034482.81', '0.343'), ('GET', '1250000.00', '0.287')]
+cinder 1 1 1 [('SET', '42372.88', '0.055'), ('GET', '45045.04', '0.047')]
+cinder 1 16 1 [('SET', '107526.88', '0.175'), ('GET', '107142.86', '0.127')]
+cinder 1 50 1 [('SET', '108303.24', '0.327'), ('GET', '107526.88', '0.367')]
+cinder 1 16 16 [('SET', '1304347.88', '0.359'), ('GET', '1500000.00', '0.191')]
+cinder 2 1 1 [('SET', '46728.97', '0.039'), ('GET', '50000.00', '0.039')]
+cinder 2 16 1 [('SET', '104895.10', '0.143'), ('GET', '105263.16', '0.143')]
+cinder 2 50 1 [('SET', '106007.07', '0.335'), ('GET', '106007.07', '0.351')]
+cinder 2 16 16 [('SET', '1500000.00', '0.271'), ('GET', '1428571.50', '0.199')]
+redis 2 1 1 [('SET', '45045.04', '0.039'), ('GET', '46296.30', '0.039')]
+redis 2 16 1 [('SET', '111940.30', '0.167'), ('GET', '110294.11', '0.159')]
+redis 2 50 1 [('SET', '114068.44', '0.471'), ('GET', '112359.55', '0.647')]
+redis 2 16 16 [('SET', '937499.94', '0.455'), ('GET', '1250000.00', '0.271')]

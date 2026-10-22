@@ -16,8 +16,9 @@
 
 using namespace cinder;
 namespace {
-volatile std::sig_atomic_t stopping = 0;
-void stop(int) { stopping = 1; }
+std::atomic<bool> stopping{false};
+static_assert(std::atomic<bool>::is_always_lock_free);
+void stop(int) { stopping.store(true, std::memory_order_relaxed); }
 bool send_all(int fd, const std::string &s) {
   size_t pos = 0;
   while (pos < s.size()) {
@@ -227,7 +228,7 @@ void resp(int fd, Engine &engine, const std::string &token) {
   std::string input;
   char buffer[16384];
   bool authed = token.empty();
-  while (!stopping) {
+  while (!stopping.load(std::memory_order_relaxed)) {
     auto n = ::recv(fd, buffer, sizeof(buffer), 0);
     if (n <= 0)
       return;
@@ -331,7 +332,7 @@ int main(int argc, char **argv) {
                     [&](int fd) { http(fd, engine, web, token, http_port, bind == "127.0.0.1"); });
       std::cout << "{\"event\":\"ready\",\"resp_port\":" << port << ",\"http_port\":" << http_port
                 << "}" << std::endl;
-      while (!stopping) {
+      while (!stopping.load(std::memory_order_relaxed)) {
         pollfd fds[2] = {{tcp, POLLIN, 0}, {web_fd, POLLIN, 0}};
         if (::poll(fds, 2, 200) <= 0)
           continue;

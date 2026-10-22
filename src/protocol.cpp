@@ -62,7 +62,14 @@ std::optional<Parsed> parse(std::string_view b) {
   return result;
 }
 std::string bulk(const std::string &v) {
-  return "$" + std::to_string(v.size()) + "\r\n" + v + "\r\n";
+  std::string out;
+  out.reserve(v.size() + 32);
+  out.push_back('$');
+  out += std::to_string(v.size());
+  out += "\r\n";
+  out += v;
+  out += "\r\n";
+  return out;
 }
 std::string json_string(const std::string &v) {
   const char *hex = "0123456789abcdef";
@@ -86,6 +93,12 @@ static std::string upper(std::string s) {
     if (c >= 'a' && c <= 'z')
       c -= 'a' - 'A';
   return s;
+}
+static std::string integer_reply(int64_t value) {
+  std::string out(1, ':');
+  out += std::to_string(value);
+  out += "\r\n";
+  return out;
 }
 std::string Engine::execute(const std::vector<std::string> &a) {
   ++commands;
@@ -124,13 +137,13 @@ std::string Engine::execute(const std::vector<std::string> &a) {
       return store.set(a[1], a[2], ttl, nx) ? "+OK\r\n" : "$-1\r\n";
     }
     if (cmd == "DEL" && n == 2)
-      return ":" + std::to_string(store.erase(a[1])) + "\r\n";
+      return integer_reply(store.erase(a[1]));
     if (cmd == "EXISTS" && n == 2)
-      return ":" + std::to_string(store.get(a[1]).has_value()) + "\r\n";
+      return integer_reply(store.get(a[1]).has_value());
     if (cmd == "INCR" && n == 2)
-      return ":" + std::to_string(store.increment(a[1])) + "\r\n";
+      return integer_reply(store.increment(a[1]));
     if (cmd == "PTTL" && n == 2)
-      return ":" + std::to_string(store.pttl(a[1])) + "\r\n";
+      return integer_reply(store.pttl(a[1]));
     if (cmd == "SAVE" && n == 1) {
       store.save(snapshot);
       return "+OK\r\n";
@@ -140,7 +153,7 @@ std::string Engine::execute(const std::vector<std::string> &a) {
       size_t keys = 0;
       for (auto s : store.stats())
         keys += s.keys;
-      return ":" + std::to_string(keys) + "\r\n";
+      return integer_reply(static_cast<int64_t>(keys));
     }
     if (cmd == "INFO" && n <= 2)
       return bulk("# Server\r\ncinder_version:0.1.0\r\n" + state());

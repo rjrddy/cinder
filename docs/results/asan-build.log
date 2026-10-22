@@ -1,0 +1,22 @@
+-- The CXX compiler identification is AppleClang 16.0.0.16000026
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (0.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/rajreddy/dev/outreach/cinder/build-asan
+[ 28%] Building CXX object CMakeFiles/cinder_core.dir/src/protocol.cpp.o
+[ 28%] Building CXX object CMakeFiles/cinder_core.dir/src/store.cpp.o
+[ 42%] Linking CXX static library libcinder_core.a
+[ 42%] Built target cinder_core
+[ 71%] Building CXX object CMakeFiles/cinder.dir/src/server.cpp.o
+[ 71%] Building CXX object CMakeFiles/core_tests.dir/tests/core.cpp.o
+[ 85%] Linking CXX executable core_tests
+[ 85%] Built target core_tests
+[100%] Linking CXX executable cinder
+[100%] Built target cinder

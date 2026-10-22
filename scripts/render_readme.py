@@ -40,7 +40,7 @@ Source: [raw benchmark CSVs and summary](docs/results/benchmark/), [core output]
 
 [ASan](docs/results/asan-final.log), [TSan](docs/results/tsan-final.log), [socket tests](docs/results/test.log), [dependency scan](docs/results/dependency-scan.log). macOS ASan uses leak detection disabled because LeakSanitizer is unavailable; Linux CI enables it. [CI runs](https://github.com/rjrddy/cinder/actions). [Quality report](docs/QUALITY.md).
 
-Caught failures: malformed RESP and quota/invalid writes were rejected without changing the old value ([raw cases](docs/results/build/caught-failures.json)); a byte-flipped snapshot prevented startup ([actual fatal log](docs/results/build/corruption-rejected.log)). Reproduce with `make test`. These are successful negative tests; retained tooling/harness failures are explained in [results notes](docs/results/NOTES.md).
+Caught failures: malformed RESP and quota/invalid writes were rejected without changing the old value ([raw cases](docs/results/build/caught-failures.json)); a byte-flipped snapshot prevented startup ([actual fatal log](docs/results/build/corruption-rejected.log)). Linux CI also caught a real shutdown flag data race ([failing TSan log](docs/results/initial-linux-tsan-race.log)); it was fixed with a lock-free atomic flag, without suppressions. Reproduce the regression gate with `make tsan`. Other fault cases reproduce with `make test`. These are successful negative tests; retained tooling/harness failures are explained in [results notes](docs/results/NOTES.md).
 
 ## Architecture
 
