@@ -1,0 +1,7 @@
+build*/
+.cache/
+.venv/
+__pycache__/
+*.snap
+*.tmp
+.DS_Store
