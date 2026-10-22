@@ -1,0 +1,21 @@
+{
+  "empty": {
+    "payload_bytes": 0,
+    "resident_keys": 0,
+    "rss_kib": 2528,
+    "hash_buckets": 0
+  },
+  "filled": {
+    "payload_bytes": 1380000,
+    "resident_keys": 10000,
+    "rss_kib": 5200,
+    "hash_buckets": 12704
+  },
+  "deleted": {
+    "payload_bytes": 0,
+    "resident_keys": 0,
+    "rss_kib": 5232,
+    "hash_buckets": 12704
+  },
+  "notes": "Point-in-time ps RSS in KiB; includes native workers, allocator, buckets and buffers. Payload cap is not an RSS cap. Erase need not return allocator memory or shrink buckets."
+}

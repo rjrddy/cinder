@@ -1,0 +1,47 @@
+[
+  {
+    "command": [
+      "../.cache/cinder-tools/redis-7.2.4/src/redis-cli",
+      "-p",
+      "50129",
+      "SET",
+      "cli:synthetic",
+      "17"
+    ],
+    "stdout": "OK\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "../.cache/cinder-tools/redis-7.2.4/src/redis-cli",
+      "-p",
+      "50129",
+      "GET",
+      "cli:synthetic"
+    ],
+    "stdout": "17\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "../.cache/cinder-tools/redis-7.2.4/src/redis-cli",
+      "-p",
+      "50129",
+      "INCR",
+      "cli:synthetic"
+    ],
+    "stdout": "18\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "../.cache/cinder-tools/redis-7.2.4/src/redis-cli",
+      "-p",
+      "50129",
+      "PTTL",
+      "cli:synthetic"
+    ],
+    "stdout": "-1\n",
+    "stderr": ""
+  }
+]

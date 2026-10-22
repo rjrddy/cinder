@@ -6,8 +6,8 @@ An in-memory key-value store must keep atomic operations, expiry and snapshots c
 
 ## Results
 
-- Cinder SET: **105,634 ops/s**, median run p99 **0.143 ms**; GET: **105,263 ops/s**, **0.143 ms**.
-- Same-machine Redis GET: **110,294 ops/s**, median run p99 **0.183 ms**. These rows use 3 trials, 30,000 requests/test, 16 clients, no pipelining, 128-byte values.
+- Cinder SET: **107,527 ops/s**, median run p99 **0.135 ms**; GET: **106,762 ops/s**, **0.151 ms**.
+- Same-machine Redis GET: **111,940 ops/s**, median run p99 **0.183 ms**. These rows use 3 trials, 30,000 requests/test, 16 clients, no pipelining, 128-byte values.
 - **8,163 core checks**, including 4,000 reference-model steps and 10,000 parser fuzz cases; **60 × 9-operation** real concurrent histories accepted, stale-read negative control rejected.
 
 Source: [raw benchmark CSVs and summary](docs/results/benchmark/), [core output](docs/results/core.log), [socket histories](docs/results/build/histories.json). Apple M2 Pro, 16 GiB RAM, macOS arm64; exact specs/compiler/config in the benchmark summary. Redis is a pinned historical 7.2.4 baseline, both built with libc/system allocators. Three trials are finite laptop measurements; neither CPU affinity nor a dedicated host. p99 values are medians of individual-run p99s, not a pooled percentile. Client and server share the machine. [Full comparison and caveats](docs/BENCHMARKS.md).
@@ -38,7 +38,7 @@ Prerequisites: C++20 compiler, CMake, Make, Python and Node. The demo installs p
 
 ```sh
 make demo
-# Open http://127.0.0.1:8084
+# Open http://127.0.0.1:8084; run the CLI below in another terminal
 python3 scripts/client.py GET synthetic:00
 ```
 
@@ -46,7 +46,7 @@ Checks: `make lint test`; sanitizer gates: `make asan` and `make tsan`. Benchmar
 
 ## Decisions and limits
 
-Per-shard shared locks and owned read copies prioritize inspectable lifetime/thread safety. Bucket collisions use full-key equality. INCR and NX are atomic under one exclusive lock. Payload accounting excludes allocator/node/stack overhead and is not an RSS limit. Quotas are per shard, so a hot shard can fill while others have spare capacity. TTL uses Unix time and is sensitive to clock adjustments. SAVE captures one state, then writes off-lock; changes after the last successful SAVE are lost on crash. Checksum detects accidental corruption, not malicious edits. Viewer totals are observational across shards. [Design and guarantees](docs/DESIGN.md), [ADRs](docs/adr/), [protocol subset](docs/PROTOCOL.md), [migration provenance](docs/migration/cinder.md).
+Per-shard shared locks and owned read copies prioritize inspectable lifetime/thread safety. Bucket collisions use full-key equality. INCR and NX are atomic under one exclusive lock. Payload accounting excludes allocator/node/stack overhead and is not an RSS limit ([separate payload/RSS measurements](docs/results/memory.json)). Quotas are per shard, so a hot shard can fill while others have spare capacity. TTL uses Unix time and is sensitive to clock adjustments. SAVE captures one state, then writes off-lock; changes after the last successful SAVE are lost on crash. Checksum detects accidental corruption, not malicious edits. Viewer totals are observational across shards. [Design and guarantees](docs/DESIGN.md), [ADRs](docs/adr/), [protocol subset](docs/PROTOCOL.md), [migration provenance](docs/migration/cinder.md).
 
 This is a bounded local storage lab: no lock-free claim, replication, WAL, transactions, tenant isolation, RESP3 or general Redis compatibility. Native workers hold connections and can be occupied by slow clients. No hosted performance or availability has been measured. The prepared [Render free-plan config](render.yaml) is **not deployed** and has ephemeral storage; [deployment limits](docs/DEPLOY.md). No account was created and no employer code/data was used. [Interview walkthrough](INTERVIEW.md), [follow-up drill](DRILL.md).
 

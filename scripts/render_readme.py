@@ -64,7 +64,7 @@ Prerequisites: C++20 compiler, CMake, Make, Python and Node. The demo installs p
 
 ```sh
 make demo
-# Open http://127.0.0.1:8084
+# Open http://127.0.0.1:8084; run the CLI below in another terminal
 python3 scripts/client.py GET synthetic:00
 ```
 
@@ -72,7 +72,7 @@ Checks: `make lint test`; sanitizer gates: `make asan` and `make tsan`. Benchmar
 
 ## Decisions and limits
 
-Per-shard shared locks and owned read copies prioritize inspectable lifetime/thread safety. Bucket collisions use full-key equality. INCR and NX are atomic under one exclusive lock. Payload accounting excludes allocator/node/stack overhead and is not an RSS limit. Quotas are per shard, so a hot shard can fill while others have spare capacity. TTL uses Unix time and is sensitive to clock adjustments. SAVE captures one state, then writes off-lock; changes after the last successful SAVE are lost on crash. Checksum detects accidental corruption, not malicious edits. Viewer totals are observational across shards. [Design and guarantees](docs/DESIGN.md), [ADRs](docs/adr/), [protocol subset](docs/PROTOCOL.md), [migration provenance](docs/migration/cinder.md).
+Per-shard shared locks and owned read copies prioritize inspectable lifetime/thread safety. Bucket collisions use full-key equality. INCR and NX are atomic under one exclusive lock. Payload accounting excludes allocator/node/stack overhead and is not an RSS limit ([separate payload/RSS measurements](docs/results/memory.json)). Quotas are per shard, so a hot shard can fill while others have spare capacity. TTL uses Unix time and is sensitive to clock adjustments. SAVE captures one state, then writes off-lock; changes after the last successful SAVE are lost on crash. Checksum detects accidental corruption, not malicious edits. Viewer totals are observational across shards. [Design and guarantees](docs/DESIGN.md), [ADRs](docs/adr/), [protocol subset](docs/PROTOCOL.md), [migration provenance](docs/migration/cinder.md).
 
 This is a bounded local storage lab: no lock-free claim, replication, WAL, transactions, tenant isolation, RESP3 or general Redis compatibility. Native workers hold connections and can be occupied by slow clients. No hosted performance or availability has been measured. The prepared [Render free-plan config](render.yaml) is **not deployed** and has ephemeral storage; [deployment limits](docs/DEPLOY.md). No account was created and no employer code/data was used. [Interview walkthrough](INTERVIEW.md), [follow-up drill](DRILL.md).
 

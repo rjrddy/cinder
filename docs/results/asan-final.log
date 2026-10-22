@@ -4,15 +4,13 @@ cmake -S . -B build-asan -DCMAKE_BUILD_TYPE=Release -DSANITIZER=address
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/rajreddy/dev/outreach/cinder/build-asan
 cmake --build build-asan -j 4
-[ 14%] Building CXX object CMakeFiles/cinder_core.dir/src/store.cpp.o
-[ 28%] Building CXX object CMakeFiles/cinder_core.dir/src/protocol.cpp.o
-[ 42%] Linking CXX static library libcinder_core.a
+[ 14%] Building CXX object CMakeFiles/cinder_core.dir/src/protocol.cpp.o
+[ 28%] Linking CXX static library libcinder_core.a
 [ 42%] Built target cinder_core
-[ 71%] Building CXX object CMakeFiles/core_tests.dir/tests/core.cpp.o
+[ 57%] Linking CXX executable core_tests
 [ 71%] Building CXX object CMakeFiles/cinder.dir/src/server.cpp.o
-[ 85%] Linking CXX executable core_tests
+[ 85%] Built target core_tests
 [100%] Linking CXX executable cinder
-[100%] Built target core_tests
 [100%] Built target cinder
 ./build-asan/core_tests
 {"checks":8163,"concurrent_increments":16000,"collision_keys":100,"model_steps":4000,"parser_fuzz_cases":10000,"status":"pass"}

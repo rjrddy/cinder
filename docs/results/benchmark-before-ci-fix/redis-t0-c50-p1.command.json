@@ -1,0 +1,21 @@
+[
+  "/Users/rajreddy/dev/outreach/.cache/cinder-tools/redis-7.2.4/src/redis-benchmark",
+  "-h",
+  "127.0.0.1",
+  "-p",
+  "61859",
+  "-n",
+  "30000",
+  "-c",
+  "50",
+  "-P",
+  "1",
+  "-d",
+  "128",
+  "-r",
+  "10000",
+  "-t",
+  "set,get",
+  "--csv",
+  "-e"
+]

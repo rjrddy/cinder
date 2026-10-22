@@ -20,60 +20,60 @@
       "clients": 1,
       "pipeline": 1,
       "test": "SET",
-      "median_ops_sec": 45385.78,
-      "min_ops_sec": 42372.88,
-      "max_ops_sec": 46728.97,
-      "median_run_p99_ms": 0.055
+      "median_ops_sec": 48000.0,
+      "min_ops_sec": 39318.48,
+      "max_ops_sec": 48076.92,
+      "median_run_p99_ms": 0.039
     },
     {
       "server": "cinder",
       "clients": 1,
       "pipeline": 1,
       "test": "GET",
-      "median_ops_sec": 45045.04,
-      "min_ops_sec": 43988.27,
-      "max_ops_sec": 50000.0,
-      "median_run_p99_ms": 0.047
+      "median_ops_sec": 48076.92,
+      "min_ops_sec": 46875.0,
+      "max_ops_sec": 48465.27,
+      "median_run_p99_ms": 0.039
     },
     {
       "server": "cinder",
       "clients": 16,
       "pipeline": 1,
       "test": "SET",
-      "median_ops_sec": 105633.8,
-      "min_ops_sec": 104895.1,
-      "max_ops_sec": 107526.88,
-      "median_run_p99_ms": 0.143
+      "median_ops_sec": 107526.88,
+      "min_ops_sec": 105263.16,
+      "max_ops_sec": 108695.66,
+      "median_run_p99_ms": 0.135
     },
     {
       "server": "cinder",
       "clients": 16,
       "pipeline": 1,
       "test": "GET",
-      "median_ops_sec": 105263.16,
-      "min_ops_sec": 100334.45,
+      "median_ops_sec": 106761.57,
+      "min_ops_sec": 105263.16,
       "max_ops_sec": 107142.86,
-      "median_run_p99_ms": 0.143
+      "median_run_p99_ms": 0.151
     },
     {
       "server": "cinder",
       "clients": 50,
       "pipeline": 1,
       "test": "SET",
-      "median_ops_sec": 106007.07,
-      "min_ops_sec": 90634.44,
-      "max_ops_sec": 108303.24,
-      "median_run_p99_ms": 0.335
+      "median_ops_sec": 107142.86,
+      "min_ops_sec": 106007.07,
+      "max_ops_sec": 108695.66,
+      "median_run_p99_ms": 0.343
     },
     {
       "server": "cinder",
       "clients": 50,
       "pipeline": 1,
       "test": "GET",
-      "median_ops_sec": 106007.07,
-      "min_ops_sec": 103092.78,
-      "max_ops_sec": 107526.88,
-      "median_run_p99_ms": 0.367
+      "median_ops_sec": 106382.98,
+      "min_ops_sec": 91463.41,
+      "max_ops_sec": 107913.67,
+      "median_run_p99_ms": 0.359
     },
     {
       "server": "cinder",
@@ -82,8 +82,8 @@
       "test": "SET",
       "median_ops_sec": 1363636.38,
       "min_ops_sec": 1304347.88,
-      "max_ops_sec": 1500000.0,
-      "median_run_p99_ms": 0.359
+      "max_ops_sec": 1428571.5,
+      "median_run_p99_ms": 0.351
     },
     {
       "server": "cinder",
@@ -92,47 +92,47 @@
       "test": "GET",
       "median_ops_sec": 1428571.5,
       "min_ops_sec": 1363636.38,
-      "max_ops_sec": 1500000.0,
-      "median_run_p99_ms": 0.199
+      "max_ops_sec": 1428571.5,
+      "median_run_p99_ms": 0.183
     },
     {
       "server": "redis",
       "clients": 1,
       "pipeline": 1,
       "test": "SET",
-      "median_ops_sec": 42735.04,
-      "min_ops_sec": 42432.81,
-      "max_ops_sec": 45045.04,
-      "median_run_p99_ms": 0.055
-    },
-    {
-      "server": "redis",
-      "clients": 1,
-      "pipeline": 1,
-      "test": "GET",
-      "median_ops_sec": 45941.81,
-      "min_ops_sec": 36496.35,
-      "max_ops_sec": 46296.3,
+      "median_ops_sec": 44977.51,
+      "min_ops_sec": 42613.64,
+      "max_ops_sec": 45731.71,
       "median_run_p99_ms": 0.047
     },
     {
       "server": "redis",
+      "clients": 1,
+      "pipeline": 1,
+      "test": "GET",
+      "median_ops_sec": 46948.36,
+      "min_ops_sec": 43668.12,
+      "max_ops_sec": 47468.35,
+      "median_run_p99_ms": 0.039
+    },
+    {
+      "server": "redis",
       "clients": 16,
       "pipeline": 1,
       "test": "SET",
-      "median_ops_sec": 110701.11,
-      "min_ops_sec": 67720.09,
-      "max_ops_sec": 111940.3,
-      "median_run_p99_ms": 0.175
+      "median_ops_sec": 109090.91,
+      "min_ops_sec": 87976.54,
+      "max_ops_sec": 112781.95,
+      "median_run_p99_ms": 0.167
     },
     {
       "server": "redis",
       "clients": 16,
       "pipeline": 1,
       "test": "GET",
-      "median_ops_sec": 110294.11,
-      "min_ops_sec": 105633.8,
-      "max_ops_sec": 111111.11,
+      "median_ops_sec": 111940.3,
+      "min_ops_sec": 110294.11,
+      "max_ops_sec": 113636.37,
       "median_run_p99_ms": 0.183
     },
     {
@@ -140,28 +140,28 @@
       "clients": 50,
       "pipeline": 1,
       "test": "SET",
-      "median_ops_sec": 108695.66,
-      "min_ops_sec": 106382.98,
-      "max_ops_sec": 114068.44,
-      "median_run_p99_ms": 0.471
+      "median_ops_sec": 114068.44,
+      "min_ops_sec": 112359.55,
+      "max_ops_sec": 114942.52,
+      "median_run_p99_ms": 0.447
     },
     {
       "server": "redis",
       "clients": 50,
       "pipeline": 1,
       "test": "GET",
-      "median_ops_sec": 102739.73,
-      "min_ops_sec": 102739.73,
-      "max_ops_sec": 112359.55,
-      "median_run_p99_ms": 0.807
+      "median_ops_sec": 113207.55,
+      "min_ops_sec": 108303.24,
+      "max_ops_sec": 115384.62,
+      "median_run_p99_ms": 0.399
     },
     {
       "server": "redis",
       "clients": 16,
       "pipeline": 16,
       "test": "SET",
-      "median_ops_sec": 967741.94,
-      "min_ops_sec": 937499.94,
+      "median_ops_sec": 1034482.81,
+      "min_ops_sec": 967741.94,
       "max_ops_sec": 1034482.81,
       "median_run_p99_ms": 0.359
     },
@@ -170,8 +170,8 @@
       "clients": 16,
       "pipeline": 16,
       "test": "GET",
-      "median_ops_sec": 1250000.0,
-      "min_ops_sec": 1111111.12,
+      "median_ops_sec": 1200000.0,
+      "min_ops_sec": 1200000.0,
       "max_ops_sec": 1250000.0,
       "median_run_p99_ms": 0.287
     }
@@ -183,8 +183,8 @@
       "clients": 1,
       "pipeline": 1,
       "test": "SET",
-      "ops_sec": 45385.78,
-      "p99_ms": 0.055,
+      "ops_sec": 39318.48,
+      "p99_ms": 0.071,
       "raw": "cinder-t0-c1-p1"
     },
     {
@@ -193,8 +193,8 @@
       "clients": 1,
       "pipeline": 1,
       "test": "GET",
-      "ops_sec": 43988.27,
-      "p99_ms": 0.055,
+      "ops_sec": 46875.0,
+      "p99_ms": 0.047,
       "raw": "cinder-t0-c1-p1"
     },
     {
@@ -203,8 +203,8 @@
       "clients": 16,
       "pipeline": 1,
       "test": "SET",
-      "ops_sec": 105633.8,
-      "p99_ms": 0.143,
+      "ops_sec": 105263.16,
+      "p99_ms": 0.167,
       "raw": "cinder-t0-c16-p1"
     },
     {
@@ -213,8 +213,8 @@
       "clients": 16,
       "pipeline": 1,
       "test": "GET",
-      "ops_sec": 100334.45,
-      "p99_ms": 0.247,
+      "ops_sec": 105263.16,
+      "p99_ms": 0.159,
       "raw": "cinder-t0-c16-p1"
     },
     {
@@ -223,8 +223,8 @@
       "clients": 50,
       "pipeline": 1,
       "test": "SET",
-      "ops_sec": 90634.44,
-      "p99_ms": 1.319,
+      "ops_sec": 106007.07,
+      "p99_ms": 0.343,
       "raw": "cinder-t0-c50-p1"
     },
     {
@@ -233,8 +233,8 @@
       "clients": 50,
       "pipeline": 1,
       "test": "GET",
-      "ops_sec": 103092.78,
-      "p99_ms": 0.471,
+      "ops_sec": 91463.41,
+      "p99_ms": 1.359,
       "raw": "cinder-t0-c50-p1"
     },
     {
@@ -244,7 +244,7 @@
       "pipeline": 16,
       "test": "SET",
       "ops_sec": 1363636.38,
-      "p99_ms": 0.359,
+      "p99_ms": 0.351,
       "raw": "cinder-t0-c16-p16"
     },
     {
@@ -253,8 +253,8 @@
       "clients": 16,
       "pipeline": 16,
       "test": "GET",
-      "ops_sec": 1363636.38,
-      "p99_ms": 0.335,
+      "ops_sec": 1428571.5,
+      "p99_ms": 0.175,
       "raw": "cinder-t0-c16-p16"
     },
     {
@@ -263,8 +263,8 @@
       "clients": 1,
       "pipeline": 1,
       "test": "SET",
-      "ops_sec": 42735.04,
-      "p99_ms": 0.055,
+      "ops_sec": 44977.51,
+      "p99_ms": 0.047,
       "raw": "redis-t0-c1-p1"
     },
     {
@@ -273,7 +273,7 @@
       "clients": 1,
       "pipeline": 1,
       "test": "GET",
-      "ops_sec": 45941.81,
+      "ops_sec": 43668.12,
       "p99_ms": 0.047,
       "raw": "redis-t0-c1-p1"
     },
@@ -283,8 +283,8 @@
       "clients": 16,
       "pipeline": 1,
       "test": "SET",
-      "ops_sec": 110701.11,
-      "p99_ms": 0.175,
+      "ops_sec": 87976.54,
+      "p99_ms": 0.495,
       "raw": "redis-t0-c16-p1"
     },
     {
@@ -293,8 +293,8 @@
       "clients": 16,
       "pipeline": 1,
       "test": "GET",
-      "ops_sec": 111111.11,
-      "p99_ms": 0.183,
+      "ops_sec": 110294.11,
+      "p99_ms": 0.191,
       "raw": "redis-t0-c16-p1"
     },
     {
@@ -303,8 +303,8 @@
       "clients": 50,
       "pipeline": 1,
       "test": "SET",
-      "ops_sec": 106382.98,
-      "p99_ms": 0.719,
+      "ops_sec": 114068.44,
+      "p99_ms": 0.455,
       "raw": "redis-t0-c50-p1"
     },
     {
@@ -313,8 +313,8 @@
       "clients": 50,
       "pipeline": 1,
       "test": "GET",
-      "ops_sec": 102739.73,
-      "p99_ms": 0.807,
+      "ops_sec": 108303.24,
+      "p99_ms": 0.775,
       "raw": "redis-t0-c50-p1"
     },
     {
@@ -323,7 +323,7 @@
       "clients": 16,
       "pipeline": 16,
       "test": "SET",
-      "ops_sec": 967741.94,
+      "ops_sec": 1034482.81,
       "p99_ms": 0.359,
       "raw": "redis-t0-c16-p16"
     },
@@ -333,8 +333,8 @@
       "clients": 16,
       "pipeline": 16,
       "test": "GET",
-      "ops_sec": 1111111.12,
-      "p99_ms": 0.367,
+      "ops_sec": 1250000.0,
+      "p99_ms": 0.263,
       "raw": "redis-t0-c16-p16"
     },
     {
@@ -343,8 +343,8 @@
       "clients": 1,
       "pipeline": 1,
       "test": "SET",
-      "ops_sec": 42432.81,
-      "p99_ms": 0.055,
+      "ops_sec": 42613.64,
+      "p99_ms": 0.047,
       "raw": "redis-t1-c1-p1"
     },
     {
@@ -353,8 +353,8 @@
       "clients": 1,
       "pipeline": 1,
       "test": "GET",
-      "ops_sec": 36496.35,
-      "p99_ms": 0.095,
+      "ops_sec": 47468.35,
+      "p99_ms": 0.039,
       "raw": "redis-t1-c1-p1"
     },
     {
@@ -363,8 +363,8 @@
       "clients": 16,
       "pipeline": 1,
       "test": "SET",
-      "ops_sec": 67720.09,
-      "p99_ms": 0.983,
+      "ops_sec": 109090.91,
+      "p99_ms": 0.167,
       "raw": "redis-t1-c16-p1"
     },
     {
@@ -373,8 +373,8 @@
       "clients": 16,
       "pipeline": 1,
       "test": "GET",
-      "ops_sec": 105633.8,
-      "p99_ms": 0.271,
+      "ops_sec": 113636.37,
+      "p99_ms": 0.167,
       "raw": "redis-t1-c16-p1"
     },
     {
@@ -383,8 +383,8 @@
       "clients": 50,
       "pipeline": 1,
       "test": "SET",
-      "ops_sec": 108695.66,
-      "p99_ms": 0.455,
+      "ops_sec": 114942.52,
+      "p99_ms": 0.447,
       "raw": "redis-t1-c50-p1"
     },
     {
@@ -393,8 +393,8 @@
       "clients": 50,
       "pipeline": 1,
       "test": "GET",
-      "ops_sec": 102739.73,
-      "p99_ms": 0.871,
+      "ops_sec": 113207.55,
+      "p99_ms": 0.399,
       "raw": "redis-t1-c50-p1"
     },
     {
@@ -403,8 +403,8 @@
       "clients": 16,
       "pipeline": 16,
       "test": "SET",
-      "ops_sec": 1034482.81,
-      "p99_ms": 0.343,
+      "ops_sec": 967741.94,
+      "p99_ms": 0.375,
       "raw": "redis-t1-c16-p16"
     },
     {
@@ -413,7 +413,7 @@
       "clients": 16,
       "pipeline": 16,
       "test": "GET",
-      "ops_sec": 1250000.0,
+      "ops_sec": 1200000.0,
       "p99_ms": 0.287,
       "raw": "redis-t1-c16-p16"
     },
@@ -423,8 +423,8 @@
       "clients": 1,
       "pipeline": 1,
       "test": "SET",
-      "ops_sec": 42372.88,
-      "p99_ms": 0.055,
+      "ops_sec": 48076.92,
+      "p99_ms": 0.039,
       "raw": "cinder-t1-c1-p1"
     },
     {
@@ -433,8 +433,8 @@
       "clients": 1,
       "pipeline": 1,
       "test": "GET",
-      "ops_sec": 45045.04,
-      "p99_ms": 0.047,
+      "ops_sec": 48465.27,
+      "p99_ms": 0.039,
       "raw": "cinder-t1-c1-p1"
     },
     {
@@ -444,7 +444,7 @@
       "pipeline": 1,
       "test": "SET",
       "ops_sec": 107526.88,
-      "p99_ms": 0.175,
+      "p99_ms": 0.135,
       "raw": "cinder-t1-c16-p1"
     },
     {
@@ -453,8 +453,8 @@
       "clients": 16,
       "pipeline": 1,
       "test": "GET",
-      "ops_sec": 107142.86,
-      "p99_ms": 0.127,
+      "ops_sec": 106761.57,
+      "p99_ms": 0.151,
       "raw": "cinder-t1-c16-p1"
     },
     {
@@ -463,8 +463,8 @@
       "clients": 50,
       "pipeline": 1,
       "test": "SET",
-      "ops_sec": 108303.24,
-      "p99_ms": 0.327,
+      "ops_sec": 108695.66,
+      "p99_ms": 0.343,
       "raw": "cinder-t1-c50-p1"
     },
     {
@@ -473,8 +473,8 @@
       "clients": 50,
       "pipeline": 1,
       "test": "GET",
-      "ops_sec": 107526.88,
-      "p99_ms": 0.367,
+      "ops_sec": 107913.67,
+      "p99_ms": 0.359,
       "raw": "cinder-t1-c50-p1"
     },
     {
@@ -484,7 +484,7 @@
       "pipeline": 16,
       "test": "SET",
       "ops_sec": 1304347.88,
-      "p99_ms": 0.359,
+      "p99_ms": 0.375,
       "raw": "cinder-t1-c16-p16"
     },
     {
@@ -493,8 +493,8 @@
       "clients": 16,
       "pipeline": 16,
       "test": "GET",
-      "ops_sec": 1500000.0,
-      "p99_ms": 0.191,
+      "ops_sec": 1428571.5,
+      "p99_ms": 0.183,
       "raw": "cinder-t1-c16-p16"
     },
     {
@@ -503,7 +503,7 @@
       "clients": 1,
       "pipeline": 1,
       "test": "SET",
-      "ops_sec": 46728.97,
+      "ops_sec": 48000.0,
       "p99_ms": 0.039,
       "raw": "cinder-t2-c1-p1"
     },
@@ -513,7 +513,7 @@
       "clients": 1,
       "pipeline": 1,
       "test": "GET",
-      "ops_sec": 50000.0,
+      "ops_sec": 48076.92,
       "p99_ms": 0.039,
       "raw": "cinder-t2-c1-p1"
     },
@@ -523,8 +523,8 @@
       "clients": 16,
       "pipeline": 1,
       "test": "SET",
-      "ops_sec": 104895.1,
-      "p99_ms": 0.143,
+      "ops_sec": 108695.66,
+      "p99_ms": 0.127,
       "raw": "cinder-t2-c16-p1"
     },
     {
@@ -533,7 +533,7 @@
       "clients": 16,
       "pipeline": 1,
       "test": "GET",
-      "ops_sec": 105263.16,
+      "ops_sec": 107142.86,
       "p99_ms": 0.143,
       "raw": "cinder-t2-c16-p1"
     },
@@ -543,8 +543,8 @@
       "clients": 50,
       "pipeline": 1,
       "test": "SET",
-      "ops_sec": 106007.07,
-      "p99_ms": 0.335,
+      "ops_sec": 107142.86,
+      "p99_ms": 0.391,
       "raw": "cinder-t2-c50-p1"
     },
     {
@@ -553,8 +553,8 @@
       "clients": 50,
       "pipeline": 1,
       "test": "GET",
-      "ops_sec": 106007.07,
-      "p99_ms": 0.351,
+      "ops_sec": 106382.98,
+      "p99_ms": 0.319,
       "raw": "cinder-t2-c50-p1"
     },
     {
@@ -563,8 +563,8 @@
       "clients": 16,
       "pipeline": 16,
       "test": "SET",
-      "ops_sec": 1500000.0,
-      "p99_ms": 0.271,
+      "ops_sec": 1428571.5,
+      "p99_ms": 0.303,
       "raw": "cinder-t2-c16-p16"
     },
     {
@@ -573,7 +573,7 @@
       "clients": 16,
       "pipeline": 16,
       "test": "GET",
-      "ops_sec": 1428571.5,
+      "ops_sec": 1363636.38,
       "p99_ms": 0.199,
       "raw": "cinder-t2-c16-p16"
     },
@@ -583,7 +583,7 @@
       "clients": 1,
       "pipeline": 1,
       "test": "SET",
-      "ops_sec": 45045.04,
+      "ops_sec": 45731.71,
       "p99_ms": 0.039,
       "raw": "redis-t2-c1-p1"
     },
@@ -593,7 +593,7 @@
       "clients": 1,
       "pipeline": 1,
       "test": "GET",
-      "ops_sec": 46296.3,
+      "ops_sec": 46948.36,
       "p99_ms": 0.039,
       "raw": "redis-t2-c1-p1"
     },
@@ -603,7 +603,7 @@
       "clients": 16,
       "pipeline": 1,
       "test": "SET",
-      "ops_sec": 111940.3,
+      "ops_sec": 112781.95,
       "p99_ms": 0.167,
       "raw": "redis-t2-c16-p1"
     },
@@ -613,8 +613,8 @@
       "clients": 16,
       "pipeline": 1,
       "test": "GET",
-      "ops_sec": 110294.11,
-      "p99_ms": 0.159,
+      "ops_sec": 111940.3,
+      "p99_ms": 0.183,
       "raw": "redis-t2-c16-p1"
     },
     {
@@ -623,8 +623,8 @@
       "clients": 50,
       "pipeline": 1,
       "test": "SET",
-      "ops_sec": 114068.44,
-      "p99_ms": 0.471,
+      "ops_sec": 112359.55,
+      "p99_ms": 0.391,
       "raw": "redis-t2-c50-p1"
     },
     {
@@ -633,8 +633,8 @@
       "clients": 50,
       "pipeline": 1,
       "test": "GET",
-      "ops_sec": 112359.55,
-      "p99_ms": 0.647,
+      "ops_sec": 115384.62,
+      "p99_ms": 0.391,
       "raw": "redis-t2-c50-p1"
     },
     {
@@ -643,8 +643,8 @@
       "clients": 16,
       "pipeline": 16,
       "test": "SET",
-      "ops_sec": 937499.94,
-      "p99_ms": 0.455,
+      "ops_sec": 1034482.81,
+      "p99_ms": 0.327,
       "raw": "redis-t2-c16-p16"
     },
     {
@@ -653,8 +653,8 @@
       "clients": 16,
       "pipeline": 16,
       "test": "GET",
-      "ops_sec": 1250000.0,
-      "p99_ms": 0.271,
+      "ops_sec": 1200000.0,
+      "p99_ms": 0.311,
       "raw": "redis-t2-c16-p16"
     }
   ]

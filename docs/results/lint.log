@@ -2,5 +2,5 @@
 .venv/bin/ruff check scripts tests
 All checks passed!
 .venv/bin/ruff format --check scripts tests
-7 files already formatted
+8 files already formatted
 node --check web/app.js

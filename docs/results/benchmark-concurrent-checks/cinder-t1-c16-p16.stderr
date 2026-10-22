@@ -1,0 +1,2 @@
+WARNING: -e option has no effect. We now immediately exit on error to avoid false results.
+WARNING: Could not fetch server CONFIG
