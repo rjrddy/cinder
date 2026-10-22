@@ -1,0 +1,21 @@
+TSAN_OPTIONS=halt_on_error=1 /Library/Developer/CommandLineTools/usr/bin/make test BUILD=build-tsan SANITIZER=thread
+cmake -S . -B build-tsan -DCMAKE_BUILD_TYPE=Release -DSANITIZER=thread
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/rajreddy/dev/outreach/cinder/build-tsan
+cmake --build build-tsan -j 4
+[ 14%] Building CXX object CMakeFiles/cinder_core.dir/src/protocol.cpp.o
+[ 28%] Building CXX object CMakeFiles/cinder_core.dir/src/store.cpp.o
+[ 42%] Linking CXX static library libcinder_core.a
+[ 42%] Built target cinder_core
+[ 71%] Building CXX object CMakeFiles/cinder.dir/src/server.cpp.o
+[ 71%] Building CXX object CMakeFiles/core_tests.dir/tests/core.cpp.o
+[ 85%] Linking CXX executable core_tests
+[ 85%] Built target core_tests
+[100%] Linking CXX executable cinder
+[100%] Built target cinder
+./build-tsan/core_tests
+{"checks":8163,"concurrent_increments":16000,"collision_keys":100,"model_steps":4000,"parser_fuzz_cases":10000,"status":"pass"}
+CINDER_BINARY=build-tsan/cinder CINDER_RESULTS=docs/results/build-tsan .venv/bin/python -m pytest -q
+.....                                                                    [100%]
+5 passed in 2.70s

@@ -1,0 +1,13 @@
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DSANITIZER=
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/rajreddy/dev/outreach/cinder/build
+cmake --build build -j 4
+[ 42%] Built target cinder_core
+[100%] Built target cinder
+[100%] Built target core_tests
+./build/core_tests
+{"checks":8163,"concurrent_increments":16000,"collision_keys":100,"model_steps":4000,"parser_fuzz_cases":10000,"status":"pass"}
+CINDER_BINARY=build/cinder CINDER_RESULTS=docs/results/build .venv/bin/python -m pytest -q
+.....                                                                    [100%]
+5 passed in 1.02s

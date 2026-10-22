@@ -1,0 +1,49 @@
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-dev.txt
+Requirement already satisfied: pytest==9.1.1 in ./.venv/lib/python3.13/site-packages (from -r requirements-dev.txt (line 1)) (9.1.1)
+Requirement already satisfied: ruff==0.17.1 in ./.venv/lib/python3.13/site-packages (from -r requirements-dev.txt (line 2)) (0.17.1)
+Requirement already satisfied: clang-format==20.1.8 in ./.venv/lib/python3.13/site-packages (from -r requirements-dev.txt (line 3)) (20.1.8)
+Requirement already satisfied: pip-audit==2.9.0 in ./.venv/lib/python3.13/site-packages (from -r requirements-dev.txt (line 4)) (2.9.0)
+Requirement already satisfied: iniconfig>=1.0.1 in ./.venv/lib/python3.13/site-packages (from pytest==9.1.1->-r requirements-dev.txt (line 1)) (2.3.1)
+Requirement already satisfied: packaging>=22 in ./.venv/lib/python3.13/site-packages (from pytest==9.1.1->-r requirements-dev.txt (line 1)) (26.3)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.13/site-packages (from pytest==9.1.1->-r requirements-dev.txt (line 1)) (1.7.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.13/site-packages (from pytest==9.1.1->-r requirements-dev.txt (line 1)) (2.21.0)
+Requirement already satisfied: CacheControl>=0.13.0 in ./.venv/lib/python3.13/site-packages (from CacheControl[filecache]>=0.13.0->pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (0.14.4)
+Requirement already satisfied: cyclonedx-python-lib<10,>=5 in ./.venv/lib/python3.13/site-packages (from pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (9.1.0)
+Requirement already satisfied: pip-api>=0.0.28 in ./.venv/lib/python3.13/site-packages (from pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (0.0.35)
+Requirement already satisfied: pip-requirements-parser>=32.0.0 in ./.venv/lib/python3.13/site-packages (from pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (32.0.1)
+Requirement already satisfied: requests>=2.31.0 in ./.venv/lib/python3.13/site-packages (from pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (2.34.2)
+Requirement already satisfied: rich>=12.4 in ./.venv/lib/python3.13/site-packages (from pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (15.0.0)
+Requirement already satisfied: toml>=0.10 in ./.venv/lib/python3.13/site-packages (from pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (0.10.2)
+Requirement already satisfied: platformdirs>=4.2.0 in ./.venv/lib/python3.13/site-packages (from pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (4.13.5)
+Requirement already satisfied: msgpack<2.0.0,>=0.5.2 in ./.venv/lib/python3.13/site-packages (from CacheControl>=0.13.0->CacheControl[filecache]>=0.13.0->pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (1.2.3)
+Requirement already satisfied: filelock>=3.8.0 in ./.venv/lib/python3.13/site-packages (from CacheControl[filecache]>=0.13.0->pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (4.2.4)
+Requirement already satisfied: license-expression<31,>=30 in ./.venv/lib/python3.13/site-packages (from cyclonedx-python-lib<10,>=5->pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (30.4.4)
+Requirement already satisfied: packageurl-python<2,>=0.11 in ./.venv/lib/python3.13/site-packages (from cyclonedx-python-lib<10,>=5->pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (0.17.6)
+Requirement already satisfied: py-serializable<3.0.0,>=2.0.0 in ./.venv/lib/python3.13/site-packages (from cyclonedx-python-lib<10,>=5->pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (2.1.0)
+Requirement already satisfied: sortedcontainers<3.0.0,>=2.4.0 in ./.venv/lib/python3.13/site-packages (from cyclonedx-python-lib<10,>=5->pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (2.4.0)
+Requirement already satisfied: pip in ./.venv/lib/python3.13/site-packages (from pip-api>=0.0.28->pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (25.0)
+Requirement already satisfied: pyparsing in ./.venv/lib/python3.13/site-packages (from pip-requirements-parser>=32.0.0->pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (3.3.3)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.13/site-packages (from requests>=2.31.0->pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (3.5.2)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.13/site-packages (from requests>=2.31.0->pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (3.20)
+Requirement already satisfied: urllib3<3,>=1.26 in ./.venv/lib/python3.13/site-packages (from requests>=2.31.0->pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (2.8.0)
+Requirement already satisfied: certifi>=2023.5.7 in ./.venv/lib/python3.13/site-packages (from requests>=2.31.0->pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (2026.10.19)
+Requirement already satisfied: markdown-it-py>=2.2.0 in ./.venv/lib/python3.13/site-packages (from rich>=12.4->pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (4.2.0)
+Requirement already satisfied: boolean.py>=4.0 in ./.venv/lib/python3.13/site-packages (from license-expression<31,>=30->cyclonedx-python-lib<10,>=5->pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (5.0)
+Requirement already satisfied: mdurl~=0.1 in ./.venv/lib/python3.13/site-packages (from markdown-it-py>=2.2.0->rich>=12.4->pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (0.1.2)
+Requirement already satisfied: defusedxml<0.8.0,>=0.7.1 in ./.venv/lib/python3.13/site-packages (from py-serializable<3.0.0,>=2.0.0->cyclonedx-python-lib<10,>=5->pip-audit==2.9.0->-r requirements-dev.txt (line 4)) (0.7.1)
+
+[notice] A new release of pip is available: 25.0 -> 26.2.2
+[notice] To update, run: /private/var/folders/tx/r4bmp29x58v41hgmtzrwwx3h0000gn/T/cinder-clean-08mv_y8q/cinder/.venv/bin/python -m pip install --upgrade pip
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DSANITIZER=
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /private/var/folders/tx/r4bmp29x58v41hgmtzrwwx3h0000gn/T/cinder-clean-08mv_y8q/cinder/build
+cmake --build build -j 4
+[ 42%] Built target cinder_core
+[100%] Built target cinder
+[100%] Built target core_tests
+.venv/bin/python scripts/demo.py
+{"event":"ready","resp_port":16380,"http_port":18084}
+Viewer: http://127.0.0.1:18084 · RESP: 16380 · synthetic keys seeded
+{"event":"stopped","commands":65}

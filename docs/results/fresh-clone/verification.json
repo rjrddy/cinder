@@ -1,0 +1,629 @@
+{
+  "source_commit": "6f408fbaf5e9c5df7b266b2fd087a5b5927b30aa",
+  "clone": "independent --no-local temporary clone",
+  "setup_lint_test": "pass",
+  "one_command_make_demo": "pass",
+  "real_http_state": {
+    "shards": [
+      {
+        "id": 0,
+        "keys": 3,
+        "payload_bytes": 66,
+        "buckets": 5,
+        "max_chain": 2
+      },
+      {
+        "id": 1,
+        "keys": 3,
+        "payload_bytes": 65,
+        "buckets": 5,
+        "max_chain": 2
+      },
+      {
+        "id": 2,
+        "keys": 2,
+        "payload_bytes": 43,
+        "buckets": 2,
+        "max_chain": 1
+      },
+      {
+        "id": 3,
+        "keys": 2,
+        "payload_bytes": 43,
+        "buckets": 2,
+        "max_chain": 2
+      },
+      {
+        "id": 4,
+        "keys": 2,
+        "payload_bytes": 44,
+        "buckets": 2,
+        "max_chain": 1
+      },
+      {
+        "id": 5,
+        "keys": 2,
+        "payload_bytes": 44,
+        "buckets": 2,
+        "max_chain": 1
+      },
+      {
+        "id": 6,
+        "keys": 3,
+        "payload_bytes": 66,
+        "buckets": 5,
+        "max_chain": 2
+      },
+      {
+        "id": 7,
+        "keys": 2,
+        "payload_bytes": 44,
+        "buckets": 2,
+        "max_chain": 2
+      },
+      {
+        "id": 8,
+        "keys": 2,
+        "payload_bytes": 44,
+        "buckets": 2,
+        "max_chain": 2
+      },
+      {
+        "id": 9,
+        "keys": 1,
+        "payload_bytes": 21,
+        "buckets": 2,
+        "max_chain": 1
+      },
+      {
+        "id": 10,
+        "keys": 2,
+        "payload_bytes": 44,
+        "buckets": 2,
+        "max_chain": 1
+      },
+      {
+        "id": 11,
+        "keys": 1,
+        "payload_bytes": 22,
+        "buckets": 2,
+        "max_chain": 1
+      },
+      {
+        "id": 12,
+        "keys": 3,
+        "payload_bytes": 66,
+        "buckets": 5,
+        "max_chain": 2
+      },
+      {
+        "id": 13,
+        "keys": 2,
+        "payload_bytes": 44,
+        "buckets": 2,
+        "max_chain": 2
+      },
+      {
+        "id": 14,
+        "keys": 3,
+        "payload_bytes": 65,
+        "buckets": 5,
+        "max_chain": 1
+      },
+      {
+        "id": 15,
+        "keys": 1,
+        "payload_bytes": 21,
+        "buckets": 2,
+        "max_chain": 1
+      },
+      {
+        "id": 16,
+        "keys": 2,
+        "payload_bytes": 43,
+        "buckets": 2,
+        "max_chain": 1
+      },
+      {
+        "id": 17,
+        "keys": 1,
+        "payload_bytes": 22,
+        "buckets": 2,
+        "max_chain": 1
+      },
+      {
+        "id": 18,
+        "keys": 2,
+        "payload_bytes": 44,
+        "buckets": 2,
+        "max_chain": 1
+      },
+      {
+        "id": 19,
+        "keys": 3,
+        "payload_bytes": 66,
+        "buckets": 5,
+        "max_chain": 2
+      },
+      {
+        "id": 20,
+        "keys": 2,
+        "payload_bytes": 44,
+        "buckets": 2,
+        "max_chain": 1
+      },
+      {
+        "id": 21,
+        "keys": 2,
+        "payload_bytes": 43,
+        "buckets": 2,
+        "max_chain": 1
+      },
+      {
+        "id": 22,
+        "keys": 1,
+        "payload_bytes": 21,
+        "buckets": 2,
+        "max_chain": 1
+      },
+      {
+        "id": 23,
+        "keys": 2,
+        "payload_bytes": 44,
+        "buckets": 2,
+        "max_chain": 1
+      },
+      {
+        "id": 24,
+        "keys": 1,
+        "payload_bytes": 22,
+        "buckets": 2,
+        "max_chain": 1
+      },
+      {
+        "id": 25,
+        "keys": 3,
+        "payload_bytes": 66,
+        "buckets": 5,
+        "max_chain": 1
+      },
+      {
+        "id": 26,
+        "keys": 2,
+        "payload_bytes": 44,
+        "buckets": 2,
+        "max_chain": 1
+      },
+      {
+        "id": 27,
+        "keys": 2,
+        "payload_bytes": 44,
+        "buckets": 2,
+        "max_chain": 2
+      },
+      {
+        "id": 28,
+        "keys": 1,
+        "payload_bytes": 21,
+        "buckets": 2,
+        "max_chain": 1
+      },
+      {
+        "id": 29,
+        "keys": 2,
+        "payload_bytes": 44,
+        "buckets": 2,
+        "max_chain": 2
+      },
+      {
+        "id": 30,
+        "keys": 1,
+        "payload_bytes": 22,
+        "buckets": 2,
+        "max_chain": 1
+      },
+      {
+        "id": 31,
+        "keys": 3,
+        "payload_bytes": 66,
+        "buckets": 5,
+        "max_chain": 2
+      }
+    ],
+    "resident_keys": 64,
+    "payload_bytes": 1398,
+    "shard_quota": 2097152,
+    "commands": 64,
+    "errors": 0,
+    "hits": 0,
+    "misses": 0,
+    "sample": [
+      {
+        "key": "synthetic:46",
+        "preview": "payload-46",
+        "expires_unix_ms": 0,
+        "shard": 0
+      },
+      {
+        "key": "synthetic:60",
+        "preview": "payload-60",
+        "expires_unix_ms": 0,
+        "shard": 0
+      },
+      {
+        "key": "synthetic:15",
+        "preview": "payload-15",
+        "expires_unix_ms": 0,
+        "shard": 0
+      },
+      {
+        "key": "synthetic:52",
+        "preview": "payload-52",
+        "expires_unix_ms": 0,
+        "shard": 1
+      },
+      {
+        "key": "synthetic:34",
+        "preview": "payload-34",
+        "expires_unix_ms": 0,
+        "shard": 1
+      },
+      {
+        "key": "synthetic:09",
+        "preview": "payload-9",
+        "expires_unix_ms": 0,
+        "shard": 1
+      },
+      {
+        "key": "synthetic:39",
+        "preview": "payload-39",
+        "expires_unix_ms": 0,
+        "shard": 2
+      },
+      {
+        "key": "synthetic:04",
+        "preview": "payload-4",
+        "expires_unix_ms": 0,
+        "shard": 2
+      },
+      {
+        "key": "synthetic:58",
+        "preview": "payload-58",
+        "expires_unix_ms": 0,
+        "shard": 3
+      },
+      {
+        "key": "synthetic:03",
+        "preview": "payload-3",
+        "expires_unix_ms": 0,
+        "shard": 3
+      },
+      {
+        "key": "synthetic:20",
+        "preview": "payload-20",
+        "expires_unix_ms": 0,
+        "shard": 4
+      },
+      {
+        "key": "synthetic:19",
+        "preview": "payload-19",
+        "expires_unix_ms": 0,
+        "shard": 4
+      },
+      {
+        "key": "synthetic:41",
+        "preview": "payload-41",
+        "expires_unix_ms": 0,
+        "shard": 5
+      },
+      {
+        "key": "synthetic:12",
+        "preview": "payload-12",
+        "expires_unix_ms": 0,
+        "shard": 5
+      },
+      {
+        "key": "synthetic:62",
+        "preview": "payload-62",
+        "expires_unix_ms": 0,
+        "shard": 6
+      },
+      {
+        "key": "synthetic:44",
+        "preview": "payload-44",
+        "expires_unix_ms": 0,
+        "shard": 6
+      },
+      {
+        "key": "synthetic:17",
+        "preview": "payload-17",
+        "expires_unix_ms": 0,
+        "shard": 6
+      },
+      {
+        "key": "synthetic:54",
+        "preview": "payload-54",
+        "expires_unix_ms": 0,
+        "shard": 7
+      },
+      {
+        "key": "synthetic:32",
+        "preview": "payload-32",
+        "expires_unix_ms": 0,
+        "shard": 7
+      },
+      {
+        "key": "synthetic:51",
+        "preview": "payload-51",
+        "expires_unix_ms": 0,
+        "shard": 8
+      },
+      {
+        "key": "synthetic:37",
+        "preview": "payload-37",
+        "expires_unix_ms": 0,
+        "shard": 8
+      },
+      {
+        "key": "synthetic:01",
+        "preview": "payload-1",
+        "expires_unix_ms": 0,
+        "shard": 9
+      },
+      {
+        "key": "synthetic:48",
+        "preview": "payload-48",
+        "expires_unix_ms": 0,
+        "shard": 10
+      },
+      {
+        "key": "synthetic:22",
+        "preview": "payload-22",
+        "expires_unix_ms": 0,
+        "shard": 10
+      },
+      {
+        "key": "synthetic:25",
+        "preview": "payload-25",
+        "expires_unix_ms": 0,
+        "shard": 11
+      },
+      {
+        "key": "synthetic:42",
+        "preview": "payload-42",
+        "expires_unix_ms": 0,
+        "shard": 12
+      },
+      {
+        "key": "synthetic:28",
+        "preview": "payload-28",
+        "expires_unix_ms": 0,
+        "shard": 12
+      },
+      {
+        "key": "synthetic:11",
+        "preview": "payload-11",
+        "expires_unix_ms": 0,
+        "shard": 12
+      },
+      {
+        "key": "synthetic:56",
+        "preview": "payload-56",
+        "expires_unix_ms": 0,
+        "shard": 13
+      },
+      {
+        "key": "synthetic:30",
+        "preview": "payload-30",
+        "expires_unix_ms": 0,
+        "shard": 13
+      },
+      {
+        "key": "synthetic:53",
+        "preview": "payload-53",
+        "expires_unix_ms": 0,
+        "shard": 14
+      },
+      {
+        "key": "synthetic:35",
+        "preview": "payload-35",
+        "expires_unix_ms": 0,
+        "shard": 14
+      },
+      {
+        "key": "synthetic:08",
+        "preview": "payload-8",
+        "expires_unix_ms": 0,
+        "shard": 14
+      },
+      {
+        "key": "synthetic:07",
+        "preview": "payload-7",
+        "expires_unix_ms": 0,
+        "shard": 15
+      },
+      {
+        "key": "synthetic:59",
+        "preview": "payload-59",
+        "expires_unix_ms": 0,
+        "shard": 16
+      },
+      {
+        "key": "synthetic:02",
+        "preview": "payload-2",
+        "expires_unix_ms": 0,
+        "shard": 16
+      },
+      {
+        "key": "synthetic:27",
+        "preview": "payload-27",
+        "expires_unix_ms": 0,
+        "shard": 17
+      },
+      {
+        "key": "synthetic:40",
+        "preview": "payload-40",
+        "expires_unix_ms": 0,
+        "shard": 18
+      },
+      {
+        "key": "synthetic:13",
+        "preview": "payload-13",
+        "expires_unix_ms": 0,
+        "shard": 18
+      },
+      {
+        "key": "synthetic:47",
+        "preview": "payload-47",
+        "expires_unix_ms": 0,
+        "shard": 19
+      },
+      {
+        "key": "synthetic:61",
+        "preview": "payload-61",
+        "expires_unix_ms": 0,
+        "shard": 19
+      },
+      {
+        "key": "synthetic:14",
+        "preview": "payload-14",
+        "expires_unix_ms": 0,
+        "shard": 19
+      },
+      {
+        "key": "synthetic:55",
+        "preview": "payload-55",
+        "expires_unix_ms": 0,
+        "shard": 20
+      },
+      {
+        "key": "synthetic:33",
+        "preview": "payload-33",
+        "expires_unix_ms": 0,
+        "shard": 20
+      },
+      {
+        "key": "synthetic:38",
+        "preview": "payload-38",
+        "expires_unix_ms": 0,
+        "shard": 21
+      },
+      {
+        "key": "synthetic:05",
+        "preview": "payload-5",
+        "expires_unix_ms": 0,
+        "shard": 21
+      },
+      {
+        "key": "synthetic:00",
+        "preview": "payload-0",
+        "expires_unix_ms": 0,
+        "shard": 22
+      },
+      {
+        "key": "synthetic:21",
+        "preview": "payload-21",
+        "expires_unix_ms": 0,
+        "shard": 23
+      },
+      {
+        "key": "synthetic:18",
+        "preview": "payload-18",
+        "expires_unix_ms": 0,
+        "shard": 23
+      },
+      {
+        "key": "synthetic:24",
+        "preview": "payload-24",
+        "expires_unix_ms": 0,
+        "shard": 24
+      },
+      {
+        "key": "synthetic:63",
+        "preview": "payload-63",
+        "expires_unix_ms": 0,
+        "shard": 25
+      },
+      {
+        "key": "synthetic:45",
+        "preview": "payload-45",
+        "expires_unix_ms": 0,
+        "shard": 25
+      },
+      {
+        "key": "synthetic:16",
+        "preview": "payload-16",
+        "expires_unix_ms": 0,
+        "shard": 25
+      },
+      {
+        "key": "synthetic:57",
+        "preview": "payload-57",
+        "expires_unix_ms": 0,
+        "shard": 26
+      },
+      {
+        "key": "synthetic:31",
+        "preview": "payload-31",
+        "expires_unix_ms": 0,
+        "shard": 26
+      },
+      {
+        "key": "synthetic:50",
+        "preview": "payload-50",
+        "expires_unix_ms": 0,
+        "shard": 27
+      },
+      {
+        "key": "synthetic:36",
+        "preview": "payload-36",
+        "expires_unix_ms": 0,
+        "shard": 27
+      },
+      {
+        "key": "synthetic:06",
+        "preview": "payload-6",
+        "expires_unix_ms": 0,
+        "shard": 28
+      },
+      {
+        "key": "synthetic:49",
+        "preview": "payload-49",
+        "expires_unix_ms": 0,
+        "shard": 29
+      },
+      {
+        "key": "synthetic:23",
+        "preview": "payload-23",
+        "expires_unix_ms": 0,
+        "shard": 29
+      },
+      {
+        "key": "synthetic:26",
+        "preview": "payload-26",
+        "expires_unix_ms": 0,
+        "shard": 30
+      },
+      {
+        "key": "synthetic:29",
+        "preview": "payload-29",
+        "expires_unix_ms": 0,
+        "shard": 31
+      },
+      {
+        "key": "synthetic:43",
+        "preview": "payload-43",
+        "expires_unix_ms": 0,
+        "shard": 31
+      },
+      {
+        "key": "synthetic:10",
+        "preview": "payload-10",
+        "expires_unix_ms": 0,
+        "shard": 31
+      }
+    ]
+  },
+  "native_cli": "payload-0",
+  "docker": "not available locally; CI gate required"
+}
