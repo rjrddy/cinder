@@ -1,0 +1,15 @@
+# Prepared only; creating/deploying this service requires owner approval.
+services:
+  - type: web
+    name: cinder
+    runtime: docker
+    plan: free
+    region: oregon
+    healthCheckPath: /
+    envVars:
+      - key: CINDER_TOKEN
+        generateValue: true
+      - key: PORT
+        value: 8084
+# Free web services have ephemeral disks. SAVE is not durable across replacement.
+# Only HTTP viewer/API is published; native RESP remains inside the container.

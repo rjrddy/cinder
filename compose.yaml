@@ -1,0 +1,13 @@
+services:
+  cinder:
+    build: .
+    ports:
+      - "127.0.0.1:6380:6380"
+      - "127.0.0.1:8084:8084"
+    environment:
+      CINDER_TOKEN: ${CINDER_TOKEN:?Set CINDER_TOKEN to at least 24 characters}
+    volumes:
+      - snapshots:/data
+    stop_grace_period: 10s
+volumes:
+  snapshots:

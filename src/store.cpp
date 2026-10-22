@@ -253,7 +253,7 @@ void Store::load(const std::string &path) {
   Store staged(quota_ * shard_count, now_);
   size_t p = 8;
   auto count = take64(b, p);
-  if (count > 1000000)
+  if (count > 1048576)
     throw std::runtime_error("snapshot entry limit");
   for (uint64_t i = 0; i < count; ++i) {
     auto kl = take64(b, p), vl = take64(b, p), expiration = take64(b, p);

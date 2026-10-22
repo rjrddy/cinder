@@ -113,7 +113,8 @@ std::string lower(std::string s) {
       c += 'a' - 'A';
   return s;
 }
-void http(int fd, Engine &engine, const std::string &web, const std::string &token) {
+void http(int fd, Engine &engine, const std::string &web, const std::string &token, int http_port,
+          bool loopback_only) {
   std::string input;
   char buffer[8192];
   size_t split;
@@ -154,6 +155,11 @@ void http(int fd, Engine &engine, const std::string &web, const std::string &tok
       return;
     }
     headers[name] = value;
+  }
+  if (loopback_only && headers["host"] != "127.0.0.1:" + std::to_string(http_port) &&
+      headers["host"] != "localhost:" + std::to_string(http_port)) {
+    http_reply(fd, 403, "text/plain", "loopback host required");
+    return;
   }
   if (headers.contains("transfer-encoding")) {
     http_reply(fd, 400, "text/plain", "chunked requests unsupported");
@@ -321,7 +327,8 @@ int main(int argc, char **argv) {
     });
     {
       Pool tcp_pool(64, [&](int fd) { resp(fd, engine, token); });
-      Pool web_pool(4, [&](int fd) { http(fd, engine, web, token); });
+      Pool web_pool(4,
+                    [&](int fd) { http(fd, engine, web, token, http_port, bind == "127.0.0.1"); });
       std::cout << "{\"event\":\"ready\",\"resp_port\":" << port << ",\"http_port\":" << http_port
                 << "}" << std::endl;
       while (!stopping) {

@@ -85,3 +85,11 @@ $('seed').addEventListener('click', async () => {
 });
 $('expire').addEventListener('click', async () => { try { await command(['SET', 'ephemeral:ember', 'expires through the real engine', 'PX', '5000']); await refresh(); } catch (e) { $('response').textContent = e.message; } });
 refresh(); setInterval(refresh, 1000);
+function operationFields() {
+  const op = $('operation').value;
+  $('key').disabled = op === 'SAVE';
+  $('value').disabled = op !== 'SET';
+  $('ttl').disabled = op !== 'SET';
+}
+$('operation').addEventListener('change', operationFields);
+operationFields();
