@@ -2,7 +2,7 @@
   "project": "cinder",
   "motion_profile": "Shard latch and register",
   "source_sha256": {
-    "web/app.js": "2ff9dcac5fef5f958ebcd6fec7c0c0ffe7676289f6df7ff9f22619ce86917004",
+    "web/app.js": "13c01d8fe2f26af44e1a3df42ce0d7a2b0c875c41785569b17da55a7679bf513",
     "web/style.css": "0bdd3e509c51efa8a2ca90aedc0290135cc181e1a0419d9125f398a1da54b87e"
   },
   "frontend_build_lint": "node --check web/app.js passed; buildless viewer",
