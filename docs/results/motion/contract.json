@@ -1,0 +1,110 @@
+{
+  "project": "cinder",
+  "scope": "Synthetic DOM using actual shipped motion module",
+  "noEntranceAnimation": true,
+  "unchangedNodeReplacementIgnored": true,
+  "observedAnimations": [
+    {
+      "tag": "BUTTON",
+      "cls": "",
+      "id": "contract-key",
+      "frames": [
+        {
+          "transform": "translateX(2px)"
+        },
+        {
+          "transform": "translateX(-0.4px)",
+          "offset": 0.65
+        },
+        {
+          "transform": "translateX(0)"
+        }
+      ],
+      "options": {
+        "duration": 160,
+        "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "iterations": 1,
+        "fill": "none"
+      },
+      "at": 112.30000007152557
+    },
+    {
+      "tag": "STRONG",
+      "cls": "",
+      "id": "",
+      "frames": [
+        {
+          "transform": "translateX(-3px)"
+        },
+        {
+          "transform": "translateX(0.6px)",
+          "offset": 0.65
+        },
+        {
+          "transform": "translateX(0)"
+        }
+      ],
+      "options": {
+        "duration": 150,
+        "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "iterations": 1,
+        "fill": "none"
+      },
+      "at": 148.70000004768372
+    },
+    {
+      "tag": "DD",
+      "cls": "",
+      "id": "",
+      "frames": [
+        {
+          "transform": "translateX(4px)"
+        },
+        {
+          "transform": "translateX(0)"
+        }
+      ],
+      "options": {
+        "duration": 160,
+        "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "iterations": 1,
+        "fill": "none"
+      },
+      "at": 148.70000004768372
+    },
+    {
+      "tag": "DIV",
+      "cls": "",
+      "id": "response",
+      "frames": [
+        {
+          "transform": "translateX(3px)"
+        },
+        {
+          "transform": "translateX(-0.6px)",
+          "offset": 0.65
+        },
+        {
+          "transform": "translateX(0)"
+        }
+      ],
+      "options": {
+        "duration": 170,
+        "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "iterations": 1,
+        "fill": "none"
+      },
+      "at": 148.80000007152557
+    }
+  ],
+  "transformOpacityOnly": true,
+  "zeroDelay": true,
+  "immediatePointerAndKeyboard": true,
+  "edgeClickTargetStableUntilActivation": true,
+  "disabledAndEditorExcluded": true,
+  "liveReducedMotionCancellation": true,
+  "reEnable": true,
+  "pagehideCleanup": true,
+  "pageErrors": [],
+  "initialReducedMotion": true
+}
